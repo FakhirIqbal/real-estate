@@ -21,33 +21,43 @@ function Page() {
   };
 
   const handleReloadClick = () => {
-    
     // Use the router.push method with the current route to trigger a page reload
-    router.push(router.pathname, undefined, { shallow: true });    // window.loacation.reload();
+    router.push(router.pathname, undefined, { shallow: true }); // window.loacation.reload();
   };
 
   return (
     <main>
       <Header />
       <div>
-        <div className="relative h-screen">
-          <div className="sticky top-0 left-0 w-full h-screen overflow-hidden">
-            <Image
-              src={BG}
-              className="w-full "
-              width={0}
-              height={0}
-              sizes={"100vw"}
-              alt="rolodex Logo"
-            />
-          </div>
+      <div className="h-screen bg-white op recentimage">
+      <div className="flex flex-col justify-center items-center h-full ">
+      <p className="font-phoppin text-md py-5">FEATURED HOMES</p>
+            <span className="font-cardo font-medium text-7xl">
+              Recent Home Sales
+            </span>
+      </div>
+
+      </div>
+        {/* <div className="relative h-screen">
+        
+            <div className="sticky  top-0 left-0 w-full h-screen overflow-hidden">
+              <Image
+                src={BG}
+                className="w-full "
+                width={0}
+                height={0}
+                sizes={"100vw"}
+                alt="rolodex Logo"
+              />
+            </div>
+
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  text-center ">
             <p className="font-phoppin text-md py-5">FEATURED HOMES</p>
             <span className="font-cardo font-medium text-8xl">
               Recent Home Sales
             </span>
           </div>
-        </div>
+        </div> */}
         <div className="flex py-20 space-y-12 flex-wrap bg-[#EBECED]">
           <div></div>
           <div className=" flex items-center  flex-col c space-y-7 w-1/3 ">

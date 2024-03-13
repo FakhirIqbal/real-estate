@@ -4,6 +4,7 @@ import Header from "@/components/header";
 import Button from "@/components/Button";
 
 function Page() {
+
   return (
     <main>
       <Header />
