@@ -11,9 +11,6 @@ import { IoMdSearch } from "react-icons/io";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
-import MOVE1 from "../out/img1.jpg";
-import MOVE2 from "../out/img2.jpg";
-import RECENT from "../out/recentsales.jpg";
 import Head from "next/head";
 export default function Home() {
 
@@ -192,7 +189,7 @@ export default function Home() {
               data-aos-delay="300"
             >
               <Image
-                src={MOVE1}
+                src={"./img1.jpg"}
                 sizes={"100vw"}
                 width={0}
                 height={0}
@@ -206,7 +203,7 @@ export default function Home() {
               data-aos-delay="300"
             >
               <Image
-                src={MOVE2}
+                src={"./img2.jpg"}
                 sizes={"100vw"}
                 width={0}
                 height={0}
@@ -502,7 +499,7 @@ export default function Home() {
             >
               <Image
                 className={"w-[551px] h-[473px]"}
-                src={RECENT}
+                src={"./recentsales.jpg"}
                 sizes={"100vw"}
                 width={0}
                 height={0}
