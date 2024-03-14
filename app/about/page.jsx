@@ -2,11 +2,17 @@ import React from "react";
 import Image from "next/image";
 import Header from "@/components/header";
 import Button from "@/components/Button";
+import Head from "next/head";
 
 function Page() {
 
   return (
     <main>
+    <Head
+        title="Jessica Bansal Real Estate"
+        description="Jessica Bansal Real Estate"
+        keywords="Jessica Bansal Real Estate"
+    />
       <Header />
       <div className="bg-[#ebeced]">
         <div className=" grid grid-cols-2  items-center py-20">

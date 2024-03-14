@@ -21,8 +21,8 @@ function Page() {
           features 9 Bedrooms, 10 baths & 3 Kitchens. The top floor has 9 ft
           ceilings, 4 Beds (all with private baths) and a laundry room. Master
           Bed comes with his/her sinks, soaker tub, custom shower with body
-          jets. Open concept main floor is an entertainer's paradise with a 10'
-          ceiling, glass stairs, security surveillance, speaker system,
+          jets. Open concept main floor is an entertainer&#39;s paradise with a
+          10&#39; ceiling, glass stairs, security surveillance, speaker system,
           engineered hardwood flooring, radiant heating, A/C, HRV & built-in
           vacuum. Fisher & Paykel appliances in the kitchen. Large sized WOK
           kitchen. Mudroom with extra storage for added convenience. Flex room
@@ -276,13 +276,13 @@ function Page() {
           </div>
           <Image
             src={PRODUCT}
-              className="w-full h-[500px] p-1  cursor-pointer "
-              width={0}
-              height={0}
-              sizes={"100vw"}
-              alt=""
+            className="w-full h-[500px] p-1  cursor-pointer "
+            width={0}
+            height={0}
+            sizes={"100vw"}
+            alt=""
           />
-          <div className='font-light text-sm py-12 flex flex-col space-y-4'>
+          <div className="font-light text-sm py-12 flex flex-col space-y-4">
             <p>List price $799,800. MacDonald Realty Westmar</p>
             <p>Jessica Bansal buyer $763,500 sell price. April 2023.</p>
           </div>

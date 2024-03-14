@@ -13,11 +13,11 @@ export default function App() {
         outerScale={5}
         clickables={[
           "a",
-          'input[type="text"]',
-          'input[type="email"]',
-          'input[type="number"]',
-          'input[type="submit"]',
-          'input[type="image"]',
+          "input[type='text']",
+          "input[type='email']",
+          "input[type='number']",
+          "input[type='submit']",
+          "input[type='image']",
           "label[for]",
           "select",
           "textarea",

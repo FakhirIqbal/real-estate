@@ -14,7 +14,15 @@ import "slick-carousel/slick/slick.css";
 import MOVE1 from "../out/img1.jpg";
 import MOVE2 from "../out/img2.jpg";
 import RECENT from "../out/recentsales.jpg";
+import Head from "next/head";
 export default function Home() {
+
+  const handleClick = () => {
+    window.scrollTo({
+      top: 660,
+      behavior: "smooth",
+    });
+  }
   const texts = useMemo(
     () => [
       {
@@ -78,6 +86,11 @@ export default function Home() {
   };
   return (
     <main>
+    <Head
+        title="Jessica Bansal Real Estate"
+        description="Jessica Bansal Real Estate"
+        keywords="Jessica Bansal Real Estate"
+    />
       <div className={"relative  "}>
         <div className={" w-full "}>
           <div
@@ -85,10 +98,10 @@ export default function Home() {
               " relative flex flex-col justify-center p-20 h-screen     items-center    w-full   "
             }
           >
-            <div className="absolute top-0 left-0 w-full h-screen overflow-hidden z-10">
+            <div className="absolute top-0 left-0 w-full  h-screen overflow-hidden z-10">
               <video
                 ref={videoRef}
-                className="object-cover w-full h-full"
+                className="object-cover w-full h-full "
                 loop
                 muted
                 autoPlay
@@ -107,7 +120,7 @@ export default function Home() {
             <div className="w-full flex flex-col justify-between h-[90%] z-10">
               <div
                 className={
-                  "flex justify-between   items-center text-xl text-white space-y-6 "
+                  "flex justify-between nav  items-center text-xl text-white  xl:space-y-6  "
                 }
               >
                 <div className="flex  cursor-pointer gap-10 items-center">
@@ -141,17 +154,18 @@ export default function Home() {
                 </div>
                 <Button>Contact</Button>
               </div>
-              <div className="flex items-center justify-between !text-white">
-                <div className="rounded-full flex justify-center items-center w-12 h-12 text-white border-2 border-white">
-                  <div>
-                    <FaArrowDown />
+              <div className="flex  items-center justify-between !text-white">
+                <div  onClick={handleClick} className="rounded-full cursor-pointer  flex justify-center items-center w-12 h-12 text-white border-2 border-white">
+                  <div className="">
+                   
+                      <FaArrowDown />
                   </div>
                 </div>
                 <div className="text-end   font-cardo">
-                  <p className="text-xl font-semibold">
+                  <p className="xl:text-xl font-semibold">
                     TOP VANCOUVER REALTOR, JESSICA BANSAL
                   </p>
-                  <h1 className="font-semibold my-3 text-5xl  font-cardo">
+                  <h1 className="font-semibold my-3 text-[40px] xl:text-5xl  font-cardo">
                     COMMITTED TO YOUR FUTURE
                   </h1>
                   <p className="text-xl  italic  font-cardo">
@@ -317,15 +331,17 @@ export default function Home() {
               fixedWidth={270}
             />
           </div>
-          <h1 className="text-4xl my-4 font-">Start Your Home Search</h1>
-          <div className="flex">
-            <input
-              type="text"
-              placeholder="New Westminster"
-              className="text-sm border border-black w-[90%] py-2 px-4 rounded-[4px] "
-            />
-            <div className="bg-green cursor-pointer w-20 flex items-center justify-center rounded-[4px]">
-              <IoMdSearch size={30} color="white" />
+          <div className="mx-16 2xl:mx-0">
+            <h1 className="text-4xl my-4 font-">Start Your Home Search</h1>
+            <div className="flex">
+              <input
+                type="text"
+                placeholder="New Westminster"
+                className="text-sm border border-black w-[90%] py-2 px-4 rounded-[4px] "
+              />
+              <div className="bg-green cursor-pointer w-20 flex items-center justify-center rounded-[4px]">
+                <IoMdSearch size={30} color="white" />
+              </div>
             </div>
           </div>
         </div>
@@ -334,7 +350,29 @@ export default function Home() {
       {/* blog section */}
       <div className="bg-[#ebeced]">
         <div className="max-w-screen-xl flex justify-center gap-20  mx-auto py-40">
-          {[400, 500, 600].map((items, index) => (
+          {[
+            {
+              img: "/buy.jpg",
+              title: "Buyer Representation",
+              description:
+                "Finding the right house is first of many steps to home buying. I will support you through each stage of the planning process by providing timely advice and recommendations tailored to your needs. Youre in good hands.",
+              button: "BUY WITH JESSICA",
+            },
+            {
+              img: "/sell.jpg",
+              title: "Selling Your Home",
+              description:
+                "What's the secret to successfully selling your home? The details. My proven sales approach, effective marketing, extensive network, and pro negotiation skills ensures you get the most money for your home.",
+              button: "SELL WITH JESSICA",
+            },
+            {
+              img: "/buysell.jpg",
+              title: "Home Evaluation",
+              description:
+                "Thinking of selling? Get started with a complimentary, no obligation, Comparative Market Analysis (CMA). This report will provide all the data you need when comparing your home to similar properties on the market.",
+              button: "START NOW",
+            },
+          ].map((items, index) => (
             <div
               // data-aos="fade-up"
               // data-aos-anchor-placement="top-bottom"
@@ -344,24 +382,22 @@ export default function Home() {
               className="space-y-6 max-w-[250px]"
             >
               <Image
-                className={"w-full"}
-                src={"/download.jpg"}
+                className={"w-full !h-[375px]"}
+                src={items.img}
                 sizes={"100vw"}
-                width={0}
-                height={0}
+                width={250}
+                height={375}
                 alt={"image"}
+                layout="responsive"
               />
               <h1 className="text-2xl  font-medium font-cardo">
-                Buyer Representation
+                {items.title}
               </h1>
               <p className="text-sm leading-6 text-gray-600">
-                Finding the right house is first of many steps to home buying. I
-                will support you through each stage of the planning process by
-                providing timely advice and recommendations tailored to your
-                needs. Youre in good hands.
+                {items.description}
               </p>
-              <Button className={"!py-1 !px-2 text-[12px] "}>
-                BUY WITH JESSICA
+              <Button className={"!py-2 !px-4 text-[12px] "}>
+                {items.button}
               </Button>
             </div>
           ))}

@@ -9,7 +9,8 @@ const PureCounter = dynamic(() => import("@srexi/purecounterjs"), {
   ssr: false,
 });
 import "aos/dist/aos.css";
-import 'animate.css';
+import "animate.css";
+import Head from "next/head";
 
 // import PureCounter from "@srexi/purecounterjs";
 // const pure = new PureCounter();
@@ -30,12 +31,12 @@ export default function RootLayout({ children }) {
   useEffect(() => {
     AOS.init({
       // Global settings:
-      disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+      disable: false, // accepts following values: "phone", "tablet", "mobile", boolean, expression or function
       startEvent: "DOMContentLoaded", // name of the event dispatched on the document, that AOS should initialize on
       initClassName: "aos-init", // class applied after initialization
       animatedClassName: "aos-animate", // class applied on animation
       useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
-      disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+      disableMutationObserver: false, // disables automatic mutations" detections (advanced)
       debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
       throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
 
@@ -49,7 +50,7 @@ export default function RootLayout({ children }) {
       anchorPlacement: "top-bottom", // defines which position of the element regarding to window should trigger the animation
     });
     new PureCounter({
-      // Setting that can't' be overriden on pre-element
+      // Setting that can"t" be overriden on pre-element
       selector: ".purecounter", // HTML query selector for spesific element
       // Settings that can be overridden on per-element basis, by `data-purecounter-*` attributes:
       start: 0, // Starting number [uint]
