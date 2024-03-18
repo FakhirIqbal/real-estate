@@ -61,7 +61,7 @@ $polygon: polygon(0 0, 100% 0, 100% 100%, 0 90%); */
   background-repeat: no-repeat;
 }
 .grayimage {
-  background-image: url("/pexels-pixabay-236028.jpg");
+  background-image: url("/gray.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -173,4 +173,13 @@ $polygon: polygon(0 0, 100% 0, 100% 100%, 0 90%); */
 .cool-link:hover::after {
   width: 100%;
   /* //transition: width .3s; */
+}
+.parllax{
+  background-image: url("/video2.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  overflow: hidden; 
+  transition: transform 0.2s ease; 
 }

@@ -4,33 +4,30 @@ import Image from "next/image";
 import Link from "next/link";
 import Dropdown from "@/components/custom_dropdown";
 import Button from "./Button";
+import { GiHamburgerMenu } from "react-icons/gi";
 import { usePathname } from "next/navigation";
 import AnimatedButton from "./ui/animatedButton";
+import { useMediaQuery } from "@react-hook/media-query";
+
 const NavBar = () => {
+  const isScreenSmall = useMediaQuery("(max-width: 640px)");
   const [isNavOpen, setIsNavOpen] = useState(false);
   return (
-    <div
-      className={`    z-40 py-4 w-full  px-4 
-    !font-phoppin bg-white`}
-    >
+    <div className={`${isScreenSmall ? "fixed top-0 left-0 right-0" : ""} z-40 py-4 w-full px-4 !font-phoppin bg-white`}>
       <div className="px-3  flex flex-wrap items-center justify-between">
-        {/* <div className="flex  items-center space-x-8 font-bold  rtl:space-x-reverse">
-          <Link href={"/"} className={"cursor-pointer"}>
-            <Image
-              src={"/eXp Realty - Black-01.svg"}
-              className="w-[80px] "
-              width={0}
-              height={0}
-              sizes={"100vw"}
-              alt="rolodex Logo"
-            />
-          </Link>
-        </div> */}
         <div className={" ml-8 text-center text-whtie font-semibold"}>
-          <h1 className={" uppercase font-cardo "}>Jessica Bansal</h1>
-          <p className="text-[10px] ">REAL ESTATE</p>
+          <Link href={"/"} className={"cursor-pointer"}>
+            <h1 className={" uppercase font-cardo "}>Jessica Bansal</h1>
+            <p className="text-[10px] ">REAL ESTATE</p>
+          </Link>
         </div>
-        <div className={` md:flex items-center gap-6  z-30  ${"hidden"}`} id="">
+        <div>
+          <GiHamburgerMenu
+            className="text-3xl sm:hidden cursor-pointer"
+            onClick={() => setIsNavOpen(!isNavOpen)}
+          />
+        </div>
+        <div className={` md:flex items-center gap-6  z-30  hidden`} id="">
           <div className="flex gap-6 !uppercase items-center space-x-8 text-gray-600 font-medium text-[12px]">
             <Link href={"/"}>
               <p className=" pr-4  hover:opacity-50 transition-all duration-300   ">
@@ -79,6 +76,60 @@ const NavBar = () => {
           </Link>
         </div>
         <div
+          className={`sm:hidden items-center gap-6  z-30 w-full text-center ${
+            isNavOpen ? "block" : "hidden"
+          }`}
+          id=""
+        >
+          <div className="flex flex-col font-bold opacity-80 mt-4 items-center rounded-lg  bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent ">
+            <Link href={"/"}>
+              <p className=" block font-bold cool-link navlink py-2  md:p-0  text-gray-900 rounded  md:hover:bg-transparent md:border-0 md:hover:text-primary ">
+                Home
+              </p>
+            </Link>
+            <Link href={"/about"}>
+              <p className=" block font-bold cool-link navlink py-2  md:p-0 text-gray-900 rounded  md:hover:bg-transparent md:border-0 md:hover:text-primary  ">
+                About
+              </p>
+            </Link>
+            <Link href={"/buy"}>
+              <p className=" block font-bold cool-link navlink py-2  md:p-0 text-gray-900 rounded  md:hover:bg-transparent md:border-0 md:hover:text-primary  ">
+                Buy
+              </p>
+            </Link>
+
+            <Link href={"/sell"}>
+              <p className="  block font-bold cool-link navlink py-2  md:p-0 text-gray-900 rounded  md:hover:bg-transparent md:border-0 md:hover:text-primary  ">
+                Sell
+              </p>
+            </Link>
+            <Link href={"/recent"}>
+              <p className="block font-bold cool-link navlink py-2  md:p-0 text-gray-900 rounded  md:hover:bg-transparent md:border-0 md:hover:text-primary  ">
+                Recent sales
+              </p>
+            </Link>
+            <Link href={"/"}>
+              <p className=" block font-bold cool-link navlink py-2  md:p-0 text-gray-900 rounded  md:hover:bg-transparent md:border-0 md:hover:text-primary  ">
+                Cities
+              </p>
+            </Link>
+            <Link href={"/"}>
+              <p className="   block font-bold cool-link navlink py-2  md:p-0 text-gray-900 rounded  md:hover:bg-transparent md:border-0 md:hover:text-primary ">
+                Home search
+              </p>
+            </Link>
+            <Link href={"/"}>
+              <p className=" block font-bold cool-link navlink py-2  md:p-0 text-gray-900 rounded  md:hover:bg-transparent md:border-0 md:hover:text-primary ">
+                Blog
+              </p>
+            </Link>
+          </div>
+          <Link href={"/contact"}>
+            <Button>Contact</Button>
+          </Link>
+        </div>
+
+        {/* <div
           className={`w-full md:hidden ${isNavOpen ? "block" : "hidden"}`}
           id="navbar-solid-bg"
         >
@@ -121,7 +172,7 @@ const NavBar = () => {
               </p>
             </Link>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

@@ -27,8 +27,8 @@ const Explorecard = ({ items, className, latest, image, index }) => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    nextArrow: <CustomNextArrow />,
-    prevArrow: <CustomPrevArrow />,
+    // nextArrow: <CustomNextArrow />,
+    // prevArrow: <CustomPrevArrow />,
   };
   return (
     <div

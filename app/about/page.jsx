@@ -7,7 +7,7 @@ import Head from "next/head";
 function Page() {
 
   return (
-    <main>
+    <main className="overflow-x-hidden">
     <Head
         title="Jessica Bansal Real Estate"
         description="Jessica Bansal Real Estate"
@@ -15,14 +15,14 @@ function Page() {
     />
       <Header />
       <div className="bg-[#ebeced]">
-        <div className=" grid grid-cols-2  items-center py-20">
-          <div className="w-[45%] ml-auto mr-20 space-y-6">
-            <p className="font-medium">ABOUT JESSICA BANSAL</p>
-            <h1 className="text-4xl font-cardo">
+        <div className="flex flex-col sm:grid grid-cols-2  items-center py-20">
+          <div className=" sm:w-[45%] sm:ml-auto m-6 sm:mr-20 space-y-6 order-2 sm:order-1">
+            <p className="text-center text-xs sm:text-start sm:text-base sm:font-medium">ABOUT JESSICA BANSAL</p>
+            <h1 className="text-2xl sm:text-4xl font-cardo">
               Committed to your future so you can feel confident in your real
               estate decisions.
             </h1>
-            <p className="font-cardo italic text-2xl">
+            <p className="font-cardo italic sm:text-2xl">
               I understand how personal buying and/or selling a home can feel.
               You have unique requirements, desires, and numbers you need to
               hit. You want someone who’s looking out for each and every one of
@@ -30,17 +30,17 @@ function Page() {
             </p>
           </div>
           <div
-            data-aos="fade-in"
-            data-aos-offset="200"
-            data-aos-delay="50"
-            data-aos-duration="1000"
-            data-aos-easing="ease-in-out"
-            data-aos-once="true"
-            className="relative   grayimage h-[80vh]  flex items-center justify-center"
+            // data-aos="fade-in"
+            // data-aos-offset="200"
+            // data-aos-delay="50"
+            // data-aos-duration="1000"
+            // data-aos-easing="ease-in-out"
+            // data-aos-once="true"
+            className="relative grayimage h-[80vh]  flex sm:items-center sm:justify-center order-1 sm:order-2"
           >
             <Image
               src={"/Headshot1.png"}
-              className="w-1/2 !z-50"
+              className="w-[80%] h-[70%] my-auto mx-auto sm:w-1/2 "
               width={0}
               height={0}
               sizes={"100vw"}
@@ -50,7 +50,7 @@ function Page() {
         </div>
       </div>
       <div className="bg-[#f3f3f4]">
-        <div className="max-w-screen-xl animation mx-auto gap-[130px] grid grid-cols-2 py-20">
+        <div className="max-w-screen-xl animation mx-auto gap-[130px] flex flex-col sm:grid grid-cols-2 py-20">
           <div
             data-aos="fade-in"
             data-aos-offset="200"
@@ -61,17 +61,16 @@ function Page() {
             className=""
           >
             <Image
-              src={"/download (10).jpg"}
-              className="w-[80%] ml-auto"
+              src={"/about.jpg"}
+              className="w-[80%] mx-auto sm:ml-auto"
               width={0}
               height={0}
               sizes={"100vw"}
               alt="rolodex Logo"
             />
-            {/* <FadeInOnScroll /> */}
           </div>
-          <div className="flex justify-between flex-col w-[97%] h-full py-4">
-            <div className="space-y-6">
+          <div className="flex justify-between flex-col w-[97%] px-5 sm:px-0 h-full py-4">
+            <div className="space-y-6 text-center sm:text-start">
               <p
                 data-aos="fade-in"
                 data-aos-offset="200"
@@ -101,7 +100,7 @@ function Page() {
                 data-aos-duration="1000"
                 data-aos-easing="ease-in-out"
                 data-aos-once="true"
-                className=" text-[17px]  leading-8  text-[#424242]"
+                className=" text-[17px] text-justify sm:text-start  leading-8  text-[#424242]"
               >
                 Having moved to New Westminster (from Nanaimo) with my family at
                 a young age I have always been an active member in the
@@ -136,7 +135,7 @@ function Page() {
         </div>
       </div>
       <div>
-        <div className=" gap-20 grid grid-cols-3 items-center py-20 pl-20">
+        <div className=" gap-20 flex flex-col sm:grid grid-cols-3 px-5 sm:px-0 items-center py-20 sm:pl-20">
           <div
             data-aos="fade-in"
             data-aos-offset="200"
@@ -144,11 +143,11 @@ function Page() {
             data-aos-duration="1000"
             data-aos-easing="ease-in-out"
             data-aos-once="true"
-            className=" h-[700px] "
+            className=" sm:h-[700px] "
           >
             <Image
-              src={"/download (11).jpg"}
-              className="w-full h-full ml-auto"
+              src={"/about1.jpg"}
+              className="w-screen sm:w-full sm:h-full sm:ml-auto"
               width={0}
               height={0}
               sizes={"100vw"}
@@ -162,16 +161,16 @@ function Page() {
             data-aos-duration="1000"
             data-aos-easing="ease-in-out"
             data-aos-once="true"
-            className="space-y-10 w-[90%]"
+            className="space-y-10 sm:w-[90%]"
           >
             <p className="font-medium text-[#424242] text-[17px]">
               MY APPROACH
             </p>
-            <h1 className="text-4xl font-cardo">
+            <h1 className="text-3xl sm:text-4xl font-cardo">
               Delivering an exceptional experience that exceeds your
               expectations and gets you results
             </h1>
-            <p className="text-xl  leading-8  text-[#424242]">
+            <p className="text-justify sm:text-start text-xl  leading-8  text-[#424242]">
               My relationship-first approach provides you with an individual and
               personal experience tailored to your specific real estate needs.
               You will feel right at home and well taken care of as I provide
@@ -180,8 +179,8 @@ function Page() {
           </div>
           <div className="">
             <Image
-              src={"/download (7).jpg"}
-              className="w-2/3 mt-auto"
+              src={"/about2.jpg"}
+              className="w-screen sm:w-2/3 sm:mt-auto"
               width={0}
               height={0}
               sizes={"100vw"}
@@ -191,7 +190,7 @@ function Page() {
         </div>
       </div>
 
-      <div className="max-w-screen-xl mx-auto gap-40 grid grid-cols-2 items-center py-20">
+      <div className="max-w-screen-xl sm:mx-auto gap-20 px-5 sm:px-0 sm:gap-40 flex flex-col sm:grid grid-cols-2 items-center py-20">
         <div
           data-aos="fade-in"
           data-aos-offset="200"
@@ -202,8 +201,8 @@ function Page() {
           className=""
         >
           <Image
-            src={"/download (8).jpg"}
-            className="w-[90%] ml-auto"
+            src={"/dog.jpg"}
+            className="w-full sm:w-[90%] sm:ml-auto"
             width={0}
             height={0}
             sizes={"100vw"}
@@ -211,16 +210,16 @@ function Page() {
           />
         </div>
         <div
-          data-aos="fade-in"
-          data-aos-offset="200"
-          data-aos-delay="50"
-          data-aos-duration="1000"
-          data-aos-easing="ease-in-out"
-          data-aos-once="true"
-          className="flex flex-col space-y-20  h-full py-4 text-2xl text-[#424242] font-medium"
+          // data-aos="fade-in"
+          // data-aos-offset="200"
+          // data-aos-delay="50"
+          // data-aos-duration="1000"
+          // data-aos-easing="ease-in-out"
+          // data-aos-once="true"
+          className="flex flex-col space-y-10 sm:space-y-20  h-[500px] py-4 text-[#424242] sm:font-medium"
         >
-          <p className="text-6xl font-cardo text-black">QUICK FACTS</p>
-          <div className="space-y-12 tracking-wider text-xl">
+          <p className="text-4xl text-center sm:text-start sm:text-6xl font-cardo text-black">QUICK FACTS</p>
+          <div className="sm:space-y-12 space-y-8 tracking-wider   sm:text-xl">
             <p>EXPLORING THE PARK WITH MY DOG, BO</p>
             <p>HAWAII IS ALWAYS A GOOD IDEA</p>
             <p>DRINKS THREE COFFEES DAILY</p>
@@ -230,9 +229,9 @@ function Page() {
         </div>
       </div>
       <div className="h-screen bg-white op grayimage">
-        <div className="flex flex-col justify-center items-center h-full space-y-16 text-white">
-          <p className="text-xl">KIND WORDS</p>
-          <h1 className="text-5xl text-center font-cardo">
+        <div className="flex flex-col justify-center items-center h-full space-y-16 ">
+          <p className="text-2xl font-semibold sm:font-normal ">KIND WORDS</p>
+          <h1 className="text-2xl italic font-extralight sm:font-normal sm:text-5xl text-center font-cardo">
             As first time home buyers, we couldn’t <br /> imagine a better
             buying experience than <br /> the one that we had with jessica. ts
           </h1>

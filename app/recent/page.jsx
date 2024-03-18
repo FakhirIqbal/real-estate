@@ -1,8 +1,6 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import BG from "../../out/bgrecent.jpg";
-import RECENT from "../../out/recentsales.jpg";
 import Header from "@/components/header";
 import Link from "next/link";
 import ReactPaginate from "react-paginate";
@@ -61,9 +59,9 @@ function Page() {
         <div className="flex py-20 space-y-12 flex-wrap bg-[#EBECED]">
           <div></div>
           <div className=" flex items-center  flex-col c space-y-7 w-1/3 ">
-            <Link href="/recent_product">
+            <Link href="./recent_product">
               <Image
-                src={RECENT}
+                src={"/recentsales.jpg"}
                 className="w-[296px] h-[325px]  cursor-pointer "
                 width={0}
                 height={0}
@@ -80,7 +78,7 @@ function Page() {
           <div className=" flex items-center flex-col space-y-7 w-1/3">
             <Link href="/recent_product">
               <Image
-                src={RECENT}
+                src={"/recentsales.jpg"}
                 className="w-[296px] h-[325px]  "
                 width={0}
                 height={0}
@@ -97,7 +95,7 @@ function Page() {
           <div className=" flex items-center flex-col space-y-7 w-1/3">
             <Link href="/recent_product">
               <Image
-                src={RECENT}
+                src={"/recentsales.jpg"}
                 className="w-[296px] h-[325px]  "
                 width={0}
                 height={0}
@@ -114,7 +112,7 @@ function Page() {
           <div className=" flex items-center  flex-col c space-y-7 w-1/3 ">
             <Link href="/recent_product">
               <Image
-                src={RECENT}
+                src={"/recentsales.jpg"}
                 className="w-[296px] h-[325px]  cursor-pointer "
                 width={0}
                 height={0}
@@ -131,7 +129,7 @@ function Page() {
           <div className=" flex items-center flex-col space-y-7 w-1/3">
             <Link href="/recent_product">
               <Image
-                src={RECENT}
+                src={"/recentsales.jpg"}
                 className="w-[296px] h-[325px]  "
                 width={0}
                 height={0}
@@ -148,7 +146,7 @@ function Page() {
           <div className=" flex items-center flex-col space-y-7 w-1/3">
             <Link href="/recent_product">
               <Image
-                src={RECENT}
+                src={"/recentsales.jpg"}
                 className="w-[296px] h-[325px]  "
                 width={0}
                 height={0}
@@ -165,7 +163,7 @@ function Page() {
           <div className=" flex items-center  flex-col c space-y-7 w-1/3 ">
             <Link href="/recent_product">
               <Image
-                src={RECENT}
+                src={"/recentsales.jpg"}
                 className="w-[296px] h-[325px]  cursor-pointer "
                 width={0}
                 height={0}
@@ -182,7 +180,7 @@ function Page() {
           <div className=" flex items-center flex-col space-y-7 w-1/3">
             <Link href="/recent_product">
               <Image
-                src={RECENT}
+                src={"/recentsales.jpg"}
                 className="w-[296px] h-[325px]  "
                 width={0}
                 height={0}
@@ -199,7 +197,7 @@ function Page() {
           <div className=" flex items-center flex-col space-y-7 w-1/3">
             <Link href="/recent_product">
               <Image
-                src={RECENT}
+                src={"/recentsales.jpg"}
                 className="w-[296px] h-[325px]  "
                 width={0}
                 height={0}
@@ -216,7 +214,7 @@ function Page() {
           <div className=" flex items-center  flex-col c space-y-7 w-1/3 ">
             <Link href="/recent_product">
               <Image
-                src={RECENT}
+                src={"/recentsales.jpg"}
                 className="w-[296px] h-[325px]  cursor-pointer "
                 width={0}
                 height={0}
@@ -233,7 +231,7 @@ function Page() {
           <div className=" flex items-center flex-col space-y-7 w-1/3">
             <Link href="/recent_product">
               <Image
-                src={RECENT}
+                src={"/recentsales.jpg"}
                 className="w-[296px] h-[325px]  "
                 width={0}
                 height={0}
@@ -250,7 +248,7 @@ function Page() {
           <div className=" flex items-center flex-col space-y-7 w-1/3">
             <Link href="/recent_product">
               <Image
-                src={RECENT}
+                src={"/recentsales.jpg"}
                 className="w-[296px] h-[325px]  "
                 width={0}
                 height={0}

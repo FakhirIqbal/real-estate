@@ -1,5 +1,4 @@
 import React from "react";
-import PRODUCT from "../../out/product.png";
 import Image from "next/image";
 
 import Header from "@/components/header";
@@ -34,7 +33,7 @@ function Page() {
         <div>
           <div className="flex space-x-0 flex-wrap justify-center">
             <Image
-              src={PRODUCT}
+              src={'./product.png'}
               className="w-1/3 h-[170px] p-1  cursor-pointer "
               width={0}
               height={0}
