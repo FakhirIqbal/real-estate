@@ -4,10 +4,8 @@ import Image from "next/image";
 import { CiLinkedin } from "react-icons/ci";
 import { BsInstagram } from "react-icons/bs";
 import { TfiEmail } from "react-icons/tfi";
-import { useMediaQuery } from "@react-hook/media-query";
 
 function Footer() {
-  const isScreenSmall = useMediaQuery("(max-width: 375px)");
 
   const images = [
     "footer1.jpg",
