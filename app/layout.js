@@ -3,7 +3,6 @@ import React, { useEffect } from "react";
 import { Cardo, Nunito } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/footer";
-import { trace } from "next/dist/trace";
 import AOS from "aos";
 import dynamic from "next/dynamic";
 const PureCounter = dynamic(() => import("@srexi/purecounterjs"), {
