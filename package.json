@@ -9,7 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@react-hook/media-query": "^1.1.1",
     "@srexi/purecounterjs": "^1.5.0",
     "animate.css": "^4.1.1",
     "aos": "^2.3.4",
