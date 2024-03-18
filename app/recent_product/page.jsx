@@ -41,7 +41,7 @@ function Page() {
               alt=""
             />
             <Image
-              src={PRODUCT}
+              src={'./product.png'}
               className="w-1/3 h-[170px] p-1 cursor-pointer "
               width={0}
               height={0}
@@ -49,7 +49,7 @@ function Page() {
               alt=""
             />
             <Image
-              src={PRODUCT}
+              src={'./product.png'}
               className="w-1/3 h-[170px] p-1  cursor-pointer "
               width={0}
               height={0}
@@ -57,7 +57,7 @@ function Page() {
               alt=""
             />
             <Image
-              src={PRODUCT}
+              src={'./product.png'}
               className="w-1/3 h-[170px] p-1  cursor-pointer "
               width={0}
               height={0}
@@ -65,7 +65,7 @@ function Page() {
               alt=""
             />
             <Image
-              src={PRODUCT}
+              src={'./product.png'}
               className="w-1/3 h-[170px] p-1 cursor-pointer "
               width={0}
               height={0}
@@ -73,7 +73,7 @@ function Page() {
               alt=""
             />
             <Image
-              src={PRODUCT}
+              src={'./product.png'}
               className="w-1/3 h-[170px] p-1  cursor-pointer "
               width={0}
               height={0}
@@ -81,7 +81,7 @@ function Page() {
               alt=""
             />
             <Image
-              src={PRODUCT}
+              src={'./product.png'}
               className="w-1/3 h-[170px] p-1  cursor-pointer "
               width={0}
               height={0}
@@ -89,7 +89,7 @@ function Page() {
               alt=""
             />
             <Image
-              src={PRODUCT}
+              src={'./product.png'}
               className="w-1/3 h-[170px] p-1 cursor-pointer "
               width={0}
               height={0}
@@ -97,7 +97,7 @@ function Page() {
               alt=""
             />
             <Image
-              src={PRODUCT}
+              src={'./product.png'}
               className="w-1/3 h-[170px] p-1  cursor-pointer "
               width={0}
               height={0}
@@ -105,7 +105,7 @@ function Page() {
               alt=""
             />
             <Image
-              src={PRODUCT}
+              src={'./product.png'}
               className="w-1/3 h-[170px] p-1  cursor-pointer "
               width={0}
               height={0}
@@ -113,7 +113,7 @@ function Page() {
               alt=""
             />
             <Image
-              src={PRODUCT}
+              src={'./product.png'}
               className="w-1/3 h-[170px] p-1 cursor-pointer "
               width={0}
               height={0}
@@ -121,7 +121,7 @@ function Page() {
               alt=""
             />
             <Image
-              src={PRODUCT}
+              src={'./product.png'}
               className="w-1/3 h-[170px] p-1  cursor-pointer "
               width={0}
               height={0}
@@ -129,7 +129,7 @@ function Page() {
               alt=""
             />
             <Image
-              src={PRODUCT}
+              src={'./product.png'}
               className="w-1/3 h-[170px] p-1  cursor-pointer "
               width={0}
               height={0}
@@ -137,7 +137,7 @@ function Page() {
               alt=""
             />
             <Image
-              src={PRODUCT}
+              src={'./product.png'}
               className="w-1/3 h-[170px] p-1 cursor-pointer "
               width={0}
               height={0}
@@ -145,7 +145,7 @@ function Page() {
               alt=""
             />
             <Image
-              src={PRODUCT}
+              src={'./product.png'}
               className="w-1/3 h-[170px] p-1  cursor-pointer "
               width={0}
               height={0}
@@ -153,7 +153,7 @@ function Page() {
               alt=""
             />
             <Image
-              src={PRODUCT}
+              src={'./product.png'}
               className="w-1/3 h-[170px] p-1  cursor-pointer "
               width={0}
               height={0}
@@ -161,7 +161,7 @@ function Page() {
               alt=""
             />
             <Image
-              src={PRODUCT}
+              src={'./product.png'}
               className="w-1/3 h-[170px] p-1 cursor-pointer "
               width={0}
               height={0}
@@ -169,7 +169,7 @@ function Page() {
               alt=""
             />
             <Image
-              src={PRODUCT}
+              src={'./product.png'}
               className="w-1/3 h-[170px] p-1  cursor-pointer "
               width={0}
               height={0}
@@ -177,7 +177,7 @@ function Page() {
               alt=""
             />
             <Image
-              src={PRODUCT}
+              src={'./product.png'}
               className="w-1/3 h-[170px] p-1  cursor-pointer "
               width={0}
               height={0}
@@ -185,7 +185,7 @@ function Page() {
               alt=""
             />
             <Image
-              src={PRODUCT}
+              src={'./product.png'}
               className="w-1/3 h-[170px] p-1 cursor-pointer "
               width={0}
               height={0}
@@ -193,7 +193,7 @@ function Page() {
               alt=""
             />
             <Image
-              src={PRODUCT}
+              src={'./product.png'}
               className="w-1/3 h-[170px] p-1  cursor-pointer "
               width={0}
               height={0}
@@ -201,7 +201,7 @@ function Page() {
               alt=""
             />
             <Image
-              src={PRODUCT}
+              src={'./product.png'}
               className="w-1/3 h-[170px] p-1  cursor-pointer "
               width={0}
               height={0}
@@ -209,7 +209,7 @@ function Page() {
               alt=""
             />
             <Image
-              src={PRODUCT}
+              src={'./product.png'}
               className="w-1/3 h-[170px] p-1 cursor-pointer "
               width={0}
               height={0}
@@ -217,7 +217,7 @@ function Page() {
               alt=""
             />
             <Image
-              src={PRODUCT}
+              src={'./product.png'}
               className="w-1/3 h-[170px] p-1  cursor-pointer "
               width={0}
               height={0}
@@ -225,7 +225,7 @@ function Page() {
               alt=""
             />
             <Image
-              src={PRODUCT}
+              src={'./product.png'}
               className="w-1/3 h-[170px] p-1  cursor-pointer "
               width={0}
               height={0}
@@ -233,7 +233,7 @@ function Page() {
               alt=""
             />
             <Image
-              src={PRODUCT}
+              src={'./product.png'}
               className="w-1/3 h-[170px] p-1 cursor-pointer "
               width={0}
               height={0}
@@ -241,7 +241,7 @@ function Page() {
               alt=""
             />
             <Image
-              src={PRODUCT}
+              src={'./product.png'}
               className="w-1/3 h-[170px] p-1  cursor-pointer "
               width={0}
               height={0}
@@ -249,7 +249,7 @@ function Page() {
               alt=""
             />
             <Image
-              src={PRODUCT}
+              src={'./product.png'}
               className="w-1/3 h-[170px] p-1  cursor-pointer "
               width={0}
               height={0}
@@ -257,7 +257,7 @@ function Page() {
               alt=""
             />
             <Image
-              src={PRODUCT}
+              src={'./product.png'}
               className="w-1/3 h-[170px] p-1 cursor-pointer "
               width={0}
               height={0}
@@ -265,7 +265,7 @@ function Page() {
               alt=""
             />
             <Image
-              src={PRODUCT}
+              src={'./product.png'}
               className="w-1/3 h-[170px] p-1  cursor-pointer "
               width={0}
               height={0}
@@ -274,7 +274,7 @@ function Page() {
             />
           </div>
           <Image
-            src={PRODUCT}
+            src={'./product.png'}
             className="w-full h-[500px] p-1  cursor-pointer "
             width={0}
             height={0}
