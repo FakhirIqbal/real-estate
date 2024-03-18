@@ -11,7 +11,8 @@ import AnimatedButton from "./ui/animatedButton";
 const NavBar = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
   return (
-    <div className={`fixed top-0 left-0 right-0 z-40 py-4 w-full px-4 !font-phoppin bg-white`}>
+    // fixed top-0 left-0 right-0
+    <div className={` z-40 py-4 w-full px-4 !font-phoppin bg-white`}>
       <div className="px-3  flex flex-wrap items-center justify-between">
         <div className={" ml-8 text-center text-whtie font-semibold"}>
           <Link href={"/"} className={"cursor-pointer"}>
