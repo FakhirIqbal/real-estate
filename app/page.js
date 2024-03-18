@@ -11,7 +11,6 @@ import { IoMdSearch } from "react-icons/io";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
-import Head from "next/head";
 export default function Home() {
   const handleClick = () => {
     window.scrollTo({
