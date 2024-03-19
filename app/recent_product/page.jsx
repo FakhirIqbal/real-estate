@@ -6,16 +6,16 @@ function Page() {
   return (
     <main>
       <Header />
-      <div className="  w-1/2 mx-auto">
+      <div className=" pt-6 sm:pt-0 px-5 sm:px-0 sm:w-1/2 mx-auto">
         <div className="flex flex-col items-center space-y-5 my-20">
           <p className="font-phoppin text-sm">
             RECENTLY SOLD BY JESSICA BANSAL
           </p>
-          <span className="font-cardo font-medium text-4xl">
+          <span className="font-cardo font-medium text-center sm:text-start text-4xl">
             7835 10th Avenue, Burnaby{" "}
           </span>
         </div>
-        <p className="text-sm font-sans py-4 leading-6 text-gray-700">
+        <p className="text-sm text-justify sm:text-start font-sans py-4 leading-6 text-gray-700">
           Welcome to 7835 10th Avenue! This is an Ultra Modern home which
           features 9 Bedrooms, 10 baths & 3 Kitchens. The top floor has 9 ft
           ceilings, 4 Beds (all with private baths) and a laundry room. Master
@@ -31,257 +31,29 @@ function Page() {
           garage with bath.
         </p>
         <div>
-          <div className="flex space-x-0 flex-wrap justify-center">
-            <Image
-              src={'./product.png'}
-              className="w-1/3 h-[170px] p-1  cursor-pointer "
-              width={0}
-              height={0}
-              sizes={"100vw"}
-              alt=""
-            />
-            <Image
-              src={'./product.png'}
-              className="w-1/3 h-[170px] p-1 cursor-pointer "
-              width={0}
-              height={0}
-              sizes={"100vw"}
-              alt=""
-            />
-            <Image
-              src={'./product.png'}
-              className="w-1/3 h-[170px] p-1  cursor-pointer "
-              width={0}
-              height={0}
-              sizes={"100vw"}
-              alt=""
-            />
-            <Image
-              src={'./product.png'}
-              className="w-1/3 h-[170px] p-1  cursor-pointer "
-              width={0}
-              height={0}
-              sizes={"100vw"}
-              alt=""
-            />
-            <Image
-              src={'./product.png'}
-              className="w-1/3 h-[170px] p-1 cursor-pointer "
-              width={0}
-              height={0}
-              sizes={"100vw"}
-              alt=""
-            />
-            <Image
-              src={'./product.png'}
-              className="w-1/3 h-[170px] p-1  cursor-pointer "
-              width={0}
-              height={0}
-              sizes={"100vw"}
-              alt=""
-            />
-            <Image
-              src={'./product.png'}
-              className="w-1/3 h-[170px] p-1  cursor-pointer "
-              width={0}
-              height={0}
-              sizes={"100vw"}
-              alt=""
-            />
-            <Image
-              src={'./product.png'}
-              className="w-1/3 h-[170px] p-1 cursor-pointer "
-              width={0}
-              height={0}
-              sizes={"100vw"}
-              alt=""
-            />
-            <Image
-              src={'./product.png'}
-              className="w-1/3 h-[170px] p-1  cursor-pointer "
-              width={0}
-              height={0}
-              sizes={"100vw"}
-              alt=""
-            />
-            <Image
-              src={'./product.png'}
-              className="w-1/3 h-[170px] p-1  cursor-pointer "
-              width={0}
-              height={0}
-              sizes={"100vw"}
-              alt=""
-            />
-            <Image
-              src={'./product.png'}
-              className="w-1/3 h-[170px] p-1 cursor-pointer "
-              width={0}
-              height={0}
-              sizes={"100vw"}
-              alt=""
-            />
-            <Image
-              src={'./product.png'}
-              className="w-1/3 h-[170px] p-1  cursor-pointer "
-              width={0}
-              height={0}
-              sizes={"100vw"}
-              alt=""
-            />
-            <Image
-              src={'./product.png'}
-              className="w-1/3 h-[170px] p-1  cursor-pointer "
-              width={0}
-              height={0}
-              sizes={"100vw"}
-              alt=""
-            />
-            <Image
-              src={'./product.png'}
-              className="w-1/3 h-[170px] p-1 cursor-pointer "
-              width={0}
-              height={0}
-              sizes={"100vw"}
-              alt=""
-            />
-            <Image
-              src={'./product.png'}
-              className="w-1/3 h-[170px] p-1  cursor-pointer "
-              width={0}
-              height={0}
-              sizes={"100vw"}
-              alt=""
-            />
-            <Image
-              src={'./product.png'}
-              className="w-1/3 h-[170px] p-1  cursor-pointer "
-              width={0}
-              height={0}
-              sizes={"100vw"}
-              alt=""
-            />
-            <Image
-              src={'./product.png'}
-              className="w-1/3 h-[170px] p-1 cursor-pointer "
-              width={0}
-              height={0}
-              sizes={"100vw"}
-              alt=""
-            />
-            <Image
-              src={'./product.png'}
-              className="w-1/3 h-[170px] p-1  cursor-pointer "
-              width={0}
-              height={0}
-              sizes={"100vw"}
-              alt=""
-            />
-            <Image
-              src={'./product.png'}
-              className="w-1/3 h-[170px] p-1  cursor-pointer "
-              width={0}
-              height={0}
-              sizes={"100vw"}
-              alt=""
-            />
-            <Image
-              src={'./product.png'}
-              className="w-1/3 h-[170px] p-1 cursor-pointer "
-              width={0}
-              height={0}
-              sizes={"100vw"}
-              alt=""
-            />
-            <Image
-              src={'./product.png'}
-              className="w-1/3 h-[170px] p-1  cursor-pointer "
-              width={0}
-              height={0}
-              sizes={"100vw"}
-              alt=""
-            />
-            <Image
-              src={'./product.png'}
-              className="w-1/3 h-[170px] p-1  cursor-pointer "
-              width={0}
-              height={0}
-              sizes={"100vw"}
-              alt=""
-            />
-            <Image
-              src={'./product.png'}
-              className="w-1/3 h-[170px] p-1 cursor-pointer "
-              width={0}
-              height={0}
-              sizes={"100vw"}
-              alt=""
-            />
-            <Image
-              src={'./product.png'}
-              className="w-1/3 h-[170px] p-1  cursor-pointer "
-              width={0}
-              height={0}
-              sizes={"100vw"}
-              alt=""
-            />
-            <Image
-              src={'./product.png'}
-              className="w-1/3 h-[170px] p-1  cursor-pointer "
-              width={0}
-              height={0}
-              sizes={"100vw"}
-              alt=""
-            />
-            <Image
-              src={'./product.png'}
-              className="w-1/3 h-[170px] p-1 cursor-pointer "
-              width={0}
-              height={0}
-              sizes={"100vw"}
-              alt=""
-            />
-            <Image
-              src={'./product.png'}
-              className="w-1/3 h-[170px] p-1  cursor-pointer "
-              width={0}
-              height={0}
-              sizes={"100vw"}
-              alt=""
-            />
-            <Image
-              src={'./product.png'}
-              className="w-1/3 h-[170px] p-1  cursor-pointer "
-              width={0}
-              height={0}
-              sizes={"100vw"}
-              alt=""
-            />
-            <Image
-              src={'./product.png'}
-              className="w-1/3 h-[170px] p-1 cursor-pointer "
-              width={0}
-              height={0}
-              sizes={"100vw"}
-              alt=""
-            />
-            <Image
-              src={'./product.png'}
-              className="w-1/3 h-[170px] p-1  cursor-pointer "
-              width={0}
-              height={0}
-              sizes={"100vw"}
-              alt=""
-            />
+          <div className="flex flex-wrap">
+            {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((item, index) => (
+              <div key={index} className="sm:w-1/3 p-1">
+                <Image
+                  src="/product.png"
+                  className=" w-full h-auto cursor-pointer"
+                  width={170}
+                  height={170}
+                  alt=""
+                />
+              </div>
+            ))}
           </div>
+          
           <Image
-            src={'./product.png'}
-            className="w-full h-[500px] p-1  cursor-pointer "
+            src={"./product.png"}
+            className="w-full h-auto sm:h-[500px] p-1  cursor-pointer "
             width={0}
             height={0}
             sizes={"100vw"}
             alt=""
           />
-          <div className="font-light text-sm py-12 flex flex-col space-y-4">
+          <div className="font-light text-center sm:text-start text-sm py-12 flex flex-col space-y-4">
             <p>List price $799,800. MacDonald Realty Westmar</p>
             <p>Jessica Bansal buyer $763,500 sell price. April 2023.</p>
           </div>
