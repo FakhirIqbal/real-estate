@@ -202,7 +202,7 @@ function Page() {
         >
           <Image
             src={"/dog.jpg"}
-            className="w-full sm:w-[90%] sm:ml-auto"
+            className="w-full object-cover h-[400px] sm:h-[550px] sm:w-[90%] sm:ml-auto"
             width={0}
             height={0}
             sizes={"100vw"}
@@ -216,7 +216,7 @@ function Page() {
           // data-aos-duration="1000"
           // data-aos-easing="ease-in-out"
           // data-aos-once="true"
-          className="flex flex-col space-y-10 sm:space-y-20  h-[500px] py-4 text-[#424242] sm:font-medium"
+          className="flex flex-col space-y-10 sm:space-y-20  py-4 text-[#424242] sm:font-medium"
         >
           <p className="text-4xl text-center sm:text-start sm:text-6xl font-cardo text-black">QUICK FACTS</p>
           <div className="sm:space-y-12 space-y-8 tracking-wider   sm:text-xl">
@@ -296,17 +296,17 @@ function Page() {
           </div>
         </div>
       </div> */}
-      <div className="max-w-screen-xl sm:gap-10 sm:mt-40 sm:relative sm:mx-auto sm:grid grid-cols-2">
+      <div className="max-w-screen-xl px-5 sm:px-5  sm:gap-10 sm:mt-40 sm:relative sm:mx-auto sm:grid grid-cols-2">
         <div className=" relative w-full">
           <Image
-            src={"/Section.png"}
-            className="w-fit sm:w-full sm:h-[50vh] sm:mt-auto"
+            src={"/download (3).jpg"}
+            className="w-full h-72 sm:w-full sm:h-[50vh] sm:mt-auto"
             width={0}
             height={0}
             sizes={"100vw"}
             alt="rolodex Logo"
           />
-          <div className="flex flex-col justify-center px-10 py-10 text-center  space-y-3 right-0 sm:absolute top-10 bg-[rgba(235,236,237,1)] ">
+          <div className="flex flex-col justify-center px-10 py-10 text-center  space-y-3 right-0  sm:absolute top-10 bg-[rgba(235,236,237,1)] ">
             <h1 className="text-4xl !font-thin   font-cardo">
               Explore Listings
             </h1>
@@ -315,10 +315,10 @@ function Page() {
             </p>
           </div>
         </div>
-        <div className=" relative w-full mt-[250px]">
+        <div className=" relative w-full mt-5 sm:mt-[250px]">
           <Image
-            src={"/Section.png"}
-            className="w-fit sm:w-full sm:h-[50vh] sm:mt-auto"
+            src={"/recentsales.jpg"}
+            className="w-full h-72 sm:w-full sm:h-[50vh] sm:mt-auto"
             width={0}
             height={0}
             sizes={"100vw"}
@@ -334,14 +334,14 @@ function Page() {
           </div>
         </div>
       </div>
-      <div className="max-w-screen-lg gap-10 relative mx-auto grid grid-cols-2  py-40">
-        <div className="flex flex-col justify-center  h-full space-y-4 ml-auto ">
-          <p className="text-sm">CONTACT</p>
-          <h1 className="text-3xl   font-cardo">
-            Ready to Fulfill Your <br /> Real Estate Dreams?
+      <div className="max-w-screen-lg px-5 sm:px-0 gap-10 relative mx-auto flex flex-col sm:grid grid-cols-2  py-40">
+        <div className="flex flex-col justify-center items-center sm:items-start  h-full space-y-10 sm:space-y-4 ml-auto ">
+          <p className="text-lg sm:text-sm">CONTACT</p>
+          <h1 className="text-3xl  text-center sm:text-start font-cardo">
+            Ready to Fulfill Your <br className="hidden sm:block"  /> Real Estate Dreams?
           </h1>
-          <p className="text-sm">
-            Whether you’re a homebuyer or seller, I can help you navigate <br />
+          <p className="text-lg sm:text-sm">
+            Whether you’re a homebuyer or seller, I can help you navigate <br className="hidden sm:block" />
             successfully through this robust, ever-changing market.
           </p>
         </div>
