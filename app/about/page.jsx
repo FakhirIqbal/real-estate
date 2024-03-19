@@ -238,9 +238,9 @@ function Page() {
           <p className="text-xl">DAVID, NEW WESTMINSTER.</p>
         </div>
       </div>
-      <div className="max-w-screen-xl mx-auto  py-20">
-        <div className="flex flex-col justify-center text-[#424242] h-full space-y-10 w-[70%] text-[20px]">
-          <p className="text-xl">HOW I CAN HELP</p>
+      <div className="max-w-screen-xl mx-auto px-5 sm:px-0 py-20">
+        <div className="flex flex-col justify-center items-center sm:items-start text-[#424242] h-full space-y-10 sm:w-[70%] text-[20px]">
+          <p className="text-lg sm:text-xl">HOW I CAN HELP</p>
           <h1 className="text-3xl !font-thin italic  font-cardo !mt-12">
             Buying your first home
           </h1>
@@ -258,7 +258,7 @@ function Page() {
           </p>
         </div>
       </div>
-      <div className="max-w-screen-xl gap-10 mt-40 relative mx-auto grid grid-cols-2">
+      {/* <div className="max-w-screen-xl gap-10 mt-40 relative mx-auto grid grid-cols-2">
         <div className=" relative w-full">
           <Image
             src={"/Section.png"}
@@ -287,6 +287,44 @@ function Page() {
             alt="rolodex Logo"
           />
           <div className="flex flex-col bg-[rgba(235,236,237,1)] justify-center px-10 py-10 text-center  space-y-3 left-0  absolute bottom-10 ">
+            <h1 className="text-4xl !font-thin   font-cardo">
+              See Recent Sales
+            </h1>
+            <p className="text-sm">
+              Click to browse my latest sales and client results
+            </p>
+          </div>
+        </div>
+      </div> */}
+      <div className="max-w-screen-xl sm:gap-10 sm:mt-40 sm:relative sm:mx-auto sm:grid grid-cols-2">
+        <div className=" relative w-full">
+          <Image
+            src={"/Section.png"}
+            className="w-fit sm:w-full sm:h-[50vh] sm:mt-auto"
+            width={0}
+            height={0}
+            sizes={"100vw"}
+            alt="rolodex Logo"
+          />
+          <div className="flex flex-col justify-center px-10 py-10 text-center  space-y-3 right-0 sm:absolute top-10 bg-[rgba(235,236,237,1)] ">
+            <h1 className="text-4xl !font-thin   font-cardo">
+              Explore Listings
+            </h1>
+            <p className="text-sm">
+              Click to search all homes for sale on the MLS database
+            </p>
+          </div>
+        </div>
+        <div className=" relative w-full mt-[250px]">
+          <Image
+            src={"/Section.png"}
+            className="w-fit sm:w-full sm:h-[50vh] sm:mt-auto"
+            width={0}
+            height={0}
+            sizes={"100vw"}
+            alt="rolodex Logo"
+          />
+          <div className="flex flex-col bg-[rgba(235,236,237,1)] justify-center px-10 py-10 text-center  space-y-3 left-0  sm:absolute bottom-10 ">
             <h1 className="text-4xl !font-thin   font-cardo">
               See Recent Sales
             </h1>
