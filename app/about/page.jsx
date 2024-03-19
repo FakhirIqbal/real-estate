@@ -228,12 +228,12 @@ function Page() {
           </div>
         </div>
       </div>
-      <div className="h-screen bg-white op grayimage">
+      <div className="h-screen bg-white op px-5 sm:px-0 grayimage">
         <div className="flex flex-col justify-center items-center h-full space-y-16 ">
           <p className="text-2xl font-semibold sm:font-normal ">KIND WORDS</p>
           <h1 className="text-2xl italic font-extralight sm:font-normal sm:text-5xl text-center font-cardo">
-            As first time home buyers, we couldn’t <br /> imagine a better
-            buying experience than <br /> the one that we had with jessica. ts
+            As first time home buyers, we couldn’t <br className="hidden sm:block" /> imagine a better
+            buying experience than <br  className="hidden sm:block" /> the one that we had with jessica. ts
           </h1>
           <p className="text-xl">DAVID, NEW WESTMINSTER.</p>
         </div>
