@@ -21,7 +21,7 @@ function Footer() {
         {images.map((item, index) => (
           <div key={index}>
             <Image
-              className={"w-full h-[200px] object-cover"}
+              className={"w-20 h-[200px] sm:w-full object-cover"}
               src={item}
               sizes={"100vw"}
               width={0}
