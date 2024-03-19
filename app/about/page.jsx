@@ -30,12 +30,12 @@ function Page() {
             </p>
           </div>
           <div
-            // data-aos="fade-in"
-            // data-aos-offset="200"
-            // data-aos-delay="50"
-            // data-aos-duration="1000"
-            // data-aos-easing="ease-in-out"
-            // data-aos-once="true"
+            data-aos="fade-in"
+            data-aos-offset="200"
+            data-aos-delay="50"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out"
+            data-aos-once="true"
             className="relative grayimage h-[80vh]  flex sm:items-center sm:justify-center order-1 sm:order-2"
           >
             <Image
@@ -210,12 +210,12 @@ function Page() {
           />
         </div>
         <div
-          // data-aos="fade-in"
-          // data-aos-offset="200"
-          // data-aos-delay="50"
-          // data-aos-duration="1000"
-          // data-aos-easing="ease-in-out"
-          // data-aos-once="true"
+          data-aos="fade-in"
+          data-aos-offset="200"
+          data-aos-delay="50"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out"
+          data-aos-once="true"
           className="flex flex-col space-y-10 sm:space-y-20  py-4 text-[#424242] sm:font-medium"
         >
           <p className="text-4xl text-center sm:text-start sm:text-6xl font-cardo text-black">QUICK FACTS</p>
