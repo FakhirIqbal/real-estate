@@ -50,7 +50,7 @@ function Page() {
         </div>
       </div>
       <div className="bg-[#f3f3f4]">
-        <div className="max-w-screen-xl animation mx-auto gap-[130px] flex flex-col sm:grid grid-cols-2 py-20">
+        <div className="max-w-screen-xl animation mx-auto gap-[130px] flex flex-col items-center sm:grid grid-cols-2 py-20">
           <div
             data-aos="fade-in"
             data-aos-offset="200"
@@ -62,14 +62,14 @@ function Page() {
           >
             <Image
               src={"/about.jpg"}
-              className="w-[80%] mx-auto sm:ml-auto"
+              className="w-80 h-[80%]  mx-auto sm:ml-auto"
               width={0}
               height={0}
               sizes={"100vw"}
               alt="rolodex Logo"
             />
           </div>
-          <div className="flex justify-between flex-col w-[97%] px-5 sm:px-0 h-full py-4">
+          <div className="flex justify-between flex-col w-[97%] px-5 sm:px-0  py-4">
             <div className="space-y-6 text-center sm:text-start">
               <p
                 data-aos="fade-in"
@@ -124,7 +124,7 @@ function Page() {
             >
               <Image
                 src={"/download (9)-removebg-preview.jpg"}
-                className="w-full ml-auto"
+                className="w-full pt-12 ml-auto"
                 width={0}
                 height={0}
                 sizes={"100vw"}
@@ -180,7 +180,7 @@ function Page() {
           <div className="">
             <Image
               src={"/about2.jpg"}
-              className="w-screen sm:w-2/3 sm:mt-auto"
+              className="w-screen sm:w-[85%] sm:mt-auto"
               width={0}
               height={0}
               sizes={"100vw"}
@@ -300,13 +300,13 @@ function Page() {
         <div className=" relative w-full">
           <Image
             src={"/download (3).jpg"}
-            className="w-full h-72 sm:w-full sm:h-[50vh] sm:mt-auto"
+            className="w-full h-72 sm:w-[600px] sm:h-[50vh] sm:mt-auto"
             width={0}
             height={0}
             sizes={"100vw"}
             alt="rolodex Logo"
           />
-          <div className="flex flex-col justify-center px-10 py-10 text-center  space-y-3 right-0  sm:absolute top-10 bg-[rgba(235,236,237,1)] ">
+          <div className="flex flex-col justify-center px-10 py-10 text-center  space-y-3 -right-32  sm:absolute top-10 bg-[rgba(235,236,237,1)] ">
             <h1 className="text-4xl !font-thin   font-cardo">
               Explore Listings
             </h1>
@@ -318,13 +318,13 @@ function Page() {
         <div className=" relative w-full mt-5 sm:mt-[250px]">
           <Image
             src={"/recentsales.jpg"}
-            className="w-full h-72 sm:w-full sm:h-[50vh] sm:mt-auto"
+            className="w-full h-72 sm:w-[600px] sm:h-[50vh] sm:mt-auto"
             width={0}
             height={0}
             sizes={"100vw"}
             alt="rolodex Logo"
           />
-          <div className="flex flex-col bg-[rgba(235,236,237,1)] justify-center px-10 py-10 text-center  space-y-3 left-0  sm:absolute bottom-10 ">
+          <div className="flex flex-col bg-[rgba(235,236,237,1)] justify-center px-10 sm:px-14 py-10 text-center  space-y-3 -left-32  sm:absolute bottom-10 ">
             <h1 className="text-4xl !font-thin   font-cardo">
               See Recent Sales
             </h1>
