@@ -26,11 +26,11 @@ function Page() {
   return (
     <main>
       <Header />
-      <div>
+      <div className="overflow-x-hidden">
         <div className="h-screen bg-white op recentimage">
           <div className="flex flex-col justify-center items-center h-full ">
             <p className="font-phoppin text-md py-5">FEATURED HOMES</p>
-            <span className="font-cardo font-medium text-7xl">
+            <span className="font-cardo font-medium text-center text-6xl px-5 sm:px-0 sm:text-7xl">
               Recent Home Sales
             </span>
           </div>
