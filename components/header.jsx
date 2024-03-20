@@ -28,7 +28,7 @@ const NavBar = () => {
         </div>
         <div className={` md:flex items-center gap-6  z-30  hidden`} id="">
           <div className="flex gap-6 !uppercase items-center space-x-8 text-gray-600 font-medium text-[12px]">
-            <Link href={"/"}>
+            <Link href={"/home"}>
               <p className=" pr-4  hover:opacity-50 transition-all duration-300   ">
                 Home
               </p>
