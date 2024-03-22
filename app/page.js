@@ -2,7 +2,10 @@
 import Button from "@/components/Button";
 import Explorecard from "@/components/cards/explorecard";
 import Header from "@/components/header";
+import Modal from "@/components/modal/formModal";
 import SliderComponent from "@/components/slickslider";
+import Sliderr from "@/components/slider";
+import { TextField, ThemeProvider, createTheme } from "@mui/material";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useMemo, useRef, useState } from "react";
@@ -82,14 +85,62 @@ export default function Home() {
     dots: false,
     infinite: true,
     autoplay: true,
-    slidesToShow: 1, // Default number of items to show
+    slidesToShow: 4, // Default number of items to show
     slidesToScroll: 1,
     // cssEase: "linear",
     swipeToSlide: true,
     speed: 9000,
     autoplaySpeed: 5000,
     arrows: false,
+    responsive: [
+      {
+        breakpoint: 1024, // Large screens
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 768, // Medium screens
+        settings: {
+          slidesToShow: 2,
+          // slidesToScroll: 2,
+        },
+      },
+      {
+        breakpoint: 640, // Small screens
+        settings: {
+          slidesToShow: 2,
+          // slidesToScroll: 2,
+        },
+      },
+      {
+        breakpoint: 480, // Small screens
+        settings: {
+          slidesToShow: 1,
+          // slidesToScroll: 2,
+        },
+      },
+    ],
   };
+
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const handleOpenModal = () => {
+    setModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setModalOpen(false);
+  };
+
+  const theme = createTheme({
+    palette: {
+      primary: {
+        main: "#000", // Change this to your desired border color
+      },
+    },
+  });
+
   return (
     <main className="overflow-x-hidden">
       <div className={"relative  "}>
@@ -136,8 +187,8 @@ export default function Home() {
                     >
                       Jessica Bansal
                     </h1>
-                    <p className="text-[16px] font-semibold !leading-none">
-                      REAL ESTATE
+                    <p className="font-cardo text-[16px] uppercase font-semibold !leading-none">
+                      prec*
                     </p>
                   </div>
 
@@ -270,17 +321,19 @@ export default function Home() {
           }
         >
           <Slider {...settings}>
-            {[2, 4, 5].map((items, index) => (
+            {[
+              "$200M+ TOTAL SALES",
+              "250+ KEYS EXCHANGED",
+              "25 AVERAGE DAYS ON MARKET",
+              "98% SALES TO LIST RATIO",
+              "$200M+ TOTAL SALES",
+              "250+ KEYS EXCHANGED",
+            ].map((items, index) => (
               <div
                 key={index}
-                className="w-full  text-base sm:text-xl text-white font-semibold !flex flex-row items-center px-4 space-x-10 sm:space-x-0 flex-wrap sm:flex-nowrap justify-between"
+                className="text-base sm:text-xl text-white font-semibold "
               >
-                <p>$200M+ TOTAL SALES</p>
-                <p>250+ KEYS EXCHANGED</p>
-                <p>25 AVERAGE DAYS ON MARKET</p>
-                <p>98% SALES TO LIST RATIO</p>
-                <p>$200M+ TOTAL SALES</p>
-                <p>250+ KEYS EXCHANGED</p>
+                {items}
               </div>
             ))}
           </Slider>
@@ -292,11 +345,13 @@ export default function Home() {
           <div className="cols-span-1 flex flex-col items-center px-8 sm:px-0 sm:items-end space-y-6">
             <h1 className="">WHAT’S YOUR GOAL?</h1>
             <hr className="border-t  w-2/3 sm:w-1/2 border-black" />
-            <h1 className="text-sm text-gray-600 text-[12px]">
+            <h1 className="text-sm text-gray-800 sm:text-[13px] transition-colors duration-500 hover:text-gray-400 cursor-pointer tracking-widest">
               BUY MY NEXT HOME
             </h1>
             <hr className="border-t  w-2/3 sm:w-1/2 border-black" />
-            <h1 className="text-sm text-gray-600 text-[12px]">SELL MY HOME</h1>
+            <h1 className="text-sm text-gray-800 sm:text-[13px] transition-colors duration-500 hover:text-gray-400 cursor-pointer tracking-widest ">
+              SELL MY HOME
+            </h1>
             <hr className="border-t  w-2/3 sm:w-1/2 border-black" />
           </div>
           <div className="col-span-2 space-y-6 sm:pl-12 px-8 sm:w-[77%]">
@@ -319,7 +374,13 @@ export default function Home() {
           <h1 className=" text-center px-8 sm:px-0 text-4xl font-cardo">
             Browse Jessica’s Listings
           </h1>
+
           <div className="relative  my-20">
+            {/* <Sliderr 
+  fixedWidth={270}
+  className={"!bg-black"}
+/> */}
+
             <SliderComponent
               data={[1, 3, 4, 5, 6, 67, 7, 8, 9]}
               renderCard={Explorecard}
@@ -333,11 +394,19 @@ export default function Home() {
               Start Your Home Search
             </h1>
             <div className="flex mt-8 sm:mt-0 ">
-              <input
+              {/* <input
                 type="text"
                 placeholder="New Westminster"
                 className="text-sm border border-black w-[90%] py-2 px-4 rounded-[4px] "
-              />
+              /> */}
+              <ThemeProvider theme={theme}>
+                <TextField
+                  fullWidth
+                  id="outlined-basic"
+                  label="New Westminster"
+                  variant="outlined"
+                />
+              </ThemeProvider>
               <div className="bg-green cursor-pointer w-20 flex items-center justify-center rounded-[4px]">
                 <IoMdSearch size={30} color="white" />
               </div>
@@ -455,7 +524,9 @@ export default function Home() {
       <div className="bg-[#ebeced]">
         <div className="max-w-screen-xl  flex flex-col items-center gap-20 mx-auto pt-20 pb-40">
           <div className="text-center">
-            <p className="text-[13px] font-semibold tracking-widest ">YOUR INFORMATION HUB</p>
+            <p className="text-[13px] font-semibold tracking-widest ">
+              YOUR INFORMATION HUB
+            </p>
             <h1 className="font-medium mt-5 sm:mt-10 px-5 sm:px-0 text-4xl font-cardo">
               Real Estate Resources For <br /> Buyers and Sellers
             </h1>
@@ -525,12 +596,14 @@ export default function Home() {
       </div>
       <div className="max-w-screen-xl flex flex-col sm:grid grid-cols-2 items-center gap-20 mx-auto pt-20 pb-40">
         <div
-          // data-aos="fade-right"
-          // data-aos-duration="500"
-          // data-aos-anchor-placement="top-bottom"
+        // data-aos="fade-right"
+        // data-aos-duration="500"
+        // data-aos-anchor-placement="top-bottom"
         >
           <Image
-            className={"w-2/3 mx-auto sm:mx-0 shadow-2xl sm:w-1/2 sm:ml-auto rounded-xl"}
+            className={
+              "w-2/3 mx-auto sm:mx-0 shadow-2xl sm:w-1/2 sm:ml-auto rounded-xl"
+            }
             src={"/benefits.jpg"}
             sizes={"100vw"}
             width={0}
@@ -549,12 +622,19 @@ export default function Home() {
             breakthrough the real estate market.
           </p>
           <p className="text-[12px] ">PLUS! ILL TELL YOU WHAT NOT TO DO</p>
-          <input
+          {/* <input
             type="text"
             placeholder="Email"
             className="text-sm border w-2/3 border-black  py-3 px-4 rounded-sm "
-          />
-          <Button className={"!px-10 w-2/3 bg-black"}>DOWNLOAD NOW</Button>
+          /> */}
+          {/* <Button className={"!px-10 w-2/3 font-bold !bg-black"}>DOWNLOAD NOW</Button> */}
+          <Button
+            className={"!px-10 w-2/3 font-bold !bg-black "}
+            onClick={handleOpenModal}
+          >
+            DOWNLOAD NOW
+          </Button>
+          <Modal isOpen={modalOpen} onClose={handleCloseModal} />
         </div>
       </div>
     </main>

@@ -80,7 +80,7 @@ const NavBar = () => {
           }`}
           id=""
         >
-          <div className="flex flex-col font-bold opacity-80 mt-4 items-center rounded-lg  bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent ">
+          <div className="flex flex-col font-bold opacity-80 mt-4 items-center rounded-lg !uppercase bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent ">
             <Link href={"/"}>
               <p className=" block font-bold cool-link navlink py-2  md:p-0  text-gray-900 rounded  md:hover:bg-transparent md:border-0 md:hover:text-primary ">
                 Home

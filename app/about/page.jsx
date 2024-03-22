@@ -1,23 +1,72 @@
-import React from "react";
+"use client";
+import React, { useEffect } from "react";
 import Image from "next/image";
 import Header from "@/components/header";
 import Button from "@/components/Button";
 import Head from "next/head";
+import Link from "next/link";
 
 function Page() {
+  // useEffect(() => {
+  //   const text = "Buying your first home"; // Text to be typed
+  //   const placeholder = document.getElementById('typewriter-placeholder');
+
+  //   let index = 0;
+  //   let typingInterval = null;
+
+  //   const startTyping = () => {
+  //     typingInterval = setInterval(() => {
+  //       if (index < text.length) {
+  //         placeholder.textContent += text.charAt(index);
+  //         index++;
+  //       } else {
+  //         clearInterval(typingInterval);
+  //         setTimeout(() => {
+  //           const deleteInterval = setInterval(() => {
+  //             if (placeholder.textContent.length > 0) {
+  //               placeholder.textContent = placeholder.textContent.slice(0, -1);
+  //             } else {
+  //               clearInterval(deleteInterval);
+  //               // Restart typing after deletion
+  //               setTimeout(() => {
+  //                 index = 0;
+  //                 startTyping(); // Restart typing
+  //               }, 2000); // Delay before restarting typing (2 seconds)
+  //             }
+  //           }, 100); // Deletion speed
+  //         }, 2000); // Delay before starting deletion (2 seconds)
+  //       }
+  //     }, 100); // Typing speed (100 milliseconds per character)
+  //   };
+
+  //   startTyping(); // Start typing initially
+
+  //   const intervalId = setInterval(() => {
+  //     index = 0;
+  //     placeholder.textContent = '';
+  //     startTyping(); // Restart typing after every 2 seconds
+  //   }, 2000); // Restart interval (2 seconds)
+
+  //   return () => {
+  //     clearInterval(intervalId);
+  //     clearInterval(typingInterval);
+  //   };
+  // }, []);
 
   return (
     <main className="overflow-x-hidden">
-    <Head
+      <Head
         title="Jessica Bansal Real Estate"
         description="Jessica Bansal Real Estate"
         keywords="Jessica Bansal Real Estate"
-    />
+      />
       <Header />
       <div className="bg-[#ebeced]">
         <div className="flex flex-col sm:grid grid-cols-2  items-center py-20">
           <div className=" sm:w-[45%] sm:ml-auto m-6 sm:mr-20 space-y-6 order-2 sm:order-1">
-            <p className="text-center text-xs sm:text-start sm:text-base sm:font-medium">ABOUT JESSICA BANSAL</p>
+            <p className="text-center text-xs sm:text-start sm:text-base sm:font-medium">
+              ABOUT JESSICA BANSAL
+            </p>
             <h1 className="text-2xl sm:text-4xl font-cardo">
               Committed to your future so you can feel confident in your real
               estate decisions.
@@ -113,7 +162,7 @@ function Page() {
               </p>
             </div>
 
-            <div
+            {/* <div
               data-aos="fade-in"
               data-aos-offset="200"
               data-aos-delay="50"
@@ -130,7 +179,7 @@ function Page() {
                 sizes={"100vw"}
                 alt="rolodex Logo"
               />
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
@@ -218,7 +267,9 @@ function Page() {
           data-aos-once="true"
           className="flex flex-col space-y-10 sm:space-y-20  py-4 text-[#424242] sm:font-medium"
         >
-          <p className="text-4xl text-center sm:text-start sm:text-6xl font-cardo text-black">QUICK FACTS</p>
+          <p className="text-4xl text-center sm:text-start sm:text-6xl font-cardo text-black">
+            QUICK FACTS
+          </p>
           <div className="sm:space-y-12 space-y-8 tracking-wider   sm:text-xl">
             <p>EXPLORING THE PARK WITH MY DOG, BO</p>
             <p>HAWAII IS ALWAYS A GOOD IDEA</p>
@@ -232,8 +283,10 @@ function Page() {
         <div className="flex flex-col justify-center items-center h-full space-y-16 ">
           <p className="text-2xl font-semibold sm:font-normal ">KIND WORDS</p>
           <h1 className="text-2xl italic font-extralight sm:font-normal sm:text-5xl text-center font-cardo">
-            As first time home buyers, we couldn’t <br className="hidden sm:block" /> imagine a better
-            buying experience than <br  className="hidden sm:block" /> the one that we had with jessica. ts
+            As first time home buyers, we couldn’t{" "}
+            <br className="hidden sm:block" /> imagine a better buying
+            experience than <br className="hidden sm:block" /> the one that we
+            had with jessica. ts
           </h1>
           <p className="text-xl">DAVID, NEW WESTMINSTER.</p>
         </div>
@@ -244,6 +297,7 @@ function Page() {
           <h1 className="text-3xl !font-thin italic  font-cardo !mt-12">
             Buying your first home
           </h1>
+
           <p>
             Everyone has a story, and each one fascinates me. As your Realtor I
             get to be part of one of your most life changing chapters. Over the
@@ -325,12 +379,16 @@ function Page() {
             alt="rolodex Logo"
           />
           <div className="flex flex-col bg-[rgba(235,236,237,1)] justify-center px-10 sm:px-14 py-10 text-center  space-y-3 -left-32  sm:absolute bottom-10 ">
-            <h1 className="text-4xl !font-thin   font-cardo">
-              See Recent Sales
-            </h1>
-            <p className="text-sm">
-              Click to browse my latest sales and client results
-            </p>
+            <Link href={"/recent"}>
+              <h1 className="text-4xl !font-thin   font-cardo">
+                See Recent Sales
+              </h1>
+            </Link>
+            <Link href={"/recent"}>
+              <p className="text-sm">
+                Click to browse my latest sales and client results
+              </p>
+            </Link>
           </div>
         </div>
       </div>
@@ -338,10 +396,12 @@ function Page() {
         <div className="flex flex-col justify-center items-center sm:items-start  h-full space-y-10 sm:space-y-4 ml-auto ">
           <p className="text-lg sm:text-sm">CONTACT</p>
           <h1 className="text-3xl  text-center sm:text-start font-cardo">
-            Ready to Fulfill Your <br className="hidden sm:block"  /> Real Estate Dreams?
+            Ready to Fulfill Your <br className="hidden sm:block" /> Real Estate
+            Dreams?
           </h1>
           <p className="text-lg sm:text-sm">
-            Whether you’re a homebuyer or seller, I can help you navigate <br className="hidden sm:block" />
+            Whether you’re a homebuyer or seller, I can help you navigate{" "}
+            <br className="hidden sm:block" />
             successfully through this robust, ever-changing market.
           </p>
         </div>
