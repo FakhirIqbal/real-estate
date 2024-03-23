@@ -146,9 +146,9 @@ const SliderComponent = ({ renderCard, className, data }) => {
       </Slider> */}
       <Slider {...settingsCard}>
       {listing.map((item, index) => (
-        <div key={index} className="relative font-noto border-[1px] border-gray-200 rounded-xl">
-          <div className="flex items-center">
+        <div key={index} className="relative font-noto border-[1px] border-gray-200 rounded-t-xl">
            <Explorecard/>
+          {/* <div className="flex items-center"> */}
 
             {/* <Image
               src={item.images}
@@ -157,7 +157,7 @@ const SliderComponent = ({ renderCard, className, data }) => {
               width={400}
               alt={item.title}
             /> */}
-          </div>
+          {/* </div> */}
           <div className="p-4 flex flex-col justify-between leading-normal ">
             <div className="mb-4 font-noto">
               <p className="text-xl line-clamp-2">{item.title}</p>

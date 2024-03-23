@@ -125,7 +125,7 @@ const Explorecard = ({ items, className, latest, image, index }) => {
                   height={0}
                   width={0}
                   sizes={"100vw"}
-                  className="w-full"
+                  className="w-full "
                 />
               </div>
             ))}
