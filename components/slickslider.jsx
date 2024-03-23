@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image";
+import Explorecard from "./cards/explorecard";
 // Custom Previous Arrow Component
 
 const SliderComponent = ({ renderCard, className, data }) => {
@@ -147,13 +148,15 @@ const SliderComponent = ({ renderCard, className, data }) => {
       {listing.map((item, index) => (
         <div key={index} className="relative font-noto border-[1px] border-gray-200 rounded-xl">
           <div className="flex items-center">
-            <Image
+           <Explorecard/>
+
+            {/* <Image
               src={item.images}
               className="w-full rounded-t-xl h-[289px] object-cover"
               height={300}
               width={400}
               alt={item.title}
-            />
+            /> */}
           </div>
           <div className="p-4 flex flex-col justify-between leading-normal ">
             <div className="mb-4 font-noto">
