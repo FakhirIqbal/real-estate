@@ -7,6 +7,33 @@ import ReactPaginate from "react-paginate";
 import { useRouter } from "next/navigation";
 
 function Page() {
+const product = [
+  {
+    image: "/recentsales.jpg",
+    title: "602-618 Carnarvon St, New Westminster",
+  },
+  {
+    image: "/recentsales2.jpg",
+    title: "411 E Eighth Avenue, New Westminster",
+  },
+  {
+    image: "/recentsales3.jpg",
+    title: "602-618 Carnarvon St, New Westminster",
+  },
+  {
+    image: "/recentsales4.jpg",
+    title: "602-618 Carnarvon St, New Westminster",
+  },
+  {
+    image: "/recentsales5.jpg",
+    title: "411 E Eighth Avenue, New Westminster",
+  },
+  {
+    image: "/recentsales6.jpg",
+    title: "602-618 Carnarvon St, New Westminster",
+  },
+]
+
   const router = useRouter();
   const [currentPage, setCurrentPage] = React.useState(0);
   const pageCount = 3;
@@ -37,13 +64,13 @@ function Page() {
         </div>
 
         <div className="bg-[#EBECED] py-16 mx-0 flex flex-col space-y-8 sm:space-y-0 sm:grid  grid-cols-3 sm:gap-7 ">
-          {[1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 2, 3, 4, 5, 6].map(
+          {product.map(
             (product, index) => (
               <div key={index} className="flex flex-col items-center space-y-7">
                 <Link href="/recent_product">
                   <Image
-                    src="/recentsales.jpg"
-                    className="w-[296px] h-[325px]"
+                    src={product.image}
+                    className="w-[296px] h-[325px] object-cover"
                     width={296}
                     height={325}
                     alt=""
@@ -51,7 +78,7 @@ function Page() {
                 </Link>
                 <Link href="/recent_product">
                   <span className="text-3xl font-cardo w-[296px] cursor-pointer hover:underline hover:underline-offset-4 hover:text-orange-950 inline-block">
-                    602-618 Carnarvon St, New Westminster
+                    {product.title}
                   </span>
                 </Link>
               </div>

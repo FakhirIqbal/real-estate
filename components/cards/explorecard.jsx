@@ -26,7 +26,7 @@ const Explorecard = ({ items, className, latest, image, index }) => {
   console.log("items", items);
   const listing = [
     {
-      images:"/list1.jpg",
+      images: "/list1.jpg",
       title: "362 Christina Place Skidegate/Sandspit",
       price: "$709,000",
       address: "Metropolis, Superstate",
@@ -34,7 +34,7 @@ const Explorecard = ({ items, className, latest, image, index }) => {
       type: "Condo",
     },
     {
-      images:"/list2.jpg",
+      images: "/list2.jpg",
 
       title: "7835 10th Avenue, Burnaby ",
       price: "$780,000",
@@ -43,7 +43,7 @@ const Explorecard = ({ items, className, latest, image, index }) => {
       type: "Condo",
     },
     {
-      images:"/list3.jpg",
+      images: "/list3.jpg",
 
       title: "411 E Eighth Avenue, New Westminster",
       price: "$89,000",
@@ -52,7 +52,7 @@ const Explorecard = ({ items, className, latest, image, index }) => {
       type: "Condo",
     },
     {
-      images:"/list4.jpg",
+      images: "/list4.jpg",
 
       title: "602-618  Carnarvon St, New Westminster ",
       price: "$859,000",
@@ -61,7 +61,7 @@ const Explorecard = ({ items, className, latest, image, index }) => {
       type: "Condo",
     },
     {
-      images:"/list5.jpg",
+      images: "/list5.jpg",
 
       title: "362 Christina Place Skidegate/Sandspit",
       price: "$710,000",
@@ -70,7 +70,7 @@ const Explorecard = ({ items, className, latest, image, index }) => {
       type: "Condo",
     },
     {
-      images:"/list6.jpg",
+      images: "/list6.jpg",
 
       title: "411 E Eighth Avenue, New Westminster",
       price: "$910,000",
@@ -79,7 +79,7 @@ const Explorecard = ({ items, className, latest, image, index }) => {
       type: "Condo",
     },
     {
-      images:"/list7.jpg",
+      images: "/list7.jpg",
 
       title: "602-618  Carnarvon St, New Westminster",
       price: "$289,000",
@@ -125,23 +125,23 @@ const Explorecard = ({ items, className, latest, image, index }) => {
                   height={0}
                   width={0}
                   sizes={"100vw"}
-                  className="w-full"
+                  className="w-full "
                 />
               </div>
             ))}
-          </Slider>
+        </Slider>
         </div>
-        <div className="col-span-6   p-4 flex flex-col justify-between leading-normal">
+        {/* <div className="col-span-6   p-4 flex flex-col justify-between leading-normal">
           <div className="mb-4 font-noto">
-            {/* <p>{newsDetail?.title}</p> */}
-            {/* <h1 className="text-gray-900 font-bold !line-clamp-1 text-sm md:text-lg mb-2 break-all">
+            <p>{newsDetail?.title}</p>
+            <h1 className="text-gray-900 font-bold !line-clamp-1 text-sm md:text-lg mb-2 break-all">
               $709,000
-            </h1> */}
+            </h1>
             <p className="text-[#9691A4] text-xl line-clamp-2">
               362 Christina Place Skidegate/Sandspit
             </p>
           </div>
-          {/* <div className="flex flex-col sm:flex-row items-start  sm:items-center sm:justify-around gap-4">
+          <div className="flex flex-col sm:flex-row items-start  sm:items-center sm:justify-around gap-4">
             <div className="text-sm flex items-center w-full  gap-2 font-noto">
               <div className="flex flex-col gap-2   ">
                 <div className="flex gap-4">
@@ -155,8 +155,8 @@ const Explorecard = ({ items, className, latest, image, index }) => {
                 <p className=" text-lg  ">Metropolis, Superstate,</p>
               </div>
             </div>
-          </div> */}
-        </div>
+          </div>
+        </div> */}
       </div>
     </div>
   );
