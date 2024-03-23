@@ -36,11 +36,14 @@ function Footer() {
               Follow me on Instagram for the latest <br /> listings, market
               trends, and tips for buying <br /> and selling your home.
             </p>
-            <Link href={"https://www.instagram.com/jess.realty?igsh=d2xvaDR3cXBqcWJ3"}>
-
-            <h1 className="text-2xl sm:text-3xl mt-2 font-semibold uppercase hover:opacity-50 transition-all duration-300">
-              @Jess.Realty
-            </h1>
+            <Link
+              href={
+                "https://www.instagram.com/jess.realty?igsh=d2xvaDR3cXBqcWJ3"
+              }
+            >
+              <h1 className="text-2xl sm:text-3xl mt-2 font-semibold uppercase hover:opacity-50 transition-all duration-300">
+                @Jess.Realty
+              </h1>
             </Link>
           </div>
         </div>
@@ -74,6 +77,7 @@ function Footer() {
               </p>
               <div className="flex justify-center sm:justify-start gap-6 items-center !mt-6 cursor-pointer">
                 <Link
+                  className="transition-all duration-300 hover:opacity-50 cursor-pointer"
                   href={
                     "https://www.instagram.com/jess.realty?igsh=d2xvaDR3cXBqcWJ3"
                   }
@@ -83,6 +87,7 @@ function Footer() {
                   <BsInstagram size={20} />{" "}
                 </Link>
                 <Link
+                  className="transition-all duration-300 hover:opacity-50 cursor-pointer"
                   href={
                     "https://www.linkedin.com/in/jessbans?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
                   }
@@ -90,7 +95,11 @@ function Footer() {
                 >
                   <CiLinkedin size={24} />
                 </Link>
-                <Link href={"mailto:bansaljess@gmail.com"} target="_blank">
+                <Link
+                  className="transition-all duration-300 hover:opacity-50 cursor-pointer"
+                  href={"mailto:bansaljess@gmail.com"}
+                  target="_blank"
+                >
                   <TfiEmail size={20} />
                 </Link>
               </div>
@@ -120,7 +129,9 @@ function Footer() {
                   (items, index) => (
                     <div key={index}>
                       <Link
-                        href={items === "Home" ? "/" : `/${items.toLowerCase()}`}
+                        href={
+                          items === "Home" ? "/" : `/${items.toLowerCase()}`
+                        }
                       >
                         <p
                           className="text-sm sm:text-base hover:opacity-50 uppercase  cursor-pointer"
@@ -145,14 +156,14 @@ function Footer() {
               Tell me what you’re looking for, and I’ll make sure you know about
               listings that match your criteria as soon as they hit the market.
             </p>
-            <p className="pb-2 cursor-pointer border-b-2 border-white w-[fit-content] hover:opacity-50  uppercase">
+            <p className="pb-2 cursor-pointer border-b-2 border-white w-[fit-content] hover:opacity-50 transition-all duration-300 uppercase">
               GEt notified
             </p>
           </div>
         </div>
 
         <div className="border-t sm:border-t-0 text-center text-xs sm:mt-20">
-          <div className="text-sm pr-4 py-3  text-white flex justify-end items-center">
+          <div className="text-sm pr-4 py-3  text-white flex justify-end items-center transition-all duration-300 hover:opacity-50 cursor-pointer">
             <p>© 2024 JESSICA BANSAL | All Rights Reserved | Terms of Use </p>
           </div>
         </div>

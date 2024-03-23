@@ -4,7 +4,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image";
 import Explorecard from "./cards/explorecard";
-// Custom Previous Arrow Component
 
 const SliderComponent = ({ renderCard, className, data }) => {
   const listing = [
@@ -72,39 +71,6 @@ const SliderComponent = ({ renderCard, className, data }) => {
     },
   ];
 
-  const settings = {
-    dots: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3, // Default number of items to show
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 2000,
-    swipeToSlide: true,
-    pauseOnHover: true,
-    responsive: [
-      {
-        breakpoint: 1024, // Large screens
-        settings: {
-          slidesToShow: 3,
-        },
-      },
-      {
-        breakpoint: 768, // Medium screens
-        settings: {
-          slidesToShow: 2,
-          // slidesToScroll: 2,
-        },
-      },
-      {
-        breakpoint: 480, // Small screens
-        settings: {
-          slidesToShow: 1,
-          // slidesToScroll: 2,
-        },
-      },
-    ],
-  };
   const settingsCard = {
     speed: 500,
     infinite: true,
@@ -116,28 +82,25 @@ const SliderComponent = ({ renderCard, className, data }) => {
     slidesToScroll: 1,
     responsive: [
       {
-        breakpoint: 1024, // Large screens
+        breakpoint: 1024, 
         settings: {
           slidesToShow: 3,
         },
       },
       {
-        breakpoint: 768, // Medium screens
+        breakpoint: 768, 
         settings: {
           slidesToShow: 2,
-          // slidesToScroll: 2,
         },
       },
       {
-        breakpoint: 480, // Small screens
+        breakpoint: 480, 
         settings: {
           slidesToShow: 1,
-          // slidesToScroll: 2,
         },
       },
     ],
-    // nextArrow: <CustomNextArrow />,
-    // prevArrow: <CustomPrevArrow />,
+
   };
   return (
     <div className="!space-x-4">
@@ -148,16 +111,6 @@ const SliderComponent = ({ renderCard, className, data }) => {
       {listing.map((item, index) => (
         <div key={index} className="relative font-noto border-[1px] border-gray-200 rounded-t-xl">
            <Explorecard/>
-          {/* <div className="flex items-center"> */}
-
-            {/* <Image
-              src={item.images}
-              className="w-full rounded-t-xl h-[289px] object-cover"
-              height={300}
-              width={400}
-              alt={item.title}
-            /> */}
-          {/* </div> */}
           <div className="p-4 flex flex-col justify-between leading-normal ">
             <div className="mb-4 font-noto">
               <p className="text-xl line-clamp-2">{item.title}</p>

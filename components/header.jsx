@@ -17,7 +17,7 @@ const NavBar = () => {
         <div className={" ml-8 text-center text-whtie font-semibold"}>
           <Link href={"/"} className={"cursor-pointer"}>
             <h1 className={" uppercase font-cardo "}>Jessica Bansal</h1>
-            <p className="text-[10px] ">REAL ESTATE</p>
+            <p className="text-[10px] font-semibold tracking-wider">PREC*</p>
           </Link>
         </div>
         <div>

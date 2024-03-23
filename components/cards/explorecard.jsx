@@ -13,7 +13,6 @@ const CustomPrevArrow = ({ onClick }) => (
   </button>
 );
 
-// Custom Next Arrow Component
 const CustomNextArrow = ({ onClick }) => (
   <button
     className="absolute bg-green   text-white right-4 bottom-[40%] transform    rounded-full text-2xl   h-8 w-8 flex items-center justify-center shadow-lg font-bold    "
@@ -24,70 +23,6 @@ const CustomNextArrow = ({ onClick }) => (
 );
 const Explorecard = ({ items, className, latest, image, index }) => {
   console.log("items", items);
-  const listing = [
-    {
-      images: "/list1.jpg",
-      title: "362 Christina Place Skidegate/Sandspit",
-      price: "$709,000",
-      address: "Metropolis, Superstate",
-      id: "#g4353tywe456",
-      type: "Condo",
-    },
-    {
-      images: "/list2.jpg",
-
-      title: "7835 10th Avenue, Burnaby ",
-      price: "$780,000",
-      address: "Metropolis, Superstate",
-      id: "#g4353tywe456",
-      type: "Condo",
-    },
-    {
-      images: "/list3.jpg",
-
-      title: "411 E Eighth Avenue, New Westminster",
-      price: "$89,000",
-      address: "Metropolis, Superstate",
-      id: "#g4353tywe456",
-      type: "Condo",
-    },
-    {
-      images: "/list4.jpg",
-
-      title: "602-618  Carnarvon St, New Westminster ",
-      price: "$859,000",
-      address: "Metropolis, Superstate",
-      id: "#g4353tywe456",
-      type: "Condo",
-    },
-    {
-      images: "/list5.jpg",
-
-      title: "362 Christina Place Skidegate/Sandspit",
-      price: "$710,000",
-      address: "Metropolis, Superstate",
-      id: "#g4353tywe456",
-      type: "Condo",
-    },
-    {
-      images: "/list6.jpg",
-
-      title: "411 E Eighth Avenue, New Westminster",
-      price: "$910,000",
-      address: "Metropolis, Superstate",
-      id: "#g4353tywe456",
-      type: "Condo",
-    },
-    {
-      images: "/list7.jpg",
-
-      title: "602-618  Carnarvon St, New Westminster",
-      price: "$289,000",
-      address: "Metropolis, Superstate",
-      id: "#g4353tywe456",
-      type: "Condo",
-    },
-  ];
 
   const settingsCard = {
     speed: 500,
@@ -103,18 +38,8 @@ const Explorecard = ({ items, className, latest, image, index }) => {
     >
       <div
         target="_blank"
-        className={` w-full   flex flex-col rounded-xl overflow-hidden  border-[1px] border-gray-200  ${className}`}
+        className={` w-full   flex flex-col rounded-xl overflow-hidden    ${className}`}
       >
-        {/* <div className="flex items-center col-span-2">
-          <Image
-            src={"/Link.png"}
-            className="w-full max-h-[300px] h-auto"
-            sizes="100vw"
-            height={0}
-            width={0}
-            alt={"image"}
-          />
-        </div> */}
         <div className="w-full  ">
           <Slider {...settingsCard}>
             {[2, 3, 4].map((image, index) => (
@@ -125,38 +50,12 @@ const Explorecard = ({ items, className, latest, image, index }) => {
                   height={0}
                   width={0}
                   sizes={"100vw"}
-                  className="w-full "
+                  className="w-full rounded-t-xl h-[289px] object-cover"
                 />
               </div>
             ))}
-        </Slider>
+          </Slider>
         </div>
-        {/* <div className="col-span-6   p-4 flex flex-col justify-between leading-normal">
-          <div className="mb-4 font-noto">
-            <p>{newsDetail?.title}</p>
-            <h1 className="text-gray-900 font-bold !line-clamp-1 text-sm md:text-lg mb-2 break-all">
-              $709,000
-            </h1>
-            <p className="text-[#9691A4] text-xl line-clamp-2">
-              362 Christina Place Skidegate/Sandspit
-            </p>
-          </div>
-          <div className="flex flex-col sm:flex-row items-start  sm:items-center sm:justify-around gap-4">
-            <div className="text-sm flex items-center w-full  gap-2 font-noto">
-              <div className="flex flex-col gap-2   ">
-                <div className="flex gap-4">
-                  <div className="flex items-center gap-2">
-                    <p className="text-[#9691A4]">{"#g4353tywe456"}</p>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <p className="text-[#9691A4]">Condo</p>
-                  </div>
-                </div>
-                <p className=" text-lg  ">Metropolis, Superstate,</p>
-              </div>
-            </div>
-          </div>
-        </div> */}
       </div>
     </div>
   );

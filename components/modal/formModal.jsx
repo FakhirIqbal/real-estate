@@ -85,16 +85,16 @@
 
 // export default Modal;
 
-import { useState } from 'react';
-import { IoClose } from 'react-icons/io5';
-import Button from '../Button';
+import { useState } from "react";
+import { IoClose } from "react-icons/io5";
+import Button from "../Button";
 
 const Modal = ({ isOpen, onClose }) => {
   const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    phoneNumber: '',
-    email: '',
+    firstName: "",
+    lastName: "",
+    phoneNumber: "",
+    email: "",
   });
   const [errors, setErrors] = useState({
     firstName: false,
@@ -107,16 +107,16 @@ const Modal = ({ isOpen, onClose }) => {
     const { name, value } = e.target;
     let error = false;
     switch (name) {
-      case 'firstName':
+      case "firstName":
         error = !/^[a-zA-Z]+$/.test(value); // Regex for letters only
         break;
-      case 'lastName':
+      case "lastName":
         error = !/^[a-zA-Z]+$/.test(value); // Regex for letters only
         break;
-      case 'phoneNumber':
+      case "phoneNumber":
         error = !/^\d+$/.test(value); // Regex for digits only
         break;
-      case 'email':
+      case "email":
         error = !/^\S+@\S+\.\S+$/.test(value); // Regex for email format
         break;
       default:
@@ -149,12 +149,12 @@ const Modal = ({ isOpen, onClose }) => {
         email: !/^\S+@\S+\.\S+$/.test(email),
       });
     } else {
-      console.log('Downloading...');
+      console.log("Downloading...");
       setFormData({
-        firstName: '',
-        lastName: '',
-        phoneNumber: '',
-        email: '',
+        firstName: "",
+        lastName: "",
+        phoneNumber: "",
+        email: "",
       });
       onClose();
     }
@@ -176,10 +176,14 @@ const Modal = ({ isOpen, onClose }) => {
               onChange={handleChange}
               placeholder="* First Name"
               className={`input mb-4 focus:outline-none focus:border-green border-2 border-gray-200 rounded-md p-2 ${
-                errors.firstName ? 'border-red-500' : ''
+                errors.firstName ? "border-red-500" : ""
               }`}
             />
-            {errors.firstName && <p className="text-red-500 mb-2">First Name is required and should contain letters only</p>}
+            {errors.firstName && (
+              <p className="text-red-500 mb-2">
+                First Name is required and should contain letters only
+              </p>
+            )}
             <input
               type="text"
               name="lastName"
@@ -187,21 +191,14 @@ const Modal = ({ isOpen, onClose }) => {
               onChange={handleChange}
               placeholder="* Last Name"
               className={`input mb-4 focus:outline-none focus:border-green border-2 border-gray-200 rounded-md p-2 ${
-                errors.lastName ? 'border-red-500' : ''
+                errors.lastName ? "border-red-500" : ""
               }`}
             />
-            {errors.lastName && <p className="text-red-500 mb-2">Last Name is required and should contain letters only</p>}
-            <input
-              type="tel"
-              name="phoneNumber"
-              value={formData.phoneNumber}
-              onChange={handleChange}
-              placeholder="* Phone Number"
-              className={`input mb-4 focus:outline-none focus:border-green border-2 border-gray-200 rounded-md p-2 ${
-                errors.phoneNumber ? 'border-red-500' : ''
-              }`}
-            />
-            {errors.phoneNumber && <p className="text-red-500 mb-2">Phone Number is required and should contain digits only</p>}
+            {errors.lastName && (
+              <p className="text-red-500 mb-2">
+                Last Name is required and should contain letters only
+              </p>
+            )}
             <input
               type="email"
               name="email"
@@ -209,13 +206,35 @@ const Modal = ({ isOpen, onClose }) => {
               onChange={handleChange}
               placeholder="* Email"
               className={`input mb-4 focus:outline-none focus:border-green border-2 border-gray-200 rounded-md p-2 ${
-                errors.email ? 'border-red-500' : ''
+                errors.email ? "border-red-500" : ""
               }`}
             />
-            {errors.email && <p className="text-red-500 mb-2">Email is required and should be in valid format</p>}
+            {errors.email && (
+              <p className="text-red-500 mb-2">
+                Email is required and should be in valid format
+              </p>
+            )}
+            <input
+              type="tel"
+              name="phoneNumber"
+              value={formData.phoneNumber}
+              onChange={handleChange}
+              placeholder="* Phone Number"
+              className={`input mb-4 focus:outline-none focus:border-green border-2 border-gray-200 rounded-md p-2 ${
+                errors.phoneNumber ? "border-red-500" : ""
+              }`}
+            />
+            {errors.phoneNumber && (
+              <p className="text-red-500 mb-2">
+                Phone Number is required and should contain digits only
+              </p>
+            )}
+
             <Button
               className={`!px-10 w-2/3 font-bold !bg-black mx-auto ${
-                Object.values(errors).some((error) => error) ? 'cursor-not-allowed opacity-50' : ''
+                Object.values(errors).some((error) => error)
+                  ? "cursor-not-allowed opacity-50"
+                  : ""
               }`}
               onClick={handleDownload}
               disabled={Object.values(errors).some((error) => error)}

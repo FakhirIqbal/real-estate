@@ -5,53 +5,18 @@ import Header from "@/components/header";
 import Button from "@/components/Button";
 import Head from "next/head";
 import Link from "next/link";
-
+import { useTypewriter, Cursor } from "react-simple-typewriter";
 function Page() {
-  // useEffect(() => {
-  //   const text = "Buying your first home"; // Text to be typed
-  //   const placeholder = document.getElementById('typewriter-placeholder');
+  const [text] = useTypewriter({
+    words: [
+      "Buying your first home",
+      "Selling your home",
+      "Investing in a rental property",
+    ],
+    loop: {},
+    delaySpeed: 5000,
 
-  //   let index = 0;
-  //   let typingInterval = null;
-
-  //   const startTyping = () => {
-  //     typingInterval = setInterval(() => {
-  //       if (index < text.length) {
-  //         placeholder.textContent += text.charAt(index);
-  //         index++;
-  //       } else {
-  //         clearInterval(typingInterval);
-  //         setTimeout(() => {
-  //           const deleteInterval = setInterval(() => {
-  //             if (placeholder.textContent.length > 0) {
-  //               placeholder.textContent = placeholder.textContent.slice(0, -1);
-  //             } else {
-  //               clearInterval(deleteInterval);
-  //               // Restart typing after deletion
-  //               setTimeout(() => {
-  //                 index = 0;
-  //                 startTyping(); // Restart typing
-  //               }, 2000); // Delay before restarting typing (2 seconds)
-  //             }
-  //           }, 100); // Deletion speed
-  //         }, 2000); // Delay before starting deletion (2 seconds)
-  //       }
-  //     }, 100); // Typing speed (100 milliseconds per character)
-  //   };
-
-  //   startTyping(); // Start typing initially
-
-  //   const intervalId = setInterval(() => {
-  //     index = 0;
-  //     placeholder.textContent = '';
-  //     startTyping(); // Restart typing after every 2 seconds
-  //   }, 2000); // Restart interval (2 seconds)
-
-  //   return () => {
-  //     clearInterval(intervalId);
-  //     clearInterval(typingInterval);
-  //   };
-  // }, []);
+  });
 
   return (
     <main className="overflow-x-hidden">
@@ -294,10 +259,9 @@ function Page() {
       <div className="max-w-screen-xl mx-auto px-5 sm:px-0 py-20">
         <div className="flex flex-col justify-center items-center sm:items-start text-[#424242] h-full space-y-10 sm:w-[70%] text-[20px]">
           <p className="text-lg sm:text-xl">HOW I CAN HELP</p>
-          <h1 className="text-3xl !font-thin italic  font-cardo !mt-12">
-            Buying your first home
+          <h1 className="text-3xl font-thin italic font-cardo mt-12">
+            <span>{text}</span> <Cursor />
           </h1>
-
           <p>
             Everyone has a story, and each one fascinates me. As your Realtor I
             get to be part of one of your most life changing chapters. Over the
