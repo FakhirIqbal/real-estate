@@ -74,8 +74,8 @@ const SliderComponent = ({ renderCard, className, data }) => {
   ];
 
   const settingsCard = {
-    prevArrow: false,
-    nextArrow: false,
+    prevArrow: <></>,
+    nextArrow: <></>,
     speed: 500,
     infinite: true,
     autoplay: true,

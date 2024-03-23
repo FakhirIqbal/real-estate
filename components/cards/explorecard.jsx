@@ -26,11 +26,24 @@ const Explorecard = ({ items, className, latest, image, index }) => {
 
   const settingsCard = {
     speed: 500,
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 1000,
+    swipeToSlide: true,
+
     slidesToShow: 1,
     slidesToScroll: 1,
     nextArrow: <CustomNextArrow />,
     prevArrow: <CustomPrevArrow />,
   };
+
+  const images = [
+    "list1 (2).jpg",
+    "list2 (2).jpg",
+    "list4 (2).jpg",
+    "list5 (2).jpg",
+    "list6 (2).jpg",
+  ];
   return (
     <div
       key={index}
@@ -42,10 +55,10 @@ const Explorecard = ({ items, className, latest, image, index }) => {
       >
         <div className="w-full  ">
           <Slider {...settingsCard}>
-            {[2, 3, 4].map((image, index) => (
+            {images.map((image, index) => (
               <div className="w-full" key={index}>
                 <Image
-                  src={"/list1.jpg"}
+                  src={image}
                   alt={"Image"}
                   height={0}
                   width={0}

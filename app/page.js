@@ -331,7 +331,7 @@ export default function Home() {
             ].map((items, index) => (
               <div
                 key={index}
-                className="text-base sm:text-xl text-white font-semibold "
+                className="text-base text-center sm:text-xl text-white font-semibold "
               >
                 {items}
               </div>

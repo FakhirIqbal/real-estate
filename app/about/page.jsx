@@ -317,7 +317,7 @@ function Page() {
       <div className="max-w-screen-xl px-5 sm:px-5  sm:gap-10 sm:mt-40 sm:relative sm:mx-auto sm:grid grid-cols-2">
         <div className=" relative w-full">
           <Image
-            src={"/download (3).jpg"}
+            src={"/explorelistings.jpg"}
             className="w-full h-72 sm:w-[600px] sm:h-[50vh] sm:mt-auto"
             width={0}
             height={0}

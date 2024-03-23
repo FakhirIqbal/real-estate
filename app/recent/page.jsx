@@ -54,10 +54,10 @@ const product = [
     <main>
       <Header />
       <div className="overflow-x-hidden">
-        <div className="h-screen bg-white op recentimage">
-          <div className="flex flex-col justify-center items-center h-full ">
-            <p className="font-phoppin text-md py-5">FEATURED HOMES</p>
-            <span className="font-cardo font-medium text-center text-6xl px-5 sm:px-0 sm:text-7xl">
+        <div className="h-96 bg-white op recentimage">
+          <div className="flex flex-col  justify-center items-center h-full ">
+            <p className="font-phoppin font-semibold text-md py-5" style={{ textShadow: '0 0 5px white' }}>FEATURED HOMES</p>
+            <span className="font-cardo font-medium text-center text-6xl px-5 sm:px-0 sm:text-7xl"  style={{ textShadow: '0 0 5px white' }}>
               Recent Home Sales
             </span>
           </div>
