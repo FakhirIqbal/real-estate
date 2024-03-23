@@ -201,3 +201,6 @@ $polygon: polygon(0 0, 100% 0, 100% 100%, 0 90%); */
   border-right: 2px solid black; /* Blinking cursor effect */
   animation: typing 3s steps(20, end), blink-caret 0.75s step-end infinite;
 }
+/* .slider {
+  
+} */

@@ -540,8 +540,8 @@ export default function Home() {
                 data-aos-delay="600"
               >
                 <Image
-                  className={"w-full sm:h-[473px] h-[322px]"}
-                  src={"/download (3).jpg"}
+                  className={"w-screen sm:w-[551px] sm:h-[473px] h-[322px] object-cover"}
+                  src={"/marketreports.jpg"}
                   sizes={"100vw"}
                   width={0}
                   height={0}

@@ -5,6 +5,29 @@ import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image";
 import Explorecard from "./cards/explorecard";
 
+function SampleNextArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "block", background: "red" }}
+      onClick={onClick}
+    />
+  );
+}
+
+function SamplePrevArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "block", background: "green" }}
+      onClick={onClick}
+    />
+  );
+}
+
+
 const SliderComponent = ({ renderCard, className, data }) => {
   const listing = [
     {
@@ -72,14 +95,18 @@ const SliderComponent = ({ renderCard, className, data }) => {
   ];
 
   const settingsCard = {
+    prevArrow: false,
+    nextArrow: false,
     speed: 500,
     infinite: true,
     autoplay: true,
-    autoplaySpeed: 1000,
+    autoplaySpeed: 2000,
     swipeToSlide: true,
     pauseOnHover: true,
     slidesToShow: 3,
     slidesToScroll: 1,
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
     responsive: [
       {
         breakpoint: 1024, 
@@ -102,12 +129,12 @@ const SliderComponent = ({ renderCard, className, data }) => {
     ],
 
   };
+  {/* <Slider {...settings}>
+    {listing?.map((items, index) => renderCard({ items, index, className }))}
+  </Slider> */}
   return (
-    <div className="!space-x-4">
-      {/* <Slider {...settings}>
-        {listing?.map((items, index) => renderCard({ items, index, className }))}
-      </Slider> */}
-      <Slider {...settingsCard}>
+    <div className="!space-x-4 slider">
+      <Slider className="" {...settingsCard}>
       {listing.map((item, index) => (
         <div key={index} className="relative font-noto border-[1px] border-gray-200 rounded-t-xl">
            <Explorecard/>
