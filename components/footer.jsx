@@ -40,6 +40,7 @@ function Footer() {
               href={
                 "https://www.instagram.com/jess.realty?igsh=d2xvaDR3cXBqcWJ3"
               }
+              aria-label="Instagram page"
             >
               <h1 className="text-2xl sm:text-3xl mt-2 font-semibold uppercase hover:opacity-50 transition-all duration-300">
                 @Jess.Realty
@@ -52,10 +53,16 @@ function Footer() {
         <div className="max-w-screen-lg flex flex-col  sm:grid grid-cols-3 gap-20 items-center  mx-auto w-full py-[120px]">
           <div className=" flex flex-col justify-between items-center">
             <div className={"!mb-6  text-whtie items-center font-semibold"}>
-              <h1 className={"text-2xl uppercase font-cardo "}>
-                Jessica Bansal
-              </h1>
-              <p className="text-sm text-center ">PREC*</p>
+              <Link
+                href={"/"}
+                className={"cursor-pointer"}
+                aria-label="homepage"
+              >
+                <h1 className={"text-2xl uppercase font-cardo "}>
+                  Jessica Bansal
+                </h1>
+                <p className="text-sm text-center ">PREC*</p>
+              </Link>
             </div>
 
             <div className="text-sm sm:text-base text-center sm:text-start font-light sm:font-normal space-y-1">
@@ -81,6 +88,7 @@ function Footer() {
                   href={
                     "https://www.instagram.com/jess.realty?igsh=d2xvaDR3cXBqcWJ3"
                   }
+                  aria-label="Instagram page"
                   target="_blank"
                 >
                   {" "}
@@ -91,6 +99,7 @@ function Footer() {
                   href={
                     "https://www.linkedin.com/in/jessbans?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
                   }
+                  aria-label="Linkedin page"
                   target="_blank"
                 >
                   <CiLinkedin size={24} />
@@ -98,6 +107,7 @@ function Footer() {
                 <Link
                   className="transition-all duration-300 hover:opacity-50 cursor-pointer"
                   href={"mailto:bansaljess@gmail.com"}
+                  aria-label="send mail"
                   target="_blank"
                 >
                   <TfiEmail size={20} />
@@ -113,6 +123,7 @@ function Footer() {
                     <div key={index}>
                       <Link
                         href={item === "Home" ? "/" : `/${item.toLowerCase()}`}
+                        aria-label={`${item} page`}
                       >
                         <p className="hover:opacity-50 text-sm sm:text-base sm:font-medium uppercase cursor-pointer transition-all duration-300">
                           {item}
@@ -132,6 +143,7 @@ function Footer() {
                         href={
                           items === "Home" ? "/" : `/${items.toLowerCase()}`
                         }
+                        aria-label={`${items} page`}
                       >
                         <p
                           className="text-sm sm:text-base hover:opacity-50 uppercase  cursor-pointer"
@@ -163,8 +175,21 @@ function Footer() {
         </div>
 
         <div className="border-t sm:border-t-0 text-center text-xs sm:mt-20">
-          <div className="text-sm pr-4 py-3  text-white flex justify-end items-center transition-all duration-300 hover:opacity-50 cursor-pointer">
-            <p>© 2024 JESSICA BANSAL | All Rights Reserved | Terms of Use </p>
+          <div className="text-sm pr-4 py-3  text-white flex justify-end items-center cursor-pointer">
+            <p>
+              <span className="transition-all duration-300 hover:opacity-50">
+                {" "}
+                © 2024 JESSICA BANSAL
+              </span>{" "}
+              |{" "}
+              <span className="transition-all duration-300 hover:opacity-50">
+                All Rights Reserved
+              </span>{" "}
+              |{" "}
+              <span className="transition-all duration-300 hover:opacity-50">
+                Terms of Use
+              </span>
+            </p>
           </div>
         </div>
       </div>

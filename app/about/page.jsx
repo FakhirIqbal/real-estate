@@ -53,7 +53,7 @@ function Page() {
             className="relative grayimage h-[80vh]  flex sm:items-center sm:justify-center order-1 sm:order-2"
           >
             <Image
-              src={"/Headshot1.png"}
+              src={"/Headshot1.webp"}
               className="w-[80%] h-[70%] my-auto mx-auto sm:w-1/2 "
               width={0}
               height={0}
@@ -343,12 +343,12 @@ function Page() {
             alt="rolodex Logo"
           />
           <div className="flex flex-col bg-[rgba(235,236,237,1)] justify-center px-10 sm:px-14 py-10 text-center  space-y-3 -left-32  sm:absolute bottom-10 ">
-            <Link href={"/recent"}>
+            <Link href={"/recent"} aria-label="recentpage">
               <h1 className="text-4xl !font-thin   font-cardo">
                 See Recent Sales
               </h1>
             </Link>
-            <Link href={"/recent"}>
+            <Link href={"/recent"} aria-label="recentpage">
               <p className="text-sm">
                 Click to browse my latest sales and client results
               </p>

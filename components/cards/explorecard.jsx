@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 const CustomPrevArrow = ({ onClick }) => (
@@ -22,7 +21,7 @@ const CustomNextArrow = ({ onClick }) => (
   </button>
 );
 const Explorecard = ({ items, className, latest, image, index }) => {
-  console.log("items", items);
+  // console.log("items", items);
 
   const settingsCard = {
     speed: 500,
@@ -40,7 +39,7 @@ const Explorecard = ({ items, className, latest, image, index }) => {
   const images = [
     "list1 (2).jpg",
     "list2 (2).jpg",
-    "list4 (2).jpg",
+    "list4 (2).webp",
     "list5 (2).jpg",
     "list6 (2).jpg",
   ];

@@ -67,7 +67,7 @@ const product = [
           {product.map(
             (product, index) => (
               <div key={index} className="flex flex-col items-center space-y-7">
-                <Link href="/recent_product">
+                <Link href="/recent_product" aria-label="productpage">
                   <Image
                     src={product.image}
                     className="w-[296px] h-[325px] object-cover"
@@ -76,7 +76,7 @@ const product = [
                     alt=""
                   />
                 </Link>
-                <Link href="/recent_product">
+                <Link href="/recent_product"  aria-label="productpage">
                   <span className="text-3xl font-cardo w-[296px] cursor-pointer hover:underline hover:underline-offset-4 hover:text-orange-950 inline-block">
                     {product.title}
                   </span>

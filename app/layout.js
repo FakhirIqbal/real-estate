@@ -69,6 +69,13 @@ export default function RootLayout({ children }) {
   }, []);
   return (
     <html lang="en" className={`${Cardos.variable} ${Nunit.variable}`}>
+      <head>
+        <title>Jessica Bansal | PREC*</title>
+        <meta name="description" content="Vancouver Realty" />
+        <link rel="icon" href="./iconj.png" type="image/png" sizes="32x32" />
+    
+
+      </head>
       <body className={(Cardos.className, Nunit.className)}>
         <>
           <style jsx global>{`
@@ -80,6 +87,7 @@ export default function RootLayout({ children }) {
           <div>{children}</div>
           <Footer />
         </>
+        
       </body>
     </html>
   );
