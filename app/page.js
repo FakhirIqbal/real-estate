@@ -5,7 +5,15 @@ import Header from "@/components/header";
 import Modal from "@/components/modal/formModal";
 import SliderComponent from "@/components/slickslider";
 import Sliderr from "@/components/slider";
-import { TextField, ThemeProvider, createTheme } from "@mui/material";
+import {
+  FormControl,
+  InputLabel,
+  MenuItem,
+  Select,
+  TextField,
+  ThemeProvider,
+  createTheme,
+} from "@mui/material";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
@@ -16,6 +24,69 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
 export default function Home() {
+  const [cities, setCities] = useState([]);
+  const API_URL =
+    "https://countriesnow.space/api/v0.1/countries/population/cities";
+
+  const [postalCodes, setPostalCodes] = useState([]);
+  const PostAPI_URL = "https://geocode.xyz/Vancouver+CA?json=1";
+
+  useEffect(() => {
+    const fetchCities = async () => {
+      try {
+        const response = await fetch(API_URL);
+        const data = await response.json();
+        // Filter cities for Vancouver
+        const vancouverCities = data.data.filter(
+          (city) => city.country === "Canada"
+        );
+        setCities(vancouverCities);
+      } catch (error) {
+        console.error("Error fetching cities:", error);
+      }
+    };
+    fetchCities();
+    const fetchPostalCodes = async () => {
+      try {
+        const response = await fetch(PostAPI_URL);
+        const data = await response.json();
+        if (data.error) {
+          console.error("Error fetching postal codes:", data.error);
+        } else {
+          const vancouverPostalCodes = data.postal;
+          setPostalCodes(vancouverPostalCodes);
+          console.log("vancouverPostalCodes", vancouverPostalCodes);
+        }
+      } catch (error) {
+        console.error("Error fetching postal codes:", error);
+      }
+    };
+    fetchPostalCodes();
+  }, []);
+
+  const [subdivision, setSubdivision] = useState("");
+  const [postcode, setPostcode] = useState("");
+  const [city, setCity] = useState("");
+
+  const handleSubdivisionChange = (event) => {
+    setSubdivision(event.target.value);
+  };
+
+  const handlePostcodeChange = (event) => {
+    setPostcode(event.target.value);
+  };
+
+  const handleCityChange = (event) => {
+    setCity(event.target.value);
+  };
+
+  const handleSearch = () => {
+    // Perform search based on selected values
+    console.log("Subdivision:", subdivision);
+    console.log("Postcode:", postcode);
+    console.log("City:", city);
+  };
+
   const handleClick = () => {
     window.scrollTo({
       top: 660,
@@ -423,6 +494,77 @@ export default function Home() {
                 <div className="bg-green cursor-pointer w-20 flex items-center justify-center rounded-[4px]">
                   <IoMdSearch size={30} color="white" />
                 </div>
+              </div>
+              <div className="bg-white shadow-lg p-5 mt-1 rounded">
+                <ThemeProvider theme={theme}>
+                  <FormControl
+                    variant="standard"
+                    sx={{ m: 1, minWidth: "100%" }}
+                  >
+                    <InputLabel id="subdivision-label">Subdivision</InputLabel>
+                    <Select
+                      labelId="subdivision-label"
+                      id="subdivision-select"
+                      value={subdivision}
+                      onChange={handleSubdivisionChange}
+                      label="Subdivision"
+                    >
+                      {/* Subdivision options */}
+                      <MenuItem value="subdivision1">Subdivision 1</MenuItem>
+                      <MenuItem value="subdivision2">Subdivision 2</MenuItem>
+                      <MenuItem value="subdivision3">Subdivision 3</MenuItem>
+                    </Select>
+                  </FormControl>
+                  <FormControl
+                    variant="standard"
+                    sx={{ m: 1, minWidth: "100%" }}
+                  >
+                    <InputLabel id="postcode-label">Postcode</InputLabel>
+                    <Select
+                      labelId="postcode-label"
+                      id="postcode-select"
+                      value={postcode}
+                      onChange={handlePostcodeChange}
+                      label="Postcode"
+                    >
+                      {/* Postcode options */}
+                      {/* {postalCodes.map((code) => (
+                        <MenuItem key={code} value={code}>
+                          {code}
+                        </MenuItem>
+                      ))} */}
+                      {/* <MenuItem value="postcode1">Postcode 1</MenuItem>
+                      <MenuItem value="postcode2">Postcode 2</MenuItem>
+                      <MenuItem value="postcode3">Postcode 3</MenuItem> */}
+                    </Select>
+                  </FormControl>
+                  <FormControl
+                    variant="standard"
+                    sx={{ m: 1, minWidth: "100%" }}
+                  >
+                    <InputLabel id="city-label">City</InputLabel>
+                    <Select
+                      labelId="city-label"
+                      id="city-select"
+                      value={city}
+                      onChange={handleCityChange}
+                      label="City"
+                    >
+                      {/* City options */}
+                      {cities.map((city) => (
+                        <MenuItem key={city.city} value={city.city}>
+                          {city.city}
+                        </MenuItem>
+                      ))}
+                      {/* <MenuItem value="city1">City 1</MenuItem>
+                      <MenuItem value="city2">City 2</MenuItem>
+                      <MenuItem value="city3">City 3</MenuItem> */}
+                    </Select>
+                  </FormControl>
+                  <Button variant="contained" onClick={handleSearch}>
+                    Search
+                  </Button>
+                </ThemeProvider>
               </div>
             </div>
           </div>

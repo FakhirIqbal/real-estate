@@ -118,7 +118,7 @@ function Footer() {
           <div className="mt-5 sm:mt-0 border-t sm:border-t-0 pt-10 sm:pt-0  flex  gap-20 items-center">
             <div className=" flex flex-col justify-between">
               <div className="space-y-3">
-                {["Home", "About", "Resources", "Blog", "Contact"].map(
+                {["Home", "About", "Resources", "Contact"].map(
                   (item, index) => (
                     <div key={index}>
                       <Link

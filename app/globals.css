@@ -69,6 +69,29 @@ $polygon: polygon(0 0, 100% 0, 100% 100%, 0 90%); */
   overflow: hidden;
   transition: transform 0.2s ease;
 }
+.contactimage {
+  background-image: url("/contactbg.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+.resourceimage {
+  background-image: url("/buyerbg.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+/* Added opacity to the background overlay */
+.resourceimage .bg-black {
+  opacity: 0.3;
+}
 .recentimage {
   background-image: url("/recentbg.jpg");
   background-size: cover;

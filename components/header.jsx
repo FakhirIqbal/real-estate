@@ -64,9 +64,9 @@ const NavBar = () => {
                 home <br /> search
               </p>
             </Link>
-            <Link href={"/"} aria-label="blogpage" >  
+            <Link href={"/resource"} aria-label="resources" >  
               <p className=" py-2   hover:opacity-50 transition-all duration-300   ">
-                blog
+                Resources
               </p>
             </Link>
           </div>
@@ -117,9 +117,9 @@ const NavBar = () => {
                 Home search
               </p>
             </Link>
-            <Link href={"/"} aria-label="blog page">
+            <Link href={"/resource"} aria-label="resource page">
               <p className=" block font-bold cool-link navlink py-2  md:p-0 text-gray-900 rounded  md:hover:bg-transparent md:border-0 md:hover:text-primary ">
-                Blog
+                Resources
               </p>
             </Link>
           </div>
