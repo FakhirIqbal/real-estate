@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "@/components/header";
 import Image from "next/image";
+import Button from "@/components/Button";
 
 function Page() {
   return (
@@ -26,12 +27,13 @@ function Page() {
         <div>
           <div className="p-3 flex flex-col space-y-3">
             <Image
+            className="object-cover h-56 w-full" 
               src="/buyerbg.webp"
               alt="Real Estate Guide"
               width={800}
               height={500}
             />
-            <p className="uppercase text-sm">in case you missed it</p>
+            <p className="uppercase text-xs">in case you missed it</p>
             <h2 className="font-cardo text-xl">
               7 Benfits of Hiring a Top Realtor to Sell Your Home
             </h2>
@@ -92,6 +94,22 @@ function Page() {
               </p>
             </div>
           </div>
+        </div>
+      </div>
+      {/* blogsection */}
+      <div className="resourceimage h-[500px] relative p-5">
+        {/* Background Image with Opacity */}
+        <div className="absolute inset-0 bg-white opacity-70 z-0"></div>
+        {/* Text Content */}
+        <div className="flex flex-col justify-center items-center h-full relative z-10">
+        <span className="text-xs">HOME FINDER</span>
+          <span className="font-cardo font-medium text-center text-2xl px-5  ">
+           Get a Custom MLS Feed Sent Straight to Your Inbox
+          </span>
+          <p className="font-cardo  text-xs leading-6 text-center text-gray-700 px-6 py-5 ">
+          Tell me what you’re looking for, and I’ll make sure you know about listings that match your criteria as soon as they hit the market.
+          </p>
+          <Button className={"uppercase bg-transparent border border-black !text-xs !py-4 !px-12 !text-black"} >get notified</Button>
         </div>
       </div>
     </main>
