@@ -8,33 +8,33 @@ function Page() {
   const trusty = [
     {
       name: "Mortgage Broker",
-      image: "/buyerbg.webp",
+      image: "/mortgage.png",
       alt: "Mortgage Broker",
     },
     {
-      name: "Home Inspector",
-      image: "/buyerbg.webp",
-      alt: "Home Inspector",
-    },
-    {
-      name: "Real Estate Lawyer",
-      image: "/buyerbg.webp",
-      alt: "Real Estate Lawyer",
-    },
-    {
-      name: "Home Stager",
-      image: "/buyerbg.webp",
-      alt: "Home Stager",
-    },
-    {
-      name: "Contractor",
-      image: "/buyerbg.webp",
-      alt: "Contractor",
+      name: "Home Inspection",
+      image: "/inspection.png",
+      alt: "Home Inspection",
     },
     {
       name: "Insurance Broker",
-      image: "/buyerbg.webp",
-      alt: "Insurance Broker",
+      image: "/insurance.png",
+      alt: "insurance broker",
+    },
+    {
+      name: "Notary Public",
+      image: "/notary.png",
+      alt: "Home Stager",
+    },
+    {
+      name: "Moving & Storage",
+      image: "/movers.png",
+      alt: "moving and storage",
+    },
+    {
+      name: "Cleaning",
+      image: "/scrubbi.png",
+      alt: "Cleaning",
     },
   ];
   return (
@@ -275,7 +275,7 @@ function Page() {
           {trusty.map((item, index) => (
             <div key={index} className=" flex flex-col space-y-3">
               <Image
-                className="object-cover h-28 w-full sm:h-48"
+                className="object-contain h-28 w-full md:w-64 sm:h-48"
                 src={item.image}
                 alt={item.alt}
                 width={800}
