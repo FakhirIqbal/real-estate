@@ -117,7 +117,7 @@ const NavBar = () => {
                 Home search
               </p>
             </Link>
-            <Link href={"/resource"} aria-label="resource page">
+            <Link href={"/resources"} aria-label="resource page">
               <p className=" block font-bold cool-link navlink py-2  md:p-0 text-gray-900 rounded  md:hover:bg-transparent md:border-0 md:hover:text-primary ">
                 Resources
               </p>
