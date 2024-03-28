@@ -15,7 +15,6 @@ function Page() {
     ],
     loop: {},
     delaySpeed: 5000,
-
   });
 
   return (
@@ -116,35 +115,41 @@ function Page() {
                 data-aos-once="true"
                 className=" text-[17px] text-justify sm:text-start  leading-8  text-[#424242]"
               >
-                Having moved to New Westminster (from Nanaimo) with my family at
-                a young age I have always been an active member in the
-                community. From the New Westminster Boys Softball League to the
-                New Westminster Royals Hockey team, it’s these positive
-                experiences that drive my commitment to give back to my
-                community. Real estate allows me to do this, by helping my
-                clients find their right homes in New Westminster, Burnaby,
-                Coquitlam, Surrey, and Vancouver.
+                From having moved to Burnaby (from Vancouver) with my family at
+                a young age and now having a family of my own, I’m committed to
+                being a positive leader and role model in the community. Real
+                estate allows me to do this, by helping my clients find their
+                right homes in Burnaby, New Westminster, Coquitlam, Surrey, and
+                Vancouver.
               </p>
             </div>
 
-            {/* <div
+            <div
               data-aos="fade-in"
               data-aos-offset="200"
               data-aos-delay="50"
               data-aos-duration="1000"
               data-aos-easing="ease-in-out"
               data-aos-once="true"
-              className="mt-auto"
+              className="mt-auto flex items-center justify-start"
             >
               <Image
-                src={"/download (9)-removebg-preview.jpg"}
-                className="w-full pt-12 ml-auto"
+                src={"/cne.webp"}
+                className="w-1/3  pt-12 ml-auto "
                 width={0}
                 height={0}
                 sizes={"100vw"}
                 alt="rolodex Logo"
               />
-            </div> */}
+              <Image
+                src={"/eXp Realty - Black-01.svg"}
+                className="w-1/3 h-32  pt-12 ml-auto "
+                width={0}
+                height={0}
+                sizes={"100vw"}
+                alt="rolodex Logo"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -235,25 +240,24 @@ function Page() {
           <p className="text-4xl text-center sm:text-start sm:text-6xl font-cardo text-black">
             QUICK FACTS
           </p>
-          <div className="sm:space-y-12 space-y-8 tracking-wider   sm:text-xl">
-            <p>EXPLORING THE PARK WITH MY DOG, BO</p>
-            <p>HAWAII IS ALWAYS A GOOD IDEA</p>
-            <p>DRINKS THREE COFFEES DAILY</p>
+          <div className="sm:space-y-12 space-y-8 tracking-wider   sm:text-xl uppercase">
+            <p>Enjoying the great outdoors</p>
+            <p>HAWAII IS ALWAYS A great IDEA</p>
+            <p>Drinks celery juice every morning</p>
             <p>PET PEEVE? DELAYED TIMELINES</p>
-            <p>DIVING INTO MY READING LIST</p>
+            {/* <p>DIVING INTO MY READING LIST</p> */}
           </div>
         </div>
       </div>
       <div className="h-screen bg-white op px-5 sm:px-0 grayimage">
         <div className="flex flex-col justify-center items-center h-full space-y-16 ">
           <p className="text-2xl font-semibold sm:font-normal ">KIND WORDS</p>
-          <h1 className="text-2xl italic font-extralight sm:font-normal sm:text-5xl text-center font-cardo">
-            As first time home buyers, we couldn’t{" "}
-            <br className="hidden sm:block" /> imagine a better buying
-            experience than <br className="hidden sm:block" /> the one that we
-            had with jessica. ts
+          <h1 className="text-2xl italic font-extralight sm:font-normal sm:text-5xl text-center font-cardo md:w-1/2 leading-10">
+            As seasoned investors, we knew when we chose Jess that we made the
+            right decision. She made the process as seamless as possible and
+            even saved us thousands of dollars
           </h1>
-          <p className="text-xl">DAVID, NEW WESTMINSTER.</p>
+          <p className="text-xl uppercase">Jass - New Westminster </p>
         </div>
       </div>
       <div className="max-w-screen-xl mx-auto px-5 sm:px-0 py-20">
@@ -263,16 +267,16 @@ function Page() {
             <span>{text}</span> <Cursor />
           </h1>
           <p>
-            Everyone has a story, and each one fascinates me. As your Realtor I
+            Everyone has a story, and each one fascinates me. As your Realtor, I
             get to be part of one of your most life changing chapters. Over the
-            last 12+ years I’ve helped numerous clients get on the property
+            last 6+ years I’ve helped numerous clients get on the property
             ladder with their first home and then go on to build their property
             portfolio.
           </p>
           <p>
-            I’ll guide and support you through your real estate journey with the
-            utmost precision while building your knowledge (and confidence) of
-            the home buying and selling process.
+          I’ll guide and support you through your real estate
+            journey with the utmost precision while building your knowledge (and
+            confidence) of the home buying and selling process.
           </p>
         </div>
       </div>

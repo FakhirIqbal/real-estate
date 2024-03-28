@@ -70,7 +70,7 @@ function Page() {
               in case you missed it
             </p>
             <h2 className="font-cardo text-xl sm:text-3xl md:w-2/3">
-              7 Benfits of Hiring a Top Realtor to Sell Your Home
+            8 Secrets for Purchasing a Profitable Investment Property in Vancouver 
             </h2>
           </div>
         </div>
@@ -271,17 +271,17 @@ function Page() {
         <h1 className="font-cardo text-4xl sm:text-6xl md:text-4xl">
           Trusted Professionals
         </h1>
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-12">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-20">
           {trusty.map((item, index) => (
             <div key={index} className=" flex flex-col space-y-3">
               <Image
-                className="object-contain h-28 w-full md:w-64 sm:h-48"
+                className="object-contain h-28 w-full md:w-48 sm:h-48"
                 src={item.image}
                 alt={item.alt}
                 width={800}
                 height={500}
               />
-              <p className="uppercase text-xs sm:text-xl md:text-base">
+              <p className="uppercase text-xs sm:text-xl md:text-xs">
                 {item.name}
               </p>
             </div>

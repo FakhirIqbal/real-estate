@@ -7,32 +7,38 @@ import ReactPaginate from "react-paginate";
 import { useRouter } from "next/navigation";
 
 function Page() {
-const product = [
-  {
-    image: "/recentsales.jpg",
-    title: "602-618 Carnarvon St, New Westminster",
-  },
-  {
-    image: "/recentsales2.jpg",
-    title: "411 E Eighth Avenue, New Westminster",
-  },
-  {
-    image: "/recentsales3.jpg",
-    title: "602-618 Carnarvon St, New Westminster",
-  },
-  {
-    image: "/recentsales4.jpg",
-    title: "602-618 Carnarvon St, New Westminster",
-  },
-  {
-    image: "/recentsales5.jpg",
-    title: "411 E Eighth Avenue, New Westminster",
-  },
-  {
-    image: "/recentsales6.jpg",
-    title: "602-618 Carnarvon St, New Westminster",
-  },
-]
+  const product = [
+    {
+      id: 1,
+      image: "/recentsales.jpg",
+      title: "602-618 Carnarvon St, New Westminster",
+    },
+    {
+      id: 2,
+      image: "/recentsales2.jpg",
+      title: "411 E Eighth Avenue, New Westminster",
+    },
+    {
+      id: 3,
+      image: "/recentsales3.jpg",
+      title: "602-618 Carnarvon St, New Westminster",
+    },
+    {
+      id: 4,
+      image: "/recentsales4.jpg",
+      title: "602-618 Carnarvon St, New Westminster",
+    },
+    {
+      id: 5,
+      image: "/recentsales5.jpg",
+      title: "411 E Eighth Avenue, New Westminster",
+    },
+    {
+      id: 6,
+      image: "/recentsales6.jpg",
+      title: "602-618 Carnarvon St, New Westminster",
+    },
+  ];
 
   const router = useRouter();
   const [currentPage, setCurrentPage] = React.useState(0);
@@ -56,34 +62,40 @@ const product = [
       <div className="overflow-x-hidden">
         <div className="h-96 bg-white op recentimage">
           <div className="flex flex-col  justify-center items-center h-full ">
-            <p className="font-phoppin font-semibold text-md py-5" style={{ textShadow: '0 0 5px white' }}>FEATURED HOMES</p>
-            <span className="font-cardo font-medium text-center text-6xl px-5 sm:px-0 sm:text-7xl"  style={{ textShadow: '0 0 5px white' }}>
+            <p
+              className="font-phoppin font-semibold text-md py-5"
+              style={{ textShadow: "0 0 5px white" }}
+            >
+              FEATURED HOMES
+            </p>
+            <span
+              className="font-cardo font-medium text-center text-6xl px-5 sm:px-0 sm:text-7xl"
+              style={{ textShadow: "0 0 5px white" }}
+            >
               Recent Home Sales
             </span>
           </div>
         </div>
 
         <div className="bg-[#EBECED] py-16 mx-0 flex flex-col space-y-8 sm:space-y-0 sm:grid  grid-cols-3 sm:gap-7 ">
-          {product.map(
-            (product, index) => (
-              <div key={index} className="flex flex-col items-center space-y-7">
-                <Link href="/recent_product" aria-label="productpage">
-                  <Image
-                    src={product.image}
-                    className="w-[296px] h-[325px] object-cover"
-                    width={296}
-                    height={325}
-                    alt=""
-                  />
-                </Link>
-                <Link href="/recent_product"  aria-label="productpage">
-                  <span className="text-3xl font-cardo w-[296px] cursor-pointer hover:underline hover:underline-offset-4 hover:text-orange-950 inline-block">
-                    {product.title}
-                  </span>
-                </Link>
-              </div>
-            )
-          )}
+          {product.map((product, index) => (
+            <div key={index} className="flex flex-col items-center space-y-7">
+              <Link href="/recent/product" aria-label="productpage">
+                <Image
+                  src={product.image}
+                  className="w-[296px] h-[325px] object-cover"
+                  width={296}
+                  height={325}
+                  alt=""
+                />
+              </Link>
+              <Link href="/recent/product" aria-label="productpage">
+                <span className="text-3xl font-cardo w-[296px] cursor-pointer hover:underline hover:underline-offset-4 hover:text-orange-950 inline-block">
+                  {product.title}
+                </span>
+              </Link>
+            </div>
+          ))}
         </div>
         <ReactPaginate
           className="flex justify-around py-20 italic font-cardo bg-[#EBECED]"
