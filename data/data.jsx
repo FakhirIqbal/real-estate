@@ -41,13 +41,13 @@ export const data = [
   {
     id: 2,
     title: "411 E Eighth Avenue, New Westminster",
-    image: "/recentsales3.webp",
+    image: "/411/411.jpeg",
     price: "",
     soldYear: 2023,
     description:
       "Congratulations to my clients on the purchase of THE BEST LOT PRICE PER SQ FT IN NEW WEST, BURNABY & COQUITLAM! A 6838 SQ FT LOT TO BUILD their DREAM HOME in the perfect spot just steps from Schools (public and private) , transit just out the door, skytrain and RCH plus shops and restaurants 10 - 15 minute walk to Sapperton or top of the hill at The Crest. easy freeway access. So many options to build a duplex or custom home in the best location!",
     indoor: [],
-    mainPic:""
+    mainPic:"/411/411.jpeg"
   },
   {
     id: 3,

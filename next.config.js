@@ -11,7 +11,6 @@
 
 // // module.exports = nextConfig;
 
-
 // // next.config.js
 // module.exports = {
 //   webpack: (config, { isServer }) => {
@@ -27,7 +26,6 @@
 //   },
 // };
 
-
 //filezilla
 
 // /** @type {import("next").NextConfig} */
@@ -42,7 +40,6 @@
 // };
 
 // module.exports = nextConfig;
-
 
 // // next.config.js
 // module.exports = {
@@ -91,13 +88,13 @@
 // };
 
 
-
 // next.config.js
 module.exports = {
   // const nextConfig = {
 //   output: "export",
   images: {
     unoptimized: true,
+    
   },
 
   reactStrictMode: true,
@@ -148,3 +145,5 @@ module.exports = {
     return config;
   },
 };
+
+
