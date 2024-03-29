@@ -8,12 +8,12 @@ import Link from "next/link";
 
 function Footer() {
   const images = [
-    "footer1.jpg",
-    "footer2.jpg",
-    "footer3.jpg",
-    "footer4.jpg",
-    "footer5.jpg",
-    "footer6.jpg",
+    "/footer1.jpg",
+    "/footer2.jpg",
+    "/footer3.jpg",
+    "/footer4.jpg",
+    "/footer5.jpg",
+    "/footer6.jpg",
   ];
   return (
     <>
