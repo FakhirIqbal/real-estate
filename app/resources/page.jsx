@@ -1,10 +1,23 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import Header from "@/components/header";
 import Image from "next/image";
 import Button from "@/components/Button";
 import Link from "next/link";
+import Modal from "@/components/modal/formModal";
 
 function Page() {
+  const [modalOpen, setModalOpen] = useState(false);
+  const [href, setHref] = useState("");
+console.log("page", href)
+  const handleOpenModal = () => {
+    setModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setModalOpen(false);
+  };
+
   const trusty = [
     {
       name: "Mortgage Broker",
@@ -40,6 +53,7 @@ function Page() {
   return (
     <main className="overflow-x-hidden">
       <Header />
+      <Modal isOpen={modalOpen} onClose={handleCloseModal} href={href} />
       {/* mainbg */}
       <div className="resourceimage h-[550px] relative p-5">
         {/* Background Image with Opacity */}
@@ -70,7 +84,8 @@ function Page() {
               in case you missed it
             </p>
             <h2 className="font-cardo text-xl sm:text-3xl md:w-2/3">
-            8 Secrets for Purchasing a Profitable Investment Property in Vancouver 
+              8 Secrets for Purchasing a Profitable Investment Property in
+              Vancouver
             </h2>
           </div>
         </div>
@@ -78,87 +93,107 @@ function Page() {
           <div className="  md:w-64 ">
             {" "}
             <div className="p-3 flex flex-col space-y-3">
-              <Link href="/pdf/Sellers Guide.pdf" download target="_blank">
-                <div className="relative  ">
-                  <Image
-                    src="/buyerbg.webp"
-                    alt="Real Estate Guide"
-                    width={800}
-                    height={500}
-                    className="object-cover h-40 sm:h-80 w-full  "
-                  />
-                  <div className="absolute inset-0 flex items-center justify-center bg-white m-3 sm:m-8 bg-opacity-80">
-                    <div className="w-4/5 text-center flex flex-col space-y-4 sm:gap-8 md:gap-6">
-                      <span className="text-[5px] sm:text-xs">
-                        jessicabansal.com
+              <div
+                onClick={() => {
+                  handleOpenModal();
+                  setHref("/pdf/Sellers Guide.pdf");
+                }}
+                className="relative cursor-pointer "
+              >
+                <Image
+                  src="/buyerbg.webp"
+                  alt="Real Estate Guide"
+                  width={800}
+                  height={500}
+                  className="object-cover h-40 sm:h-80 w-full  "
+                />
+                <div className="absolute inset-0 flex items-center justify-center bg-white m-3 sm:m-8 bg-opacity-80">
+                  <div className="w-4/5 text-center flex flex-col space-y-4 sm:gap-8 md:gap-6">
+                    <span className="text-[5px] sm:text-xs">
+                      jessicabansal.com
+                    </span>
+                    <p className="text-lg font-cardo uppercase sm:text-4xl">
+                      Seller Guide
+                    </p>
+                    <div className="flex flex-col font-cardo">
+                      <span className="text-[7px] sm:text-lg md:text-sm  ">
+                        JESSICA BANSAL
                       </span>
-                      <p className="text-lg font-cardo uppercase sm:text-4xl">
-                        Seller Guide
-                      </p>
-                      <div className="flex flex-col font-cardo">
-                        <span className="text-[7px] sm:text-lg md:text-sm  ">
-                          JESSICA BANSAL
-                        </span>
-                        <span className="text-[5px] sm:text-[9px] md:text-[6px]">
+                      <span className="text-[5px] sm:text-[9px] md:text-[6px]">
                         PERSONAL REAL ESTATE CORPORATION
-                        </span>
-                      </div>
+                      </span>
                     </div>
                   </div>
                 </div>
-              </Link>
+              </div>
 
               <p className="md:hidden uppercase text-xs text-gray-600 sm:text-xl font-semibold">
                 download
               </p>
               <div className="hidden md:flex flex-col space-y-2">
                 <span className="font-cardo text-2xl">Free Download</span>
-                <Link href="/pdf/Sellers Guide.pdf" download target="_blank">
-                  <span className="uppercase text-xs transition-all duration-300 hover:opacity-50 tracking-widest">get it now</span>
-                </Link>
+                <span
+                  onClick={() => {
+                    handleOpenModal();
+                    setHref("/pdf/Sellers Guide.pdf");
+                  }}
+                  className="uppercase cursor-pointer text-xs transition-all duration-300 hover:opacity-50 tracking-widest"
+                >
+                  get it now
+                </span>
               </div>
             </div>
           </div>
           <div className=" md:w-64">
             {" "}
             <div className="p-3 flex flex-col space-y-3">
-              <Link href="/pdf/Buyers Guide.pdf" download target="_blank">
-                <div className="relative">
-                  <Image
-                    src="/buyerbg.webp"
-                    alt="Real Estate Guide"
-                    width={800}
-                    height={500}
-                    className="object-cover h-40 sm:h-80 w-full "
-                  />
-                  <div className="absolute inset-0 flex items-center justify-center bg-white m-3 sm:m-8 bg-opacity-80">
-                    <div className="w-4/5 text-center flex flex-col space-y-4 sm:gap-8 md:gap-6">
-                      <span className="text-[5px] sm:text-xs">
-                        jessicabansal.com
+              <div
+                onClick={() => {
+                  handleOpenModal();
+                  setHref("/pdf/Buyers Guide.pdf");
+                }}
+                className="relative cursor-pointer"
+              >
+                <Image
+                  src="/buyerbg.webp"
+                  alt="Real Estate Guide"
+                  width={800}
+                  height={500}
+                  className="object-cover h-40 sm:h-80 w-full "
+                />
+                <div className="absolute inset-0 flex items-center justify-center bg-white m-3 sm:m-8 bg-opacity-80">
+                  <div className="w-4/5 text-center flex flex-col space-y-4 sm:gap-8 md:gap-6">
+                    <span className="text-[5px] sm:text-xs">
+                      jessicabansal.com
+                    </span>
+                    <p className="text-lg font-cardo uppercase sm:text-4xl">
+                      BUYER Guide
+                    </p>
+                    <div className="flex flex-col font-cardo">
+                      <span className="text-[7px] sm:text-lg md:text-sm  ">
+                        JESSICA BANSAL
                       </span>
-                      <p className="text-lg font-cardo uppercase sm:text-4xl">
-                        BUYER Guide
-                      </p>
-                      <div className="flex flex-col font-cardo">
-                        <span className="text-[7px] sm:text-lg md:text-sm  ">
-                          JESSICA BANSAL
-                        </span>
-                        <span className="text-[5px] sm:text-[9px] md:text-[6px]">
+                      <span className="text-[5px] sm:text-[9px] md:text-[6px]">
                         PERSONAL REAL ESTATE CORPORATION
-                        </span>
-                      </div>
+                      </span>
                     </div>
                   </div>
                 </div>
-              </Link>
+              </div>
               <p className="md:hidden uppercase text-xs text-gray-600 sm:text-xl font-semibold">
                 download
               </p>
               <div className="hidden md:flex flex-col space-y-2">
                 <span className="font-cardo text-2xl">Free Download</span>
-                <Link href="/pdf/Buyers Guide.pdf" download target="_blank">
-                  <span className="uppercase text-xs transition-all duration-300 hover:opacity-50 tracking-widest">get it now</span>
-                </Link>
+                <span
+                  onClick={() => {
+                    handleOpenModal();
+                    setHref("/pdf/Buyers Guide.pdf");
+                  }}
+                  className="uppercase cursor-pointer text-xs transition-all duration-300 hover:opacity-50 tracking-widest"
+                >
+                  get it now
+                </span>
               </div>
             </div>
           </div>

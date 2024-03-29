@@ -5,13 +5,14 @@ import Header from "@/components/header";
 import Link from "next/link";
 import ReactPaginate from "react-paginate";
 import { useRouter } from "next/navigation";
+import { data } from "@/data/data";
 
 function Page() {
   const product = [
     {
       id: 1,
       image: "/recentsales.jpg",
-      title: "602-618 Carnarvon St, New Westminster",
+      title: "7835 10th Avenue, Burnaby",
     },
     {
       id: 2,
@@ -78,9 +79,9 @@ function Page() {
         </div>
 
         <div className="bg-[#EBECED] py-16 mx-0 flex flex-col space-y-8 sm:space-y-0 sm:grid  grid-cols-3 sm:gap-7 ">
-          {product.map((product, index) => (
+          {data.map((product, index) => (
             <div key={index} className="flex flex-col items-center space-y-7">
-              <Link href="/recent/product" aria-label="productpage">
+              <Link href={`/recent/product/${product.id}`} aria-label="productpage">
                 <Image
                   src={product.image}
                   className="w-[296px] h-[325px] object-cover"
@@ -89,7 +90,7 @@ function Page() {
                   alt=""
                 />
               </Link>
-              <Link href="/recent/product" aria-label="productpage">
+              <Link href={`/recent/product/${product.id}`} aria-label="productpage">
                 <span className="text-3xl font-cardo w-[296px] cursor-pointer hover:underline hover:underline-offset-4 hover:text-orange-950 inline-block">
                   {product.title}
                 </span>

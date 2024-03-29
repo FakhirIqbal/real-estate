@@ -88,8 +88,9 @@
 import { useState } from "react";
 import { IoClose } from "react-icons/io5";
 import Button from "../Button";
+import { Link } from "@mui/material";
 
-const Modal = ({ isOpen, onClose }) => {
+const Modal = ({ isOpen, onClose , href }) => {
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -239,7 +240,9 @@ const Modal = ({ isOpen, onClose }) => {
               onClick={handleDownload}
               disabled={Object.values(errors).some((error) => error)}
             >
-              Download Now
+           <Link href={href} className="no-underline text-white" download target="_blank">
+             Download Now
+            </Link>
             </Button>
           </div>
         </div>

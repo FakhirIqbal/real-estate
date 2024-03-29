@@ -495,7 +495,8 @@ export default function Home() {
                   <IoMdSearch size={30} color="white" />
                 </div>
               </div>
-              <div className="bg-white shadow-lg p-5 mt-1 rounded">
+              {/* dropdown */}
+              <div className="bg-white hidden shadow-lg p-5 mt-1 rounded">
                 <ThemeProvider theme={theme}>
                   <FormControl
                     variant="standard"
@@ -795,7 +796,7 @@ export default function Home() {
             >
               DOWNLOAD NOW
             </Button>
-            <Modal isOpen={modalOpen} onClose={handleCloseModal} />
+            <Modal isOpen={modalOpen} onClose={handleCloseModal} href="/pdf/Investment Guide.pdf" />
           </div>
         </div>
       </main>
