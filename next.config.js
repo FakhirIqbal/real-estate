@@ -87,24 +87,22 @@
 //   },
 // };
 
-
 // next.config.js
 module.exports = {
   // const nextConfig = {
-//   output: "export",
+  //   output: "export",
   images: {
     unoptimized: true,
-    
   },
 
   reactStrictMode: true,
-// };
+  // };
   webpack: (config, { isServer }) => {
     // Exclude slick-carousel CSS from being processed
     if (!isServer) {
       config.module.rules.push({
         test: /slick-carousel\/slick\/slick-theme\.css$/,
-        use: 'null-loader', // or any loader you prefer to exclude the CSS
+        use: "null-loader", // or any loader you prefer to exclude the CSS
       });
 
       // Configure handling of images from slick-carousel
@@ -113,11 +111,11 @@ module.exports = {
         include: /slick-carousel/,
         use: [
           {
-            loader: 'file-loader',
+            loader: "file-loader",
             options: {
-              publicPath: '/_next/static/images/', // Adjust this path as needed
-              outputPath: 'static/images/', // Adjust this path as needed
-              name: '[name].[hash].[ext]',
+              publicPath: "/_next/static/images/", // Adjust this path as needed
+              outputPath: "static/images/", // Adjust this path as needed
+              name: "[name].[hash].[ext]",
             },
           },
         ],
@@ -130,13 +128,13 @@ module.exports = {
       exclude: /slick-carousel/, // Exclude slick-carousel images
       use: [
         {
-          loader: 'url-loader',
+          loader: "url-loader",
           options: {
             limit: 8192, // or any other limit you prefer
-            fallback: 'file-loader',
-            outputPath: 'static/images/', // Adjust this path as needed
-            publicPath: '/_next/static/images/', // Adjust this path as needed
-            name: '[name].[hash].[ext]',
+            fallback: "file-loader",
+            outputPath: "static/images/", // Adjust this path as needed
+            publicPath: "/_next/static/images/", // Adjust this path as needed
+            name: "[name].[hash].[ext]",
           },
         },
       ],
@@ -144,6 +142,13 @@ module.exports = {
 
     return config;
   },
+  async rewrites() {
+    return [
+      // Rewrite nested routes
+      {
+        source: "/recent/:id*",
+        destination: "/recent/[id]",
+      },
+    ];
+  },
 };
-
-

@@ -1,96 +1,10 @@
-// "use client";
-// import { useState } from "react";
-// import { IoClose } from "react-icons/io5";
-// import Button from "../Button";
-
-// const Modal = ({ isOpen, onClose }) => {
-//   const [formData, setFormData] = useState({
-//     firstName: "",
-//     lastName: "",
-//     phoneNumber: "",
-//     email: "",
-//   });
-
-//   const handleChange = (e) => {
-//     const { name, value } = e.target;
-//     setFormData((prevData) => ({ ...prevData, [name]: value }));
-//     console.log(formData);
-//   };
-
-//   return (
-//     <>
-//       {isOpen && (
-//         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black  bg-opacity-50">
-//           <div className="bg-white p-8 rounded-lg  flex flex-col w-fit">
-//             <div className="flex justify-between mb-4 space-x-20 items-center">
-//               <h2 className="text-2xl font-bold ">Enter Your Information</h2>
-//               <IoClose
-//                 className=" cursor-pointer "
-//                 size={24}
-//                 onClick={onClose}
-//               />
-//             </div>
-//             <input
-//               type="text"
-//               name="firstName"
-//               value={formData.firstName}
-//               onChange={handleChange}
-//               placeholder="First Name"
-//               className="input mb-4 focus:outline-none border-2 border-gray-200 rounded-md p-2"
-//             />
-//             <input
-//               type="text"
-//               name="lastName"
-//               value={formData.lastName}
-//               onChange={handleChange}
-//               placeholder="Last Name"
-//               className="input mb-4 focus:outline-none border-2 border-gray-200 rounded-md p-2"
-//             />
-//             <input
-//               type="tel"
-//               name="phoneNumber"
-//               value={formData.phoneNumber}
-//               onChange={handleChange}
-//               placeholder="Phone Number"
-//               className="input mb-4 focus:outline-none border-2 border-gray-200 rounded-md p-2"
-//             />
-//             <input
-//               type="email"
-//               name="email"
-//               value={formData.email}
-//               onChange={handleChange}
-//               placeholder="Email"
-//               className="input mb-4 focus:outline-none border-2 border-gray-200 rounded-md p-2"
-//             />
-//             <Button
-//               className={"!px-10 w-2/3 font-bold !bg-black mx-auto"}
-//               onClick={() => {
-//                 setFormData({
-//                   firstName: "",
-//                   lastName: "",
-//                   phoneNumber: "",
-//                   email: "",
-//                 }),
-//                   onClose();
-//               }}
-//             >
-//               Download Now
-//             </Button>
-//           </div>
-//         </div>
-//       )}
-//     </>
-//   );
-// };
-
-// export default Modal;
-
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { IoClose } from "react-icons/io5";
 import Button from "../Button";
-import { Link } from "@mui/material";
+import Link from "next/link";
 
-const Modal = ({ isOpen, onClose , href }) => {
+const Modal = ({ isOpen, onClose, href }) => {
+  const [btnTrue, setBtnTrue] = useState(false);
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -103,14 +17,25 @@ const Modal = ({ isOpen, onClose , href }) => {
     phoneNumber: false,
     email: false,
   });
+  console.log(formData)
+
+  useEffect(() => {
+    // Check if all fields are filled and regex patterns are satisfied
+    const isValid =
+      formData.firstName &&
+      formData.lastName &&
+      formData.phoneNumber &&
+      formData.email &&
+      !Object.values(errors).some((error) => error);
+
+    setBtnTrue(isValid);
+  }, [formData, errors]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     let error = false;
     switch (name) {
       case "firstName":
-        error = !/^[a-zA-Z]+$/.test(value); // Regex for letters only
-        break;
       case "lastName":
         error = !/^[a-zA-Z]+$/.test(value); // Regex for letters only
         break;
@@ -137,18 +62,6 @@ const Modal = ({ isOpen, onClose , href }) => {
         phoneNumber: !phoneNumber,
         email: !email,
       });
-    } else if (
-      !/^[a-zA-Z]+$/.test(firstName) ||
-      !/^[a-zA-Z]+$/.test(lastName) ||
-      !/^\d+$/.test(phoneNumber) ||
-      !/^\S+@\S+\.\S+$/.test(email)
-    ) {
-      setErrors({
-        firstName: !/^[a-zA-Z]+$/.test(firstName),
-        lastName: !/^[a-zA-Z]+$/.test(lastName),
-        phoneNumber: !/^\d+$/.test(phoneNumber),
-        email: !/^\S+@\S+\.\S+$/.test(email),
-      });
     } else {
       console.log("Downloading...");
       setFormData({
@@ -165,7 +78,7 @@ const Modal = ({ isOpen, onClose , href }) => {
     <>
       {isOpen && (
         <div className=" fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
-          <div className="bg-white p-8 rounded-lg flex flex-col m-5 w-fit">
+          <div className="bg-white p-8 rounded-lg flex  flex-col m-5 w-fit">
             <div className="flex justify-between mb-4 space-x-20 items-center">
               <h2 className="text-2xl font-bold">Enter Your Information</h2>
               <IoClose className="cursor-pointer" size={24} onClick={onClose} />
@@ -230,20 +143,24 @@ const Modal = ({ isOpen, onClose , href }) => {
                 Phone Number is required and should contain digits only
               </p>
             )}
-
-            <Button
-              className={`!px-10 w-2/3 font-bold !bg-black mx-auto ${
-                Object.values(errors).some((error) => error)
-                  ? "cursor-not-allowed opacity-50"
-                  : ""
-              }`}
-              onClick={handleDownload}
-              disabled={Object.values(errors).some((error) => error)}
-            >
-           <Link href={href} className="no-underline text-white" download target="_blank">
-             Download Now
-            </Link>
-            </Button>
+            <div>
+              <Link
+                href={href}
+                className="no-underline text-white"
+                download
+                target="_blank"
+              >
+                <Button
+                  className={`!px-10 w-full font-bold !bg-black mx-auto ${
+                    !btnTrue ? "cursor-not-allowed opacity-50" : ""
+                  }`}
+                  onClick={handleDownload}
+                  disabled={!btnTrue}
+                >
+                  Download Now
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       )}

@@ -12,7 +12,7 @@ function Id() {
   useEffect(() => {
     if (typeof window === "undefined") return; // Exit early if not running in the browser
   
-    const param = window.location.pathname.split('/')[2]; // Get the parameter after '/recent/'
+    const param = window.location.pathname.split('/')[1]; // Get the parameter after '/recent/'
     setParams(param); // Assuming setParams is a function to update state
   }, []);
 
