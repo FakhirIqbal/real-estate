@@ -47,7 +47,7 @@ export const data = [
     description:
       "Congratulations to my clients on the purchase of THE BEST LOT PRICE PER SQ FT IN NEW WEST, BURNABY & COQUITLAM! A 6838 SQ FT LOT TO BUILD their DREAM HOME in the perfect spot just steps from Schools (public and private) , transit just out the door, skytrain and RCH plus shops and restaurants 10 - 15 minute walk to Sapperton or top of the hill at The Crest. easy freeway access. So many options to build a duplex or custom home in the best location!",
     indoor: [],
-    mainPic:"/411/411.jpeg"
+    mainPic: "/411/411.jpeg",
   },
   {
     id: 3,
@@ -83,6 +83,41 @@ export const data = [
       "/602-618/23.jpg",
       "/602-618/24.jpg",
     ],
-    mainPic:""
+    mainPic: "",
+  },
+  {
+    id: 4,
+    title: "13760 62 ave, Surrey",
+    image: "/13760/14.jpg",
+    price: "",
+    soldYear: 2023,
+    description: "",
+    indoor: [
+      "/13760/1.jpg",
+      "/13760/2.jpg",
+      "/13760/3.jpg",
+      "/13760/4.jpg",
+      "/13760/5.jpg",
+      "/13760/6.jpg",
+      "/13760/7.jpg",
+      "/13760/8.jpg",
+      "/13760/9.jpg",
+      "/13760/10.jpg",
+      "/13760/11.jpg",
+      "/13760/12.jpg",
+      "/13760/13.jpg",
+      "/13760/14.jpg",
+    ],
+    mainPic: "",
+  },
+  {
+    id: 5,
+    title: "122 eighth ave, New Westminster",
+    image: "/122/4.jpg",
+    price: "",
+    soldYear: 2023,
+    description: "",
+    indoor: ["/122/1.jpg", "/122/2.jpg", "/122/3.jpg", "/122/4.jpg"],
+    mainPic: "",
   },
 ];

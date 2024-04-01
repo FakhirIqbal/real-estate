@@ -111,8 +111,26 @@ const SliderComponent = ({ renderCard, className, data }) => {
   </Slider> */}
   return (
     <div className="!space-x-4 slider">
-      <Slider className="" {...settingsCard}>
-      {listing.map((item, index) => (
+      {/* <Slider className="" {...settingsCard}> */}
+
+
+      <div  className="relative font-noto border-[1px] w-1/3 mx-auto border-gray-200 rounded-t-xl">
+           <Explorecard/>
+          <div className="p-4 flex flex-col justify-between leading-normal ">
+            <div className="mb-4 font-noto">
+              <p className="text-xl line-clamp-2">362 Christina Place </p>
+              <p className="text-[#9691A4] text-xl line-clamp-2 ">$710,000</p>
+            </div>
+            <div className="flex items-center gap-2 text-[#9691A4]">
+              <p>Skidegate/Sandspit</p>
+              <p></p>
+            </div>
+            <p className="text-lg"></p>
+          </div>
+        </div>
+
+
+      {/* {listing.map((item, index) => (
         <div key={index} className="relative font-noto border-[1px] border-gray-200 rounded-t-xl">
            <Explorecard/>
           <div className="p-4 flex flex-col justify-between leading-normal ">
@@ -127,8 +145,8 @@ const SliderComponent = ({ renderCard, className, data }) => {
             <p className="text-lg">{item.address}</p>
           </div>
         </div>
-      ))}
-    </Slider>
+      ))} */}
+    {/* </Slider> */}
     </div>
   );
 };

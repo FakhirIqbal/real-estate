@@ -27,7 +27,7 @@ const Explorecard = ({ items, className, latest, image, index }) => {
     speed: 500,
     infinite: true,
     autoplay: true,
-    autoplaySpeed: 1000,
+    autoplaySpeed: 2000,
     swipeToSlide: true,
 
     slidesToShow: 1,
@@ -37,11 +37,11 @@ const Explorecard = ({ items, className, latest, image, index }) => {
   };
 
   const images = [
-    "list1 (2).jpg",
-    "list2 (2).jpg",
-    "list4 (2).webp",
-    "list5 (2).jpg",
-    "list6 (2).jpg",
+    "listing1.jpg",
+    "listing2.jpg",
+    "listing3.jpg",
+    "listing4.jpg",
+    "listing5.jpg",
   ];
   return (
     <div

@@ -101,14 +101,14 @@ export default function Home() {
         description:
           "This report provides a comprehensive analysis of the data collected over the past quarter. It includes key insights, trends, and recommendations for future strategies. The detailed analysis covers various aspects, such as customer behavior, market trends, and performance metrics.",
       },
+      // {
+      //   name: "Brittney -  Surrey",
+      //   title: "Financial Forecast Presentation",
+      //   description:
+      //     "Explore the financial forecast for the upcoming fiscal year. This presentation covers revenue projections, expense analysis, and potential areas for cost optimization. Gain a deep understanding of the financial landscape, and discover strategic opportunities for sustainable growth.",
+      // },
       {
-        name: "Brittney -  Surrey",
-        title: "Financial Forecast Presentation",
-        description:
-          "Explore the financial forecast for the upcoming fiscal year. This presentation covers revenue projections, expense analysis, and potential areas for cost optimization. Gain a deep understanding of the financial landscape, and discover strategic opportunities for sustainable growth.",
-      },
-      {
-        name: "David -  New Westminster",
+        name: "Jass -  New Westminster",
         title: "Strategic Business Plan Overview",
         description:
           "Gain insights into our strategic business plan, outlining goals, initiatives, and milestones. This overview highlights the key strategies driving our company's growth and success. The plan covers market positioning, competitive analysis, and a roadmap for executing our strategic initiatives.",
@@ -617,7 +617,7 @@ export default function Home() {
                   {items.description}
                 </p>
                 <Button className={"!py-2 !px-4 text-[12px] "}>
-                  {items.button}
+                  COMING SOON
                 </Button>
               </div>
             ))}
@@ -717,7 +717,7 @@ export default function Home() {
                     Browse listings and market stats <br />
                     specific to your neighbourhood.
                   </p>
-                  <Button className={"!px-10 !py-1 text-[12px]"}>VIEW</Button>
+                  <Button className={"!px-10 !py-1 text-[12px]"}>Coming Soon</Button>
                 </div>
               </div>
             </div>
