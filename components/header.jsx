@@ -12,7 +12,9 @@ const NavBar = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
   return (
     // fixed top-0 left-0 right-0
-    <div className={`fixed top-0 left-0 right-0 sm:static  z-40 py-4 w-full px-4 !font-phoppin bg-white`}>
+    <div
+      className={`fixed top-0 left-0 right-0 sm:static  z-40 py-4 w-full px-4 !font-phoppin bg-white`}
+    >
       <div className="px-3  flex flex-wrap items-center justify-between">
         <div className={" ml-8 text-center text-whtie font-semibold"}>
           <Link href={"/"} className={"cursor-pointer"} aria-label="homepage">
@@ -50,21 +52,21 @@ const NavBar = () => {
               </p>
             </Link>
             <Link href={"/recent"} aria-label="recentpage">
-              <p className=" py-2   hover:opacity-50 transition-all duration-300   ">
+              <p className=" py-2   hover:opacity-50 transition-all duration-300 text-center  ">
                 Recent <br /> sales
               </p>
             </Link>
-            <Link href={"/"} aria-label="cities">
+            <Link href={"/cities"} aria-label="cities">
               <p className=" py-2   hover:opacity-50 transition-all duration-300   ">
                 cities
               </p>
             </Link>
             <Link href={"/"} aria-label="homesearch">
-              <p className=" py-2   hover:opacity-50 transition-all duration-300   ">
+              <p className=" py-2   hover:opacity-50 transition-all duration-300 text-center  ">
                 home <br /> search
               </p>
             </Link>
-            <Link href={"/resources"} aria-label="resources" >  
+            <Link href={"/resources"} aria-label="resources">
               <p className=" py-2   hover:opacity-50 transition-all duration-300   ">
                 Resources
               </p>
@@ -107,7 +109,7 @@ const NavBar = () => {
                 Recent sales
               </p>
             </Link>
-            <Link href={"/"} aria-label="cities page">
+            <Link href={"/cities"} aria-label="cities page">
               <p className=" block font-bold cool-link navlink py-2  md:p-0 text-gray-900 rounded  md:hover:bg-transparent md:border-0 md:hover:text-primary  ">
                 Cities
               </p>

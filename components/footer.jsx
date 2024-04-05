@@ -8,12 +8,12 @@ import Link from "next/link";
 
 function Footer() {
   const images = [
-    "/footer1.jpg",
-    "/footer2.jpg",
-    "/footer3.jpg",
-    "/footer4.jpg",
-    "/footer5.jpg",
-    "/footer6.jpg",
+    "/footer1.svg",
+    "/footer2.svg",
+    "/footer3.svg",
+    "/footer4.svg",
+    "/footer5.svg",
+    "/footer6.svg",
   ];
   return (
     <>
@@ -31,8 +31,8 @@ function Footer() {
           </div>
         ))}
         <div className="">
-          <div className="bg-white  sm:mx-0 px-4 sm:px-14 w-2/3 sm:w-fit py-7 sm:py-12 absolute sm:right-0 sm:top-32 sm:-bottom-[150px] text-center text-sm sm:left-auto left-0 right-0 top-32  mx-auto">
-            <p className=" sm:text-xl sm:leading-8">
+          <div className="bg-white  sm:mx-0 px-4 sm:px-14 w-2/3 sm:w-[20%] py-3 sm:py-7 absolute sm:right-0 sm:top-32 sm:-bottom-[150px] text-center text-sm sm:left-auto left-0 right-0 top-32  mx-auto">
+            <p className=" sm:text-md sm:leading-8">
               Follow me on Instagram for the latest <br /> listings, market
               trends, and tips for buying <br /> and selling your home.
             </p>
@@ -42,7 +42,7 @@ function Footer() {
               }
               aria-label="Instagram page"
             >
-              <h1 className="text-2xl sm:text-3xl mt-2 font-semibold uppercase hover:opacity-50 transition-all duration-300">
+              <h1 className="text-2xl sm:text-2xl mt-2 font-semibold uppercase hover:opacity-50 transition-all duration-300">
                 @Jess.Realty
               </h1>
             </Link>

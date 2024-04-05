@@ -9,7 +9,7 @@ import Modal from "@/components/modal/formModal";
 function Page() {
   const [modalOpen, setModalOpen] = useState(false);
   const [href, setHref] = useState("");
-console.log("page", href)
+  console.log("page", href);
   const handleOpenModal = () => {
     setModalOpen(true);
   };
@@ -85,7 +85,7 @@ console.log("page", href)
             </p>
             <h2 className="font-cardo text-xl sm:text-3xl md:w-2/3">
               8 Secrets for Purchasing a Profitable Investment Property in
-              Vancouver
+              Vancouver (comming soon!)
             </h2>
           </div>
         </div>
@@ -206,7 +206,7 @@ console.log("page", href)
         {/* Text Content */}
         <div className="flex flex-col justify-center items-center h-full relative z-10 space-y-4 sm:space-y-10">
           <span className="text-xs sm:text-lg sm:tracking-widest">
-            HOME FINDER
+            Get Notified
           </span>
           <span className="font-cardo font-medium text-center text-2xl px-5  sm:text-5xl md:w-1/2">
             Get a Custom MLS Feed Sent Straight to Your Inbox
@@ -230,7 +230,7 @@ console.log("page", href)
           <div className="hidden"></div>
           <div className="flex flex-col space-y-6  md:items-center md:px-16 md:text-center ">
             <h1 className="font-cardo tracking-wider sm:text-3xl md:text-xl">
-              MORTGAGE CALCULATOR
+              Calculate
             </h1>
             <p className="text-sm sm:text-2xl sm:leading-10  md:text-sm">
               Estimate your regular mortgage payments based on the purchase
@@ -253,7 +253,7 @@ console.log("page", href)
 
           <div className="flex flex-col md:items-center space-y-6 md:border-l md:border-r border-black border-opacity-50 md:px-16 md:text-center">
             <h1 className="font-cardo tracking-wider sm:text-3xl md:text-xl">
-              HOME EVALUATION
+              Go To Form
             </h1>
             <p className="text-sm sm:text-2xl sm:leading-10 md:text-sm">
               Receive a free, no-obligation estimate of the market value of your
@@ -275,7 +275,7 @@ console.log("page", href)
           </div>
           <div className="flex flex-col space-y-6 md:items-center md:px-16 md:text-center">
             <h1 className="font-cardo tracking-wider  sm:text-3xl md:text-xl">
-              MARKET UPDATE
+              Look At The Form
             </h1>
             <p className="text-sm sm:text-2xl sm:leading-10 md:text-sm">
               Read the monthly housing market report and get the most up-to-date

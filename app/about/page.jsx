@@ -74,15 +74,15 @@ function Page() {
             className=""
           >
             <Image
-              src={"/about.jpg"}
-              className="w-80 h-[80%]  mx-auto sm:ml-auto"
+              src={"/working.svg"}
+              className="w-[80%] h-[100%] object-cover mx-auto sm:ml-auto"
               width={0}
               height={0}
               sizes={"100vw"}
               alt="rolodex Logo"
             />
           </div>
-          <div className="flex justify-between flex-col w-[97%] px-5 sm:px-0  py-4">
+          <div className="flex justify-between flex-col w-[97%] px-5 sm:px-0 py-4">
             <div className="space-y-6 text-center sm:text-start">
               <p
                 data-aos="fade-in"
@@ -165,7 +165,7 @@ function Page() {
             className=" sm:h-[700px] "
           >
             <Image
-              src={"/about1.jpg"}
+              src={"/dining.svg"}
               className="w-screen sm:w-full sm:h-full sm:ml-auto"
               width={0}
               height={0}
@@ -198,8 +198,8 @@ function Page() {
           </div>
           <div className="">
             <Image
-              src={"/about2.jpg"}
-              className="w-screen sm:w-[85%] sm:mt-auto"
+              src={"/Kitchen.svg"}
+              className="w-screen sm:w-[55%] sm:mt-auto"
               width={0}
               height={0}
               sizes={"100vw"}
@@ -220,7 +220,7 @@ function Page() {
           className=""
         >
           <Image
-            src={"/dog.jpg"}
+            src={"/hawaii.jpg"}
             className="w-full object-cover h-[400px] sm:h-[550px] sm:w-[90%] sm:ml-auto"
             width={0}
             height={0}
@@ -274,9 +274,9 @@ function Page() {
             portfolio.
           </p>
           <p>
-          I’ll guide and support you through your real estate
-            journey with the utmost precision while building your knowledge (and
-            confidence) of the home buying and selling process.
+            I’ll guide and support you through your real estate journey with the
+            utmost precision while building your knowledge (and confidence) of
+            the home buying and selling process.
           </p>
         </div>
       </div>
@@ -321,7 +321,7 @@ function Page() {
       <div className="max-w-screen-xl px-5 sm:px-5  sm:gap-10 sm:mt-40 sm:relative sm:mx-auto sm:grid grid-cols-2">
         <div className=" relative w-full">
           <Image
-            src={"/explorelistings.jpg"}
+            src={"/building.jpg"}
             className="w-full h-72 sm:w-[600px] sm:h-[50vh] sm:mt-auto"
             width={0}
             height={0}
@@ -374,13 +374,14 @@ function Page() {
           </p>
         </div>
         <div className="flex items-end justify-center">
-          <Button
+          <Link
+            href={"/contact"}
             className={
               "bg-transparent hover:bg-white text-sm tracking-widest hover:!text-black !text-black border border-black !px-12 py-3"
             }
           >
             GET STARTED
-          </Button>
+          </Link>
         </div>
       </div>
     </main>

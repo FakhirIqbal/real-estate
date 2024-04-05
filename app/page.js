@@ -101,17 +101,35 @@ export default function Home() {
         description:
           "This report provides a comprehensive analysis of the data collected over the past quarter. It includes key insights, trends, and recommendations for future strategies. The detailed analysis covers various aspects, such as customer behavior, market trends, and performance metrics.",
       },
-      // {
-      //   name: "Brittney -  Surrey",
-      //   title: "Financial Forecast Presentation",
-      //   description:
-      //     "Explore the financial forecast for the upcoming fiscal year. This presentation covers revenue projections, expense analysis, and potential areas for cost optimization. Gain a deep understanding of the financial landscape, and discover strategic opportunities for sustainable growth.",
-      // },
       {
         name: "Jass -  New Westminster",
         title: "Strategic Business Plan Overview",
         description:
           "Gain insights into our strategic business plan, outlining goals, initiatives, and milestones. This overview highlights the key strategies driving our company's growth and success. The plan covers market positioning, competitive analysis, and a roadmap for executing our strategic initiatives.",
+      },
+      {
+        name: "Rafael - Vancouver",
+        title: "Incredible experience",
+        description:
+          "We went in knowing nothing and honestly kind of scared of the huge commitment buying our first apartment would be. But Amit was there every step of the way, making sure we had all the information and easing away our fears. ",
+      },
+      {
+        name: "Anna -  Vancouver",
+        title: "Highly recommend!",
+        description:
+          "Amit guided me through the ever-changing real estate market and ensured I purchased not only a home that I love, but also a sound investment. His wealth of knowledge and years of experience in the local market made me feel confident in every decision I made.",
+      },
+      {
+        name: "Ari - Langley",
+        title: "Very lucky to find Jessica",
+        description:
+          "Amit helped us narrow down our parameters, educated us on the process, and helped us every step of the way. What we really appreciated about Amit is his up to date market knowledge, professionalism, integrity, and prompt communication.",
+      },
+      {
+        name: "David -  New Westminster",
+        title: "Genuinely eager to find our perfect home",
+        description:
+          "We couldn’t imagine a better buying experience than the one that we had with Amit. He guided us through our journey with precision while helping to build our knowledge of the home buying process as first time home buyers.",
       },
     ],
     []
@@ -429,13 +447,19 @@ export default function Home() {
             <div className="cols-span-1 flex flex-col items-center px-8 sm:px-0 sm:items-end space-y-6">
               <h1 className="">WHAT’S YOUR GOAL?</h1>
               <hr className="border-t  w-2/3 sm:w-1/2 border-black" />
-              <h1 className="text-sm text-gray-800 sm:text-[13px] transition-colors duration-500 hover:text-gray-400 cursor-pointer tracking-widest">
+              <Link
+                href={"/buy"}
+                className="text-sm text-gray-800 sm:text-[13px] transition-colors duration-500 hover:text-gray-400 cursor-pointer tracking-widest"
+              >
                 BUY MY NEXT HOME
-              </h1>
+              </Link>
               <hr className="border-t  w-2/3 sm:w-1/2 border-black" />
-              <h1 className="text-sm text-gray-800 sm:text-[13px] transition-colors duration-500 hover:text-gray-400 cursor-pointer tracking-widest ">
+              <Link
+                href={"/sell"}
+                className="text-sm text-gray-800 sm:text-[13px] transition-colors duration-500 hover:text-gray-400 cursor-pointer tracking-widest "
+              >
                 SELL MY HOME
-              </h1>
+              </Link>
               <hr className="border-t  w-2/3 sm:w-1/2 border-black" />
             </div>
             <div className="col-span-2 space-y-6 sm:pl-12 px-8 sm:w-[77%]">
@@ -581,20 +605,23 @@ export default function Home() {
                 description:
                   "Finding the right house is first of many steps to home buying. I will support you through each stage of the planning process by providing timely advice and recommendations tailored to your needs. Youre in good hands.",
                 button: "BUY WITH JESSICA",
+                href: "/buy",
               },
               {
-                img: "/sell.jpg",
+                img: "/Great room .svg",
                 title: "Selling Your Home",
                 description:
                   "What's the secret to successfully selling your home? The details. My proven sales approach, effective marketing, extensive network, and pro negotiation skills ensures you get the most money for your home.",
                 button: "SELL WITH JESSICA",
+                href: "/sell",
               },
               {
-                img: "/buysell.jpg",
+                img: "/Home Office.svg",
                 title: "Home Evaluation",
                 description:
                   "Thinking of selling? Get started with a complimentary, no obligation, Comparative Market Analysis (CMA). This report will provide all the data you need when comparing your home to similar properties on the market.",
                 button: "START NOW",
+                href: "/",
               },
             ].map((items, index) => (
               <div
@@ -602,7 +629,7 @@ export default function Home() {
                 className=" space-y-10 sm:space-y-6 mx-4 sm:mx-0  sm:max-w-[250px]"
               >
                 <Image
-                  className={"w-full !h-[375px]"}
+                  className={"w-full object-cover !h-[375px]"}
                   src={items.img}
                   sizes={"100vw"}
                   width={0}
@@ -616,9 +643,13 @@ export default function Home() {
                 <p className="text-sm leading-6 text-gray-600">
                   {items.description}
                 </p>
-                <Button className={"!py-2 !px-4 text-[12px] "}>
-                  COMING SOON
-                </Button>
+                <br />
+                <Link
+                  href={items.href}
+                  className="py-2 px-4 mt-[20px] text-[12px] font-semibold shadow-sm text-white bg-[#424242]"
+                >
+                  {items.button}
+                </Link>
               </div>
             ))}
           </div>
@@ -652,7 +683,7 @@ export default function Home() {
               <FaArrowRight color="white" />
             </div>
           </div>
-          <div className=" relative flex flex-col !text-center px-8 sm:px-20 py-12 space-y-10 sm:w-2/3 z-50 !text-black bg-white">
+          <div className=" relative flex flex-col !text-center px-8 md:px-20 xl:px-40 py-12 space-y-10 sm:w-2/3 z-50 !text-black bg-white xl:max-w-screen-xl">
             <div className="hidden  absolute bottom-6 right-8 cursor-pointer rounded-full sm:flex justify-center items-center w-12 h-12 text-white border-2 border-black z-30">
               <div onClick={() => handleChangeText(1)}>
                 <FaArrowRight color="black" />
@@ -676,7 +707,7 @@ export default function Home() {
               {currentText.title}
             </p>
             <p className="text-sm ">{currentText.description}</p>
-            <p className="italic">{currentText.name}</p>
+            <p className="italic font-cardo">{currentText.name}</p>
           </div>
         </div>
         <div className="bg-[#ebeced]">
@@ -701,7 +732,7 @@ export default function Home() {
                     className={
                       "w-screen sm:w-[551px] sm:h-[473px] h-[322px] object-cover"
                     }
-                    src={"/marketreports.jpg"}
+                    src={"/exterior.svg"}
                     sizes={"100vw"}
                     width={0}
                     height={0}
@@ -717,7 +748,7 @@ export default function Home() {
                     Browse listings and market stats <br />
                     specific to your neighbourhood.
                   </p>
-                  <Button className={"!px-10 !py-1 text-[12px]"}>Coming Soon</Button>
+                  <Button className={"!px-10 !py-1 text-[12px]"}>View</Button>
                 </div>
               </div>
             </div>
@@ -762,9 +793,12 @@ export default function Home() {
           >
             <Image
               className={
-                "w-2/3 mx-auto sm:mx-0 shadow-2xl sm:w-1/2 sm:ml-auto rounded-xl"
+                "w-2/3 mx-auto sm:mx-0 shadow-2xl sm:w-1/2 sm:ml-auto rounded-xl border-[15px] border-black"
               }
-              src={"/benefits.jpg"}
+              style={{
+                boxShadow: "2px 2px 12px black",
+              }}
+              src={"/Investment Sell.jpg"}
               sizes={"100vw"}
               width={0}
               height={0}
@@ -796,7 +830,11 @@ export default function Home() {
             >
               DOWNLOAD NOW
             </Button>
-            <Modal isOpen={modalOpen} onClose={handleCloseModal} href="/pdf/Investment Guide.pdf" />
+            <Modal
+              isOpen={modalOpen}
+              onClose={handleCloseModal}
+              href="/pdf/Investment Guide.pdf"
+            />
           </div>
         </div>
       </main>

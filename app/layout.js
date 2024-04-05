@@ -72,9 +72,7 @@ export default function RootLayout({ children }) {
       <head>
         <title>Jessica Bansal | PREC*</title>
         <meta name="description" content="Vancouver Realty" />
-        <link rel="icon" href="./iconj.png" type="image/png" sizes="32x32" />
-    
-
+        <link rel="icon" href="./favicon.ico" sizes="32x32" />
       </head>
       <body className={(Cardos.className, Nunit.className)}>
         <>
@@ -87,7 +85,6 @@ export default function RootLayout({ children }) {
           <div>{children}</div>
           <Footer />
         </>
-        
       </body>
     </html>
   );

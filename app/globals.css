@@ -235,3 +235,8 @@ $polygon: polygon(0 0, 100% 0, 100% 100%, 0 90%); */
 .slider > .slick-arrow {
   display: hidden;
 }
+
+.buyer_guide_pdf {
+  rotate: -15deg;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
