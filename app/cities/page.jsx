@@ -20,7 +20,7 @@ export default function Page() {
   return (
     <>
       <Header />
-      <div className="flex flex-col overflow-x-hidden max-w-screen-full mx-auto font-nunito">
+      <div className="flex flex-col overflow-x-hidden max-w-screen-full  mx-auto font-nunito ">
         <div className="overflow-x-hidden overflow-y-auto relative">
           <div
             className="aboutus-hero bg-no-repeat bg-cover bg-fixed relative w-[100%] h-[95vh] flex flex-col items-center justify-center text-center"
@@ -29,10 +29,10 @@ export default function Page() {
               backgroundPosition: "center center",
             }}
           >
-            <h1 className="py-[45px] text-[40px] text-white font-light font-cardo px-[30px] md:mx-0 mx-10">
+            <h1 className="py-[10px] text-[40px] text-white font-light font-cardo px-[30px] md:mx-0 mx-10">
               Vancouver Cities & Neighbourhoods
             </h1>
-            <span className="text-lg text-white italic font-cardo hidden md:block">
+            <span className="text-lg text-white italic font-cardo hidden md:block mt-0">
               Learn more about each community, it s current real estate report,
               and available listings.
             </span>
@@ -146,29 +146,30 @@ export default function Page() {
 
       <div className="flex justify-center">
         <div
-          className="flex flex-col-reverse  md:flex-row justify-center items-center w-full md:w-[90%] lg:w-[80%] xl:w-[50%] gap-5 m-5"
+          className="flex flex-col-reverse  md:flex-row justify-center items-center w-full md:w-[90%] lg:w-[80%] xl:w-[50%] gap-16 py-10 m-5"
           id="new-west"
         >
           <div className="w-full md:w-1/2 flex flex-col items-center md:items-start">
             <h1 className="font-cardo text-[38px]">New Westminster</h1>
+
+            <div className="md:hidden block">
+              <Link href={"/"} className="text-sm font-nunito">
+                {" "}
+                <span className="underline text-[12px] ">CLICK TO VIEW</span> New Westminster
+                Market Report{" "}
+              </Link>
+              <br />
+              <Link
+                href={"/"}
+                className="text-sm font-nunito hover:text-slate-500"
+              >
+                {" "}
+                <span className="underline text-[12px] ">CLICK TO VIEW</span> New Westminster
+                Market Report{" "}
+              </Link>
+            </div>
             <br />
-            <Link href={"/"} className="text-sm font-nunito md:hidden block">
-              {" "}
-              <span className="underline">CLICK TO VIEW</span> New Westminster
-              Market Report{" "}
-            </Link>
-            <br />
-            <br />
-            <Link
-              href={"/"}
-              className="text-sm font-nunito md:hidden block hover:text-slate-500"
-            >
-              {" "}
-              <span className="underline">CLICK TO VIEW</span> New Westminster
-              Market Report{" "}
-            </Link>
-            <br />
-            <p className="font-nunito font-[rgba(66, 66, 66, 1)]">
+            <p className="font-nunito font-[rgba(66, 66, 66, 1)] text-[12px] leading-[2] ">
               New West residents love the expansive waterfront of the Fraser
               River for its beautiful scenery and awesome recreation facilities.
               Over the years, New Westminster has grown and developed into a
@@ -178,9 +179,9 @@ export default function Page() {
               together.
             </p>
             <br />
-            <Link href={"/"} className="text-sm font-nunito md:block hidden">
+            <Link href={"/"} className="text-sm font-nunito md:block hidden ">
               {" "}
-              <span className="underline">CLICK TO VIEW</span> New Westminster
+              <span className="underline text-[12px]">CLICK TO VIEW</span> New Westminster
               Market Report{" "}
             </Link>
             <br />
@@ -189,7 +190,7 @@ export default function Page() {
               className="text-sm font-nunito md:block hidden hover:text-slate-500"
             >
               {" "}
-              <span className="underline">CLICK TO VIEW</span> New Westminster
+              <span className="underline text-[12px]">CLICK TO VIEW</span> New Westminster
               Market Report{" "}
             </Link>
           </div>
@@ -207,28 +208,29 @@ export default function Page() {
 
       <div className="flex justify-center bg-[#ebeced]">
         <div
-          className="flex flex-col-reverse  md:flex-row-reverse justify-center items-center w-full md:w-[90%] lg:w-[80%] xl:w-[50%] gap-5 m-5"
+          className="flex flex-col-reverse  md:flex-row-reverse justify-center items-center w-full md:w-[90%] lg:w-[80%] xl:w-[50%] gap-16 py-10 m-5"
           id="Burnaby"
         >
           <div className="w-full md:w-1/2 flex flex-col items-center md:items-start">
             <h1 className="font-cardo text-[38px]">Burnaby</h1>
-            <Link href={"/"} className="text-sm font-nunito md:hidden block">
-              {" "}
-              <span className="underline">CLICK TO VIEW</span> Burnaby Market
-              Report{" "}
-            </Link>
+            <div className="md:hidden block">
+              <Link href={"/"} className="text-sm font-nunito">
+                {" "}
+                <span className="underline text-[12px] ">CLICK TO VIEW</span> Burnaby Market
+                Report{" "}
+              </Link>
+              <br />
+              <Link
+                href={"/"}
+                className="text-sm font-nunito  hover:text-slate-500"
+              >
+                {" "}
+                <span className="underline text-[12px] ">CLICK TO VIEW</span> Burnaby Market
+                Report{" "}
+              </Link>
+            </div>
             <br />
-            <br />
-            <Link
-              href={"/"}
-              className="text-sm font-nunito md:hidden block hover:text-slate-500"
-            >
-              {" "}
-              <span className="underline">CLICK TO VIEW</span> Burnaby Market
-              Report{" "}
-            </Link>
-            <br />
-            <p className="font-nunito font-[rgba(66, 66, 66, 1)]">
+            <p className="font-nunito font-[rgba(66, 66, 66, 1)] text-[12px] leading-[2]">
               Burnaby is a large urban center known for great shopping and
               restaurants, excellent family-friendly communities, and a good
               public transit system. Residents of Burnaby are easily able to get
@@ -240,7 +242,7 @@ export default function Page() {
             <br />
             <Link href={"/"} className="text-sm font-nunito md:block hidden">
               {" "}
-              <span className="underline">CLICK TO VIEW</span> Burnaby Market
+              <span className="underline text-[12px] ">CLICK TO VIEW</span> Burnaby Market
               Report{" "}
             </Link>
             <br />
@@ -250,7 +252,7 @@ export default function Page() {
               className="text-sm font-nunito md:block hidden hover:text-slate-500"
             >
               {" "}
-              <span className="underline">CLICK TO VIEW</span>Burnaby Market
+              <span className="underline text-[12px]">CLICK TO VIEW</span> Burnaby Market
               Report{" "}
             </Link>
           </div>
@@ -268,26 +270,29 @@ export default function Page() {
 
       <div className="flex justify-center ">
         <div
-          className="flex flex-col-reverse  md:flex-row justify-center items-center w-full md:w-[90%] lg:w-[80%] xl:w-[50%] gap-5 m-5"
+          className="flex flex-col-reverse  md:flex-row justify-center items-center w-full md:w-[90%] lg:w-[80%] xl:w-[50%] gap-16 py-10 m-5"
           id="Vancouver"
         >
           <div className="w-full md:w-1/2 flex flex-col items-center md:items-start">
             <h1 className="font-cardo text-[38px]">Vancouver</h1>
-            <Link href={"/"} className="text-sm font-nunito md:hidden block">
-              {" "}
-              <span className="underline">CLICK TO VIEW</span> Vancouver Report{" "}
-            </Link>
+            <div className="md:hidden block">
+              <Link href={"/"} className="text-sm font-nunito ">
+                {" "}
+                <span className="underline text-[12px] ">CLICK TO VIEW</span> Vancouver
+                Report{" "}
+              </Link>
+              <br />
+              <Link
+                href={"/"}
+                className="text-sm font-nunito  hover:text-slate-500"
+              >
+                {" "}
+                <span className="underline text-[12px] ">CLICK TO VIEW</span> Vancouver
+                Report{" "}
+              </Link>
+            </div>
             <br />
-            <br />
-            <Link
-              href={"/"}
-              className="text-sm font-nunito md:hidden block hover:text-slate-500"
-            >
-              {" "}
-              <span className="underline">CLICK TO VIEW</span> Vancouver Report{" "}
-            </Link>
-            <br />
-            <p className="font-nunito font-[rgba(66, 66, 66, 1)]">
+            <p className="font-nunito font-[rgba(66, 66, 66, 1)] text-[12px] leading-[2] ">
               Consistently thought of as one of the best cities in the world,
               Vancouver is an exciting place to live. Celebrated for ready
               access to beaches and the outdoors, and active transportation
@@ -299,7 +304,7 @@ export default function Page() {
             <br />
             <Link href={"/"} className="text-sm font-nunito md:block hidden">
               {" "}
-              <span className="underline">CLICK TO VIEW</span> Vancouver Report{" "}
+              <span className="underline text-[12px] ">CLICK TO VIEW</span> Vancouver Report{" "}
             </Link>
             <br />
             <Link
@@ -307,7 +312,7 @@ export default function Page() {
               className="text-sm font-nunito md:block hidden hover:text-slate-500"
             >
               {" "}
-              <span className="underline">CLICK TO VIEW</span>Vancouver Report{" "}
+              <span className="underline text-[12px] ">CLICK TO VIEW</span> Vancouver Report{" "}
             </Link>
           </div>
           <div
@@ -324,26 +329,29 @@ export default function Page() {
 
       <div className="flex justify-center bg-[#ebeced]">
         <div
-          className="flex flex-col-reverse  md:flex-row-reverse justify-center items-center w-full md:w-[90%] lg:w-[80%] xl:w-[50%] gap-5 m-5"
+          className="flex flex-col-reverse  md:flex-row-reverse justify-center items-center w-full md:w-[90%] lg:w-[80%] xl:w-[50%] gap-16 py-10 m-5"
           id="Coquitlam"
         >
           <div className="w-full md:w-1/2 flex flex-col items-center md:items-start">
             <h1 className="font-cardo text-[38px]">Coquitlam</h1>
-            <Link href={"/"} className="text-sm font-nunito md:hidden block">
-              {" "}
-              <span className="underline">CLICK TO VIEW</span> Coquitlam Report{" "}
-            </Link>
+            <div className="md:hidden block">
+              <Link href={"/"} className="text-sm font-nunito">
+                {" "}
+                <span className="underline text-[12px] ">CLICK TO VIEW</span> Coquitlam
+                Report{" "}
+              </Link>
+              <br />
+              <Link
+                href={"/"}
+                className="text-sm font-nunito hover:text-slate-500"
+              >
+                {" "}
+                <span className="underline text-[12px] ">CLICK TO VIEW</span> Coquitlam
+                Report{" "}
+              </Link>
+            </div>
             <br />
-            <br />
-            <Link
-              href={"/"}
-              className="text-sm font-nunito md:hidden block hover:text-slate-500"
-            >
-              {" "}
-              <span className="underline">CLICK TO VIEW</span> Coquitlam Report{" "}
-            </Link>
-            <br />
-            <p className="font-nunito font-[rgba(66, 66, 66, 1)]">
+            <p className="font-nunito font-[rgba(66, 66, 66, 1)] text-[12px] leading-[2] ">
               Home to shopping centres, theme parks and other picturesque
               attractions loved and admired by tourists and locals alike,
               Coquitlam is a busy, vibrant city that keeps everyone moving. This
@@ -355,7 +363,7 @@ export default function Page() {
             <br />
             <Link href={"/"} className="text-sm font-nunito md:block hidden">
               {" "}
-              <span className="underline">CLICK TO VIEW</span> Coquitlam Report{" "}
+              <span className="underline text-[12px] ">CLICK TO VIEW</span> Coquitlam Report{" "}
             </Link>
             <br />
             <Link
@@ -363,7 +371,7 @@ export default function Page() {
               className="text-sm font-nunito md:block hidden hover:text-slate-500"
             >
               {" "}
-              <span className="underline">CLICK TO VIEW</span>Coquitlam Report{" "}
+              <span className="underline text-[12px] ">CLICK TO VIEW</span> Coquitlam Report{" "}
             </Link>
           </div>
           <div
@@ -380,26 +388,27 @@ export default function Page() {
 
       <div className="flex justify-center">
         <div
-          className="flex flex-col-reverse  md:flex-row justify-center items-center w-full md:w-[90%] lg:w-[80%] xl:w-[50%] gap-5 m-5"
+          className="flex flex-col-reverse  md:flex-row justify-center items-center w-full md:w-[90%] lg:w-[80%] xl:w-[50%] gap-16 py-10 m-5"
           id="Surrey"
         >
           <div className="w-full md:w-1/2 flex flex-col items-center md:items-start">
             <h1 className="font-cardo text-[38px]">Surrey</h1>
-            <Link href={"/"} className="text-sm font-nunito md:hidden block">
-              {" "}
-              <span className="underline">CLICK TO VIEW</span> Surrey Report{" "}
-            </Link>
+            <div className="md:hidden block">
+              <Link href={"/"} className="text-sm font-nunito">
+                {" "}
+                <span className="underline text-[12px] ">CLICK TO VIEW</span> Surrey Report{" "}
+              </Link>
+              <br />
+              <Link
+                href={"/"}
+                className="text-sm font-nunito hover:text-slate-500"
+              >
+                {" "}
+                <span className="underline text-[12px] ">CLICK TO VIEW</span> Surrey Report{" "}
+              </Link>
+            </div>
             <br />
-            <br />
-            <Link
-              href={"/"}
-              className="text-sm font-nunito md:hidden block hover:text-slate-500"
-            >
-              {" "}
-              <span className="underline">CLICK TO VIEW</span> Surrey Report{" "}
-            </Link>
-            <br />
-            <p className="font-nunito font-[rgba(66, 66, 66, 1)]">
+            <p className="font-nunito font-[rgba(66, 66, 66, 1)] text-[12px] leading-[2] ">
               Surrey is an expansive city with diverse neighbourhoods, cost of
               living, and community resources. The cultural make-up of the city
               provides a welcoming environment for newcomers to Canada and adds
@@ -412,7 +421,7 @@ export default function Page() {
             <br />
             <Link href={"/"} className="text-sm font-nunito md:block hidden">
               {" "}
-              <span className="underline">CLICK TO VIEW</span> Surrey Report{" "}
+              <span className="underline text-[12px] ">CLICK TO VIEW</span> Surrey Report{" "}
             </Link>
             <br />
             <Link
@@ -420,7 +429,7 @@ export default function Page() {
               className="text-sm font-nunito md:block hidden hover:text-slate-500"
             >
               {" "}
-              <span className="underline">CLICK TO VIEW</span>Surrey Report{" "}
+              <span className="underline text-[12px] ">CLICK TO VIEW</span> Surrey Report{" "}
             </Link>
           </div>
           <div
@@ -437,26 +446,29 @@ export default function Page() {
 
       <div className="flex justify-center bg-[#ebeced]">
         <div
-          className="flex flex-col-reverse  md:flex-row-reverse justify-center items-center w-full md:w-[90%] lg:w-[80%] xl:w-[50%] gap-5 m-5"
+          className="flex flex-col-reverse  md:flex-row-reverse justify-center items-center w-full md:w-[90%] lg:w-[80%] xl:w-[50%] gap-16 py-10 m-5"
           id="Port-Moody"
         >
           <div className="w-full md:w-1/2 flex flex-col items-center md:items-start">
             <h1 className="font-cardo text-[38px]">Port Moody</h1>
-            <Link href={"/"} className="text-sm font-nunito md:hidden block">
-              {" "}
-              <span className="underline">CLICK TO VIEW</span> Port Moody Report{" "}
-            </Link>
+            <div className="md:hidden block">
+              <Link href={"/"} className="text-sm font-nunito">
+                {" "}
+                <span className="underline text-[12px] ">CLICK TO VIEW</span> Port Moody
+                Report{" "}
+              </Link>
+              <br />
+              <Link
+                href={"/"}
+                className="text-sm font-nunito hover:text-slate-500"
+              >
+                {" "}
+                <span className="underline text-[12px] ">CLICK TO VIEW</span> Port Moody
+                Report{" "}
+              </Link>
+            </div>
             <br />
-            <br />
-            <Link
-              href={"/"}
-              className="text-sm font-nunito md:hidden block hover:text-slate-500"
-            >
-              {" "}
-              <span className="underline">CLICK TO VIEW</span> Port Moody Report{" "}
-            </Link>
-            <br />
-            <p className="font-nunito font-[rgba(66, 66, 66, 1)]">
+            <p className="font-nunito font-[rgba(66, 66, 66, 1)] text-[12px] leading-[2]">
               Located just a little further along the Burrard Inlet, “PoMo” is
               an excellent city. It boasts all the same features of Vancouver
               making it a great place to live. It’s the perfect combination of
@@ -467,7 +479,7 @@ export default function Page() {
             <br />
             <Link href={"/"} className="text-sm font-nunito md:block hidden">
               {" "}
-              <span className="underline">CLICK TO VIEW</span> Port Moody Report{" "}
+              <span className="underline text-[12px] ">CLICK TO VIEW</span> Port Moody Report{" "}
             </Link>
             <br />
             <Link
@@ -475,7 +487,7 @@ export default function Page() {
               className="text-sm font-nunito md:block hidden hover:text-slate-500"
             >
               {" "}
-              <span className="underline">CLICK TO VIEW</span>Port Moody Report{" "}
+              <span className="underline text-[12px] ">CLICK TO VIEW</span> Port Moody Report{" "}
             </Link>
           </div>
           <div

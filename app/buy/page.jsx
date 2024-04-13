@@ -8,7 +8,7 @@ import Modal from "@/components/modal/formModal";
 
 const data = [
   {
-    image: "/buy.jpg",
+    image: "/slider1.svg",
     process: "the home buying process",
     sno: "1.",
     title: "Get Pre-Approved",
@@ -16,7 +16,7 @@ const data = [
       "Knowing your budget is essential as you’ll know exactly how much you can borrow and the price range your home needs to be in. You can lock in interest rates for up to 90 days while you look for your home.",
   },
   {
-    image: "/buy.jpg",
+    image: "/slider2.svg",
     process: "the home buying process",
     sno: "2.",
     title: "The Search",
@@ -24,7 +24,7 @@ const data = [
       "Choosing a home that complements your lifestyle, income, and preferences is no easy task. But, with the right realtor, whose personality meshes well with yours, you will soon understand your wants and needs. ",
   },
   {
-    image: "/buy.jpg",
+    image: "/slider3.svg",
     process: "the home buying process",
     sno: "3.",
     title: "The Offer",
@@ -32,7 +32,7 @@ const data = [
       "When you’ve found ‘the one’ I’ll conduct a Comparative Market Analysis to determine where a reasonable offer should stand. Then we’ll present our Contract of Purchase and Sale to the listing agent.",
   },
   {
-    image: "/buy.jpg",
+    image: "/slider4.svg",
     process: "the home buying process",
     sno: "4.",
     title: "Remove Subjects",
@@ -40,7 +40,7 @@ const data = [
       "This is where we successfully complete the conditions outlined in the Contract of Purchase and Sale, which will include a home inspection and finalizing your lending terms with your mortgage broker and bank.",
   },
   {
-    image: "/buy.jpg",
+    image: "/slider5.svg",
     process: "the home buying process",
     sno: "5.",
     title: "Sign and Close",
@@ -48,7 +48,7 @@ const data = [
       "With your deposit paid, you’ll meet with a legal representative to register the property and transfer the Title from the previous owner to you. You’ll sign all the documents a few days before completion day, which is when you legally get ownership of your new home.",
   },
   {
-    image: "/buy.jpg",
+    image: "/slider6.svg",
     process: "the home buying process",
     sno: "6.",
     title: "Moving Day!",
@@ -73,7 +73,7 @@ function Page() {
       <Header />
       <Modal isOpen={modalOpen} onClose={handleCloseModal} href={href} />
       {/* mainbg */}
-      <div className="resourceimage h-[550px] md:h-96 relative p-5">
+      <div className="buyresourceimage h-[550px] md:h-96 relative p-5">
         {/* Background Image with Opacity */}
         <div className="absolute inset-0 bg-white opacity-70 z-0"></div>
         {/* Text Content */}
@@ -231,13 +231,13 @@ function Page() {
               className="cursor-pointer w-48 buyer_guide_pdf"
             >
               <Image
-                src="/buyerbg.webp"
+                src="/buyersguide.jpg"
                 alt="Real Estate Guide"
                 width={800}
                 height={500}
-                className="object-cover h-64 w-48 rounded-sm "
+                className="h-64 w-48 rounded-sm "
               />
-              <div className="absolute inset-0 flex items-center justify-center bg-white m-3 sm:m-4 bg-opacity-80 ">
+              {/* <div className="absolute inset-0 flex items-center justify-center bg-white m-3 sm:m-4 bg-opacity-80 ">
                 <div className="w-full h-full text-center flex flex-col justify-around">
                   <span className="text-[5px] sm:text-xs">
                     jessicabansal.com
@@ -254,7 +254,7 @@ function Page() {
                     </span>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
             {/* <Image
               src="/shadow.webp"

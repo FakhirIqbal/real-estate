@@ -30,9 +30,9 @@ function Footer() {
             />
           </div>
         ))}
-        <div className="">
-          <div className="bg-white  sm:mx-0 px-4 sm:px-14 w-2/3 sm:w-[20%] py-3 sm:py-7 absolute sm:right-0 sm:top-32 sm:-bottom-[150px] text-center text-sm sm:left-auto left-0 right-0 top-32  mx-auto">
-            <p className=" sm:text-md sm:leading-8">
+        <div className=" " >
+          <div className="bg-white  sm:mx-0 px-4  sm:w-[300px] py-3 sm:py-7 absolute sm:right-0 sm:top-32  text-center text-sm sm:left-auto left-0 right-0 top-32   mr:[30%]">
+            <p className=" sm:text-md sm:leading-1">
               Follow me on Instagram for the latest <br /> listings, market
               trends, and tips for buying <br /> and selling your home.
             </p>
@@ -42,7 +42,7 @@ function Footer() {
               }
               aria-label="Instagram page"
             >
-              <h1 className="text-2xl sm:text-2xl mt-2 font-semibold uppercase hover:opacity-50 transition-all duration-300">
+              <h1 className="text-sm sm:text-sm mt-2 font-semibold uppercase hover:opacity-50 transition-all duration-300">
                 @Jess.Realty
               </h1>
             </Link>
@@ -58,7 +58,7 @@ function Footer() {
                 className={"cursor-pointer"}
                 aria-label="homepage"
               >
-                <h1 className={"text-2xl uppercase font-cardo "}>
+                <h1 className={"text-xs uppercase font-cardo "}>
                   Jessica Bansal
                 </h1>
                 <p className="text-sm text-center ">PREC*</p>

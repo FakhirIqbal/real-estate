@@ -124,12 +124,12 @@ export const data = [
   {
     id: 6,
     title: "SL11 - 23222 Gilley Road, Richmond            ",
-    image: "/122/4.jpg",
+    image: "/122/4 (2).jpg",
     price: "Sold in 2021",
-    soldYear: "2021 List Price $999.000",
+    soldYear: "",
     description:
       "Congratulations to my client on purchasing this commercial unit at Hamilton Village, where it all comes together. Hamilton's new High Street will be the center of a revitalized core, with its wide, walkable boulevards and tree-lined paths providing a self-contained main street shopping experience just steps from your door. From markets and cafés, to local shops and services, all the essentials will be here. The new High Street shopping plaza promises exceptional retail space and unprecedented area shopping for visitors and locals alike. Hamilton Village will do more than integrate into the community-it will help revitalize the area with new housing options, green spaces, waterfront access and exciting amenities.",
-    indoor: ["/122/1.jpg", "/122/2.jpg", "/122/3.jpg", "/122/4.jpg"],
+    indoor: [],
     mainPic: "",
   },
 ];

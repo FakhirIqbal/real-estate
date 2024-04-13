@@ -11,11 +11,10 @@ function Id() {
   const [params, setParams] = useState("");
   useEffect(() => {
     if (typeof window === "undefined") return; // Exit early if not running in the browser
-  
-    const param = window.location.pathname.split('/')[1]; // Get the parameter after '/recent/'
+
+    const param = window.location.pathname.split("/")[1]; // Get the parameter after '/recent/'
     setParams(param); // Assuming setParams is a function to update state
   }, []);
-
 
   // console.log();
   // const router = useRouter();
@@ -86,13 +85,21 @@ function Id() {
               alt=""
             />
           )}
-          <div className="font-light text-center sm:text-start text-sm py-12 flex flex-col space-y-4">
-            <p>{`Sold ${selectedItem[0]?.soldYear}. ${
-              selectedItem[0]?.price
-                ? `List price ${selectedItem[0]?.price}`
-                : ""
-            }`}</p>
-          </div>
+          {selectedItem[0].id == 6 ? (
+            <div className="font-light text-center sm:text-start text-sm py-12 flex flex-col space-y-4">
+              <p>{`${selectedItem[0]?.soldYear}${
+                selectedItem[0]?.price ? `${selectedItem[0]?.price}.` : ""
+              }`}</p>
+            </div>
+          ) : (
+            <div className="font-light text-center sm:text-start text-sm py-12 flex flex-col space-y-4">
+              <p>{`Sold ${selectedItem[0]?.soldYear}. ${
+                selectedItem[0]?.price
+                  ? `List price ${selectedItem[0]?.price}`
+                  : ""
+              }`}</p>
+            </div>
+          )}
         </div>
       </div>
     </main>

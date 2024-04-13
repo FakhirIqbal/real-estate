@@ -96,40 +96,40 @@ export default function Home() {
   const texts = useMemo(
     () => [
       {
-        name: "David -  New Westminster",
+        name: "David - New Westminster",
         title: "Data Analysis Report",
         description:
           "This report provides a comprehensive analysis of the data collected over the past quarter. It includes key insights, trends, and recommendations for future strategies. The detailed analysis covers various aspects, such as customer behavior, market trends, and performance metrics.",
       },
       {
-        name: "Jass -  New Westminster",
+        name: "Jass - New Westminster",
         title: "Strategic Business Plan Overview",
         description:
-          "Gain insights into our strategic business plan, outlining goals, initiatives, and milestones. This overview highlights the key strategies driving our company's growth and success. The plan covers market positioning, competitive analysis, and a roadmap for executing our strategic initiatives.",
+          "Gain insights into our strategic business plan, outlining goals, initiatives, and milestones. This overview highlights the key strategies driving our companys growth and success. The plan covers market positioning, competitive analysis, and a roadmap for executing our strategic initiatives.",
       },
       {
         name: "Rafael - Vancouver",
         title: "Incredible experience",
         description:
-          "We went in knowing nothing and honestly kind of scared of the huge commitment buying our first apartment would be. But Amit was there every step of the way, making sure we had all the information and easing away our fears. ",
+          "We went in knowing nothing and honestly kind of scared of the huge commitment buying our first apartment would be. But Jessica was there every step of the way, making sure we had all the information and easing away our fears.",
       },
       {
-        name: "Anna -  Vancouver",
+        name: "Anna - Vancouver",
         title: "Highly recommend!",
         description:
-          "Amit guided me through the ever-changing real estate market and ensured I purchased not only a home that I love, but also a sound investment. His wealth of knowledge and years of experience in the local market made me feel confident in every decision I made.",
+          "Jessica guided me through the ever-changing real estate market and ensured I purchased not only a home that I love, but also a sound investment. His wealth of knowledge and years of experience in the local market made me feel confident in every decision I made.",
       },
       {
         name: "Ari - Langley",
         title: "Very lucky to find Jessica",
         description:
-          "Amit helped us narrow down our parameters, educated us on the process, and helped us every step of the way. What we really appreciated about Amit is his up to date market knowledge, professionalism, integrity, and prompt communication.",
+          "Jessica helped us narrow down our parameters, educated us on the process, and helped us every step of the way. What we really appreciated about Jessica is his up to date market knowledge, professionalism, integrity, and prompt communication.",
       },
       {
-        name: "David -  New Westminster",
+        name: "David - New Westminster",
         title: "Genuinely eager to find our perfect home",
         description:
-          "We couldn’t imagine a better buying experience than the one that we had with Amit. He guided us through our journey with precision while helping to build our knowledge of the home buying process as first time home buyers.",
+          "We couldn’t imagine a better buying experience than the one that we had with Jessica. He guided us through our journey with precision while helping to build our knowledge of the home buying process as first-time home buyers.",
       },
     ],
     []
@@ -177,7 +177,6 @@ export default function Home() {
     autoplay: true,
     slidesToShow: 4, // Default number of items to show
     slidesToScroll: 1,
-    // cssEase: "linear",
     swipeToSlide: true,
     speed: 9000,
     autoplaySpeed: 5000,
@@ -334,7 +333,9 @@ export default function Home() {
         <Header />
         <div>
           <div className="flex flex-col px-5 sm:px-0 sm:block mt-20 w-full text-center max-w-screen-xl mx-auto">
-            <p className="text-sm">JESSICA BANSAL REAL ESTATE</p>
+            <p className="text-sm">
+              Jessica Bansal Personal Real Estate Corporation
+            </p>
             <h1 className="px-4 sm:px-0 text-4xl  py-4 font-cardo">
               Your Next Great Move Starts Here
             </h1>
@@ -368,13 +369,12 @@ export default function Home() {
                 />
               </div>
             </div>
-            <p className="my-8 sm:my-0 text-sm order-1">
-              Say Good bye to overwhelm, and hello to your new home. My goal is
-              to simplify this complex <br /> process by replacing stress and
-              anxiety with ease and excitement. It’s important to me that you
-              are
-              <br />
-              confident and comfortable with every choice you make..
+            <p>
+              Say &quot;goodbye&quot; to overwhelm, and &quot;hello&quot; to
+              your new home. My goal is to simplify this complex <br /> process
+              by replacing stress and anxiety with ease and excitement.
+              It&apos;s important to me that you are <br />
+              confident and comfortable with every choice you make.
             </p>
           </div>
           {/* about us */}
@@ -387,14 +387,14 @@ export default function Home() {
               <div className="space-y-6 text-sm flex flex-col items-center sm:block">
                 <p className="">
                   I know that buying or selling a home is more than just a
-                  transaction: it’s a life changing experience. My
+                  transaction: it&#39;s a life changing experience. My
                   relationship-first approach is what makes the journey to
                   success more enjoyable.
                 </p>
                 <p className="">
-                  Whether you’re new to the area or a 604 native, I’ll guide you
-                  through each step of your real estate needs - before, during,
-                  and after the sale
+                  Whether you&#39;re new to the area or a 604 native, I&#39;ll
+                  guide you through each step of your real estate needs -
+                  before, during, and after the sale
                 </p>
                 <Button className={"!flex gap-2 "}>
                   <Link href={"/about"} aria-label="aboutpage">
@@ -445,7 +445,7 @@ export default function Home() {
         <div className="s">
           <div className="max-w-screen-xl sm:mx-auto gap-20 py-20 flex flex-col sm:grid grid-cols-3">
             <div className="cols-span-1 flex flex-col items-center px-8 sm:px-0 sm:items-end space-y-6">
-              <h1 className="">WHAT’S YOUR GOAL?</h1>
+              <h1 className="">WHAT&#39;S YOUR GOAL?</h1>
               <hr className="border-t  w-2/3 sm:w-1/2 border-black" />
               <Link
                 href={"/buy"}
@@ -464,37 +464,31 @@ export default function Home() {
             </div>
             <div className="col-span-2 space-y-6 sm:pl-12 px-8 sm:w-[77%]">
               <h1 className="text-[22px] leading-tight sm:leading-normal sm:text-2xl font-medium font-cardo">
-                You’re serious about your real estate goals; Im serious about
-                getting the job done! I ensure no details fall through the
+                You&#39;re serious about your real estate goals; Im serious
+                about getting the job done! I ensure no details fall through the
                 cracks so that you get the best deal.
               </h1>
               <p className="text-sm leading-loose sm:leading-normal ">
-                Regardless of the market conditions one thing is for sure - it’s
-                highly competitive. So it’s simply not enough to casually browse
-                consumer-facing platforms like Zolo. It takes having an agent in
-                your corner who’s well-networked, has a proven track record, is
-                an expert negotiator, and can navigate the paperwork on your
-                behalf for the best possible outcome.
+                Regardless of the market conditions one thing is for sure -
+                it&#39;s highly competitive. So it&#39;s simply not enough to
+                casually browse consumer-facing platforms like Zolo. It takes
+                having an agent in your corner who&#39;s well-networked, has a
+                proven track record, is an expert negotiator, and can navigate
+                the paperwork on your behalf for the best possible outcome.
               </p>
             </div>
           </div>
           <div className="max-w-screen-xl mx-4 sm:mx-auto mb-20">
             <h1 className=" text-center px-8 sm:px-0 text-4xl font-cardo">
-              Browse Jessica’s Listings
+              Browse Jessica&#39;s Listings
             </h1>
 
             <div className="relative  my-20">
-              {/* <Sliderr 
-  fixedWidth={270}
-  className={"!bg-black"}
-/> */}
-
               <SliderComponent
                 data={[1, 3, 4, 5, 6, 67, 7, 8, 9]}
                 renderCard={Explorecard}
                 className={"!mx-4 "}
                 fixedWidth={270}
-                // slidesToShow={1}
               />
             </div>
             <div className="mx-2  sm:mx-16 2xl:mx-0">
@@ -502,11 +496,6 @@ export default function Home() {
                 Start Your Home Search
               </h1>
               <div className="flex mt-8 sm:mt-0 ">
-                {/* <input
-                type="text"
-                placeholder="New Westminster"
-                className="text-sm border border-black w-[90%] py-2 px-4 rounded-[4px] "
-              /> */}
                 <ThemeProvider theme={theme}>
                   <TextField
                     fullWidth
@@ -551,17 +540,7 @@ export default function Home() {
                       value={postcode}
                       onChange={handlePostcodeChange}
                       label="Postcode"
-                    >
-                      {/* Postcode options */}
-                      {/* {postalCodes.map((code) => (
-                        <MenuItem key={code} value={code}>
-                          {code}
-                        </MenuItem>
-                      ))} */}
-                      {/* <MenuItem value="postcode1">Postcode 1</MenuItem>
-                      <MenuItem value="postcode2">Postcode 2</MenuItem>
-                      <MenuItem value="postcode3">Postcode 3</MenuItem> */}
-                    </Select>
+                    ></Select>
                   </FormControl>
                   <FormControl
                     variant="standard"
@@ -581,9 +560,6 @@ export default function Home() {
                           {city.city}
                         </MenuItem>
                       ))}
-                      {/* <MenuItem value="city1">City 1</MenuItem>
-                      <MenuItem value="city2">City 2</MenuItem>
-                      <MenuItem value="city3">City 3</MenuItem> */}
                     </Select>
                   </FormControl>
                   <Button variant="contained" onClick={handleSearch}>
@@ -611,7 +587,7 @@ export default function Home() {
                 img: "/Great room .svg",
                 title: "Selling Your Home",
                 description:
-                  "What's the secret to successfully selling your home? The details. My proven sales approach, effective marketing, extensive network, and pro negotiation skills ensures you get the most money for your home.",
+                  "Whats the secret to successfully selling your home? The details. My proven sales approach, effective marketing, extensive network, and pro negotiation skills ensures you get the most money for your home.",
                 button: "SELL WITH JESSICA",
                 href: "/sell",
               },
@@ -659,25 +635,6 @@ export default function Home() {
             " relative parllax flex flex-col justify-center py-20 px-8 sm:p-20 items-center    w-full   z-10"
           }
         >
-          {/* <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-10">
-          <video
-            ref={videoRef}
-            className="object-cover w-full h-full"
-            loop
-            muted
-            autoPlay
-            playsInline
-            // playbackrate={0.4}
-          >
-            <source src="vidio2.mp4" type="video/mp4" />
-          </video>
-          <button
-                onClick={() => setIsPlaying(!isPlaying)}
-                className="absolute top-4 left-4 bg-white text-black border-none p-2 cursor-pointer z-20"
-              >
-                {isPlaying ? "Pause" : "Play"}
-              </button>
-        </div> */}
           <div className="absolute bottom-6 right-8 cursor-pointer rounded-full sm:hidden flex justify-center items-center w-12 h-12 text-white border-2 border-white z-30">
             <div onClick={() => handleChangeText(1)}>
               <FaArrowRight color="white" />
@@ -786,11 +743,7 @@ export default function Home() {
           </div>
         </div>
         <div className="max-w-screen-xl flex flex-col sm:grid grid-cols-2 items-center gap-20 mx-auto pt-20 pb-40">
-          <div
-          // data-aos="fade-right"
-          // data-aos-duration="500"
-          // data-aos-anchor-placement="top-bottom"
-          >
+          <div>
             <Image
               className={
                 "w-2/3 mx-auto sm:mx-0 shadow-2xl sm:w-1/2 sm:ml-auto rounded-xl border-[15px] border-black"
@@ -818,12 +771,6 @@ export default function Home() {
               and breakthrough the real estate market.
             </p>
             <p className="text-[12px] ">PLUS! ILL TELL YOU WHAT NOT TO DO</p>
-            {/* <input
-            type="text"
-            placeholder="Email"
-            className="text-sm border w-2/3 border-black  py-3 px-4 rounded-sm "
-          /> */}
-            {/* <Button className={"!px-10 w-2/3 font-bold !bg-black"}>DOWNLOAD NOW</Button> */}
             <Button
               className={"!px-10 w-2/3 font-bold !bg-black "}
               onClick={handleOpenModal}

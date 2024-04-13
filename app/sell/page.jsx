@@ -10,7 +10,7 @@ import Link from "next/link";
 
 const data = [
   {
-    image: "/buy.jpg",
+    image: "/slider1.svg",
     process: "THE HOME SELLING PROCESS",
     sno: "1.",
     title: "Get Pre-Approved",
@@ -18,7 +18,7 @@ const data = [
       "Knowing your budget is essential as you’ll know exactly how much you can borrow and the price range your home needs to be in. You can lock in interest rates for up to 90 days while you look for your home.",
   },
   {
-    image: "/buy.jpg",
+    image: "/slider2.svg",
     process: "THE HOME SELLING PROCESS",
     sno: "2.",
     title: "The Search",
@@ -26,7 +26,7 @@ const data = [
       "Choosing a home that complements your lifestyle, income, and preferences is no easy task. But, with the right realtor, whose personality meshes well with yours, you will soon understand your wants and needs. ",
   },
   {
-    image: "/buy.jpg",
+    image: "/slider3.svg",
     process: "THE HOME SELLING PROCESS",
     sno: "3.",
     title: "The Offer",
@@ -34,7 +34,7 @@ const data = [
       "When you’ve found ‘the one’ I’ll conduct a Comparative Market Analysis to determine where a reasonable offer should stand. Then we’ll present our Contract of Purchase and Sale to the listing agent.",
   },
   {
-    image: "/buy.jpg",
+    image: "/slider4.svg",
     process: "THE HOME SELLING PROCESS",
     sno: "4.",
     title: "Remove Subjects",
@@ -42,7 +42,7 @@ const data = [
       "This is where we successfully complete the conditions outlined in the Contract of Purchase and Sale, which will include a home inspection and finalizing your lending terms with your mortgage broker and bank.",
   },
   {
-    image: "/buy.jpg",
+    image: "/slider5.svg",
     process: "THE HOME SELLING PROCESS",
     sno: "5.",
     title: "Sign and Close",
@@ -50,7 +50,7 @@ const data = [
       "With your deposit paid, you’ll meet with a legal representative to register the property and transfer the Title from the previous owner to you. You’ll sign all the documents a few days before completion day, which is when you legally get ownership of your new home.",
   },
   {
-    image: "/buy.jpg",
+    image: "/slider6.svg",
     process: "THE HOME SELLING PROCESS",
     sno: "6.",
     title: "Moving Day!",
@@ -75,7 +75,7 @@ function Page() {
       <Header />
       <Modal isOpen={modalOpen} onClose={handleCloseModal} href={href} />
       {/* mainbg */}
-      <div className="resourceimage h-[550px] md:h-96 relative p-5">
+      <div className="sellerbg  h-[550px] md:h-96 relative p-5">
         {/* Background Image with Opacity */}
         <div className="absolute inset-0 bg-white opacity-70 z-0"></div>
         {/* Text Content */}
@@ -128,8 +128,8 @@ function Page() {
         <div className="flex items-center justify-center w-full">
           <div className="max-w-screen-lg mx-auto flex items-center justify-between gap-10 p-10 ">
             <div className="font-cardo">
-              <p>ON YOUR LISTING</p>
-              <h1 className="text-3xl">Lets Find Your Dream Home</h1>
+              <p>Elevate your listing</p>
+              <h1 className="text-3xl">Selling your home with Jessica </h1>
               <Image
                 src="/Headshot1.webp"
                 alt="buy"
@@ -138,15 +138,9 @@ function Page() {
                 className=" lg:h-[355px] md:h-[230px] w-[2300px] pt-3"
               />
             </div>
-            <div>
-              <Image
-                src="/buy.jpg"
-                alt="buy"
-                width={1920}
-                height={1080}
-                className=""
-              />
-            </div>
+
+            <img src="/laptop.jpg" alt="buy" width={200} className="" />
+
             <div>
               <p>
                 Each property is unique, and as such, your home should have a
@@ -169,8 +163,8 @@ function Page() {
       <div className="flex flex-col justify-center items-center">
         <div className="px-10 flex flex-col md:flex-row md:justify-center md:items-center gap-20 pb-20 md:py-20 md:w-[70%] w-[100%] max-w-screen-xl">
           <div className="flex flex-col gap-10">
-            <span className="hidden md:block text-xs">
-              YOU ARE IN THE RIGHT PLACE
+            <span className="hidden md:block text-sm">
+              YOU&#39;RE IN THE RIGHT PLACE
             </span>
             <h1 className="text-3xl xl:text-5xl xl:tracking-wide  font-cardo">
               If You Are Serious About Selling Your Home, I am Serious About
@@ -188,20 +182,18 @@ function Page() {
             </p>
           </div>
           <div className="">
-            <video
-              className="object-cover w-[150%] xl:h-[500px] h-[250px] "
-              loop
-              muted
-              autoPlay
-              playsInline
-            >
-              <source src="buyvideo.mp4" type="video/mp4" />
-            </video>
+            <Image
+              src="/moving.svg"
+              alt="buy"
+              width={1920}
+              height={1080}
+              className=" lg:h-[390px] md:h-[230px] w-[2300px] pt-3 obje"
+            />
           </div>
         </div>
       </div>
       {/* section4 */}
-      <div className="resourceimage h-auto lg:py-32 sm:h-[600px] relative p-5 flex justify-center">
+      <div className="reviewimage h-auto lg:py-32 sm:h-[600px] relative p-5 flex justify-center">
         {/* Background Image with Opacity */}
         <div className="absolute inset-0 bg-white opacity-70 z-0"></div>
         {/* Text Content */}
@@ -238,14 +230,14 @@ function Page() {
               }}
               className="cursor-pointer w-48 buyer_guide_pdf"
             >
-              <Image
-                src="/buyerbg.webp"
+              <img
+                src="/Seller Guide-01 (1).jpg"
                 alt="Real Estate Guide"
                 width={800}
                 height={500}
-                className="object-cover h-64 w-48 rounded-sm "
+                className="h-64 w-48 rounded-sm "
               />
-              <div className="absolute inset-0 flex items-center justify-center bg-white m-3 sm:m-4 bg-opacity-80 ">
+              {/* <div className="absolute inset-0 flex items-center justify-center bg-white m-3 sm:m-4 bg-opacity-80 ">
                 <div className="w-full h-full text-center flex flex-col justify-around">
                   <span className="text-[5px] sm:text-xs">
                     jessicabansal.com
@@ -262,7 +254,7 @@ function Page() {
                     </span>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
             {/* <Image
               src="/shadow.webp"

@@ -1,12 +1,8 @@
 "use client";
-import React, { useState, useEffect } from "react";
-import Image from "next/image";
+import React, { useState } from "react";
 import Link from "next/link";
-import Dropdown from "@/components/custom_dropdown";
 import Button from "./Button";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { usePathname } from "next/navigation";
-import AnimatedButton from "./ui/animatedButton";
 
 const NavBar = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -29,7 +25,7 @@ const NavBar = () => {
           />
         </div>
         <div className={` md:flex items-center gap-6  z-30  hidden`} id="">
-          <div className="flex gap-6 !uppercase items-center space-x-8 text-gray-600 font-medium text-[12px]">
+          <div className="flex md:gap-0 gap-6 !uppercase items-center space-x-8 text-gray-600 font-medium text-[12px]">
             <Link href={"/"} aria-label="homepage">
               <p className=" pr-4  hover:opacity-50 transition-all duration-300   ">
                 Home
@@ -129,51 +125,6 @@ const NavBar = () => {
             <Button>Contact</Button>
           </Link>
         </div>
-
-        {/* <div
-          className={`w-full md:hidden ${isNavOpen ? "block" : "hidden"}`}
-          id="navbar-solid-bg"
-        >
-          <div className="flex flex-col font-bold opacity-80 mt-4 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent ">
-            <Link href={"/"}>
-              <p
-                className="gap-2 font-bold opacity-80 py-2  md:p-0 flex flex-row  text-primary rounded md:bg-transparent md:text-blue-700 "
-                aria-current="page"
-              >
-                <Image
-                  src={"/icons/usericon.svg"}
-                  className=""
-                  width={10}
-                  height={10}
-                  sizes={"100vw"}
-                  alt="User Icon"
-                />
-                Sign in
-              </p>
-            </Link>
-            <Link href={"/"}>
-              <p className="block font-bold cool-link navlink py-2  md:p-0 text-gray-900 rounded  md:hover:bg-transparent md:border-0 md:hover:text-primary">
-                Post Business Card
-              </p>
-            </Link>
-            <Link href={"/"}>
-              <p className="block font-bold opacity-80 py-2 cool-link navlink  md:p-0 text-gray-900 rounded  md:hover:bg-transparent md:border-0 md:hover:text-primary">
-                For employers
-              </p>
-            </Link>
-            <Link href={"/"}>
-              <p className=" py-2  md:p-0 cool-link navlink font-bold opacity-80 text-gray-900 rounded  md:hover:bg-transparent md:border-0 hover:text-primary ">
-                Find Company
-              </p>
-            </Link>
-
-            <Link href={"/"}>
-              <p className=" py-2   md:p-0 cool-link navlink font-bold opacity-80 text-gray-900 rounded  md:hover:bg-transparent md:border-0 hover:text-primary">
-                News
-              </p>
-            </Link>
-          </div>
-        </div> */}
       </div>
     </div>
   );

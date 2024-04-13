@@ -2,7 +2,6 @@
 import React, { useEffect } from "react";
 import Image from "next/image";
 import Header from "@/components/header";
-import Button from "@/components/Button";
 import Head from "next/head";
 import Link from "next/link";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
@@ -14,7 +13,7 @@ function Page() {
       "Investing in a rental property",
     ],
     loop: {},
-    delaySpeed: 5000,
+    delaySpeed: 4000,
   });
 
   return (
@@ -26,16 +25,16 @@ function Page() {
       />
       <Header />
       <div className="bg-[#ebeced]">
-        <div className="flex flex-col sm:grid grid-cols-2  items-center py-20">
+        <div className="flex flex-col sm:grid grid-cols-2 justify-center items-center py-20">
           <div className=" sm:w-[45%] sm:ml-auto m-6 sm:mr-20 space-y-6 order-2 sm:order-1">
-            <p className="text-center text-xs sm:text-start sm:text-base sm:font-medium">
+            <p className="text-center !text-xs sm:text-start sm:text-base sm:font-medium">
               ABOUT JESSICA BANSAL
             </p>
-            <h1 className="text-2xl sm:text-4xl font-cardo">
+            <h1 className="text-2xl lg:text-4xl font-cardo">
               Committed to your future so you can feel confident in your real
               estate decisions.
             </h1>
-            <p className="font-cardo italic sm:text-2xl">
+            <p className="font-cardo text-sm italic lg:text-2xl">
               I understand how personal buying and/or selling a home can feel.
               You have unique requirements, desires, and numbers you need to
               hit. You want someone who’s looking out for each and every one of
@@ -53,7 +52,8 @@ function Page() {
           >
             <Image
               src={"/Headshot1.webp"}
-              className="w-[80%] h-[70%] my-auto mx-auto sm:w-1/2 "
+              className="w-[60%] my-auto mx-auto md:w-60%] lg:w-[40%]"
+              style={{ objectFit: "center !important" }}
               width={0}
               height={0}
               sizes={"100vw"}
@@ -153,8 +153,8 @@ function Page() {
           </div>
         </div>
       </div>
-      <div>
-        <div className=" gap-20 flex flex-col sm:grid grid-cols-3 px-5 sm:px-0 items-center py-20 sm:pl-20">
+      <div className="">
+        <div className="max-w-screen-xl mx-auto gap-10 flex flex-col sm:grid grid-cols-3 items-center p-10">
           <div
             data-aos="fade-in"
             data-aos-offset="200"
@@ -162,14 +162,13 @@ function Page() {
             data-aos-duration="1000"
             data-aos-easing="ease-in-out"
             data-aos-once="true"
-            className=" sm:h-[700px] "
+            className="w-full"
           >
             <Image
               src={"/dining.svg"}
-              className="w-screen sm:w-full sm:h-full sm:ml-auto"
+              className="w-full h-full object-cover"
               width={0}
               height={0}
-              sizes={"100vw"}
               alt="rolodex Logo"
             />
           </div>
@@ -180,36 +179,37 @@ function Page() {
             data-aos-duration="1000"
             data-aos-easing="ease-in-out"
             data-aos-once="true"
-            className="space-y-10 sm:w-[90%]"
+            className="w-full flex flex-col justify-center min-h-[200px]"
           >
-            <p className="font-medium text-[#424242] text-[17px]">
+            <p className="font-medium text-[#424242] text-[13px]">
               MY APPROACH
             </p>
-            <h1 className="text-3xl sm:text-4xl font-cardo">
+            <br />
+            <h1 className="text-[25px] font-cardo">
               Delivering an exceptional experience that exceeds your
               expectations and gets you results
             </h1>
-            <p className="text-justify sm:text-start text-xl  leading-8  text-[#424242]">
+            <br />
+            <p className="text-justify sm:text-start text-[14px] font-nunito leading-4  text-[#424242]">
               My relationship-first approach provides you with an individual and
               personal experience tailored to your specific real estate needs.
               You will feel right at home and well taken care of as I provide
               you with the representation you deserve.
             </p>
           </div>
-          <div className="">
+          <div className="w-full">
             <Image
               src={"/Kitchen.svg"}
-              className="w-screen sm:w-[55%] sm:mt-auto"
+              className="w-full sm:w-[65%] sm:h-[80%] object-cover"
               width={0}
               height={0}
-              sizes={"100vw"}
               alt="rolodex Logo"
             />
           </div>
         </div>
       </div>
 
-      <div className="max-w-screen-xl sm:mx-auto gap-20 px-5 sm:px-0 sm:gap-40 flex flex-col sm:grid grid-cols-2 items-center py-20">
+      <div className="max-w-screen-xl sm:mx-auto gap-15 px-5 sm:px-0 sm:gap-20 flex flex-col sm:grid grid-cols-2 items-center py-20">
         <div
           data-aos="fade-in"
           data-aos-offset="200"
@@ -217,11 +217,11 @@ function Page() {
           data-aos-duration="1000"
           data-aos-easing="ease-in-out"
           data-aos-once="true"
-          className=""
+          className="bg-black"
         >
           <Image
             src={"/hawaii.jpg"}
-            className="w-full object-cover h-[400px] sm:h-[550px] sm:w-[90%] sm:ml-auto"
+            className="w-full object-cover h-[400px] sm:h-[550px] sm:ml-auto"
             width={0}
             height={0}
             sizes={"100vw"}
@@ -235,12 +235,12 @@ function Page() {
           data-aos-duration="1000"
           data-aos-easing="ease-in-out"
           data-aos-once="true"
-          className="flex flex-col space-y-10 sm:space-y-20  py-4 text-[#424242] sm:font-medium"
+          className="flex flex-col space-y-10 sm:space-y-15  py-4 text-[#424242] sm:font-medium"
         >
-          <p className="text-4xl text-center sm:text-start sm:text-6xl font-cardo text-black">
+          <p className="text-4xl text-center sm:text-start sm:text-4xl font-cardo text-black">
             QUICK FACTS
           </p>
-          <div className="sm:space-y-12 space-y-8 tracking-wider   sm:text-xl uppercase">
+          <div className="sm:space-y-9 space-y-5 tracking-wider   sm:text-base uppercase">
             <p>Enjoying the great outdoors</p>
             <p>HAWAII IS ALWAYS A great IDEA</p>
             <p>Drinks celery juice every morning</p>
@@ -251,13 +251,13 @@ function Page() {
       </div>
       <div className="h-screen bg-white op px-5 sm:px-0 grayimage">
         <div className="flex flex-col justify-center items-center h-full space-y-16 ">
-          <p className="text-2xl font-semibold sm:font-normal ">KIND WORDS</p>
-          <h1 className="text-2xl italic font-extralight sm:font-normal sm:text-5xl text-center font-cardo md:w-1/2 leading-10">
+          <p className="text-xl font-semibold sm:font-normal ">KIND WORDS</p>
+          <h1 className="text-2xl italic font-extralight sm:font-normal sm:text-4xl text-center font-cardo md:w-1/2 leading-10">
             As seasoned investors, we knew when we chose Jess that we made the
             right decision. She made the process as seamless as possible and
             even saved us thousands of dollars
           </h1>
-          <p className="text-xl uppercase">Jass - New Westminster </p>
+          <p className="text-base uppercase">Jass - New Westminster </p>
         </div>
       </div>
       <div className="max-w-screen-xl mx-auto px-5 sm:px-0 py-20">
@@ -280,44 +280,6 @@ function Page() {
           </p>
         </div>
       </div>
-      {/* <div className="max-w-screen-xl gap-10 mt-40 relative mx-auto grid grid-cols-2">
-        <div className=" relative w-full">
-          <Image
-            src={"/Section.png"}
-            className="w-full h-[50vh] mt-auto"
-            width={0}
-            height={0}
-            sizes={"100vw"}
-            alt="rolodex Logo"
-          />
-          <div className="flex flex-col justify-center px-10 py-10 text-center  space-y-3 right-0  absolute top-10 bg-[rgba(235,236,237,1)] ">
-            <h1 className="text-4xl !font-thin   font-cardo">
-              Explore Listings
-            </h1>
-            <p className="text-sm">
-              Click to search all homes for sale on the MLS database
-            </p>
-          </div>
-        </div>
-        <div className=" relative w-full mt-[250px]">
-          <Image
-            src={"/Section.png"}
-            className="w-full h-[50vh] mt-auto"
-            width={0}
-            height={0}
-            sizes={"100vw"}
-            alt="rolodex Logo"
-          />
-          <div className="flex flex-col bg-[rgba(235,236,237,1)] justify-center px-10 py-10 text-center  space-y-3 left-0  absolute bottom-10 ">
-            <h1 className="text-4xl !font-thin   font-cardo">
-              See Recent Sales
-            </h1>
-            <p className="text-sm">
-              Click to browse my latest sales and client results
-            </p>
-          </div>
-        </div>
-      </div> */}
       <div className="max-w-screen-xl px-5 sm:px-5  sm:gap-10 sm:mt-40 sm:relative sm:mx-auto sm:grid grid-cols-2">
         <div className=" relative w-full">
           <Image

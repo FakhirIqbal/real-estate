@@ -13,7 +13,7 @@ const BuySlider = ({ data }) => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 1500,
     arrows: false,
     pauseOnHover: true,
     prevArrow: <></>,
@@ -104,6 +104,12 @@ const BuySlider = ({ data }) => {
                   <p className="xl:text-xl text-xs tracking-wide z-99 relative">
                     {item.description}
                   </p>
+                  <img
+                    src="/Arrow.svg"
+                    style={{ marginTop: -30 }}
+                    width={100}
+                    alt=""
+                  />
                 </div>
               </div>
             </div>
